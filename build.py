@@ -39,7 +39,7 @@ def header(r, home):
     a = (lambda x: f"#{x}") if home else (lambda x: f"{r}index.html#{x}")
     return f"""<header class="site-head" id="top">
   <div class="wrap">
-    <a class="logo" href="{r}index.html" aria-label="Total Cardiovascular Care home"><img src="{r}assets/img/tcc-logo-navy.webp" alt="Total Cardiovascular Care" width="123" height="54"></a>
+    <a class="logo" href="{r}index.html" aria-label="Total Cardiovascular Care home"><img class="logo-dark" src="{r}assets/img/tcc-logo-navy.webp" alt="Total Cardiovascular Care" width="123" height="54"><img class="logo-light" src="{r}assets/img/tcc-logo.webp" alt="" width="123" height="54"></a>
     <nav class="nav" aria-label="Main">
       <a href="{a('doctors')}">Doctors</a>
       <a href="{a('care')}">Services</a>
