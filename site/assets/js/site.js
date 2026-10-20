@@ -48,28 +48,43 @@ function docCard(d){return `<a class="doc" href="${docUrl(d.s)}" aria-label="${e
   <div class="ph"><img src="${IMG(d.img)}" alt="" loading="lazy" width="900" height="900"></div>
   <span class="go" aria-hidden="true">${arrow}</span>
   <div class="meta"><span class="role">${esc(d.t)}</span><h3>${esc(d.n)}</h3><span class="cred">${esc(d.c)}</span></div></a>`;}
-const locItem=o=>`<li><a href="${locUrl(o.s)}"><strong>${o.n}${o.main?'<span class="main">Main rooms</span>':''}</strong><span>${esc(o.main?o.a:o.v)}</span><span class="pc">${o.pc}<i>&rarr;</i></span></a></li>`;
+const locItem=o=>`<li><a href="${locUrl(o.s)}" data-loc="${o.s}"><strong>${o.n}${o.main?'<span class="main">Main rooms</span>':''}</strong><span>${esc(o.main?o.a:o.v)}</span><span class="pc">${o.pc}<i>&rarr;</i></span></a></li>`;
 
 function netmap(active){
- /* equirectangular projection, longitude scaled by cos(latitude) so distances are true */
- const W=600,H=470,x0=144.93,x1=145.80,y0=-37.90,y1=-38.68,pad=40,k=Math.cos(38.3*Math.PI/180);
- const sx=(W-2*pad)/((x1-x0)*k),sy=(H-2*pad)/(y0-y1),s=Math.min(sx,sy);
- const ox=(W-(x1-x0)*k*s)/2;
- const P=l=>[ox+(l.lon-x0)*k*s,pad+(y0-l.lat)*s];
- const km10=10/111.32*s;
- const SIDE={'safety-beach':'l',wonthaggi:'l'};
- let grid='';for(let gx=pad;gx<=W-pad;gx+=26)for(let gy=pad-10;gy<=H-pad+10;gy+=26)grid+=`<circle cx="${gx}" cy="${gy}" r="1" fill="#DCE5EB"/>`;
- const pts=LOCS.map(P);
- const order=['highett','frankston','mornington','safety-beach','newhaven','wonthaggi','inverloch'].map(s=>pts[LOCS.findIndex(l=>l.s===s)]);
- const route=`<path d="M${order.map(p=>p.join(' ')).join(' L')}" fill="none" stroke="#00A7E9" stroke-width="1.2" stroke-dasharray="3 5" opacity=".7"/>`;
- const marks=LOCS.map((l,i)=>{const [x,y]=pts[i];const on=l.s===active;const right=SIDE[l.s]!=='l';
-  return `<a href="${locUrl(l.s)}" aria-label="${l.n} clinic"><g>
-   ${on?`<circle cx="${x}" cy="${y}" r="16" fill="#00A7E9" opacity=".16"/>`:''}
-   <circle cx="${x}" cy="${y}" r="${on?7:5.5}" fill="${on||l.main?'#000522':'#FFFFFF'}" stroke="#000522" stroke-width="1.5"/>
-   <text x="${right?x+14:x-14}" y="${y+4}" text-anchor="${right?'start':'end'}" font-family="Geist, Helvetica, Arial, sans-serif" font-size="${on?15:13.5}" font-weight="${on?500:400}" fill="#000522">${l.n}</text>
-   <text x="${right?x+14:x-14}" y="${y+19}" text-anchor="${right?'start':'end'}" font-family="Geist Mono, monospace" font-size="10.5" fill="#5F6873">${l.pc}</text></g></a>`;}).join('');
- return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the seven Total Cardiovascular Care clinics, from Highett in the north-west to Inverloch in the south-east">${grid}${route}${marks}
-  <g font-family="Geist Mono, monospace" font-size="10.5" fill="#5F6873"><path d="M${W-pad-km10} ${H-18}v-6M${W-pad-km10} ${H-21}H${W-pad}M${W-pad} ${H-18}v-6" stroke="#5F6873" fill="none"/><text x="${W-pad-km10-8}" y="${H-17}" text-anchor="end">10 km</text><text x="${pad}" y="${H-17}">North is up</text></g></svg>`;}
+ /* Real coastline (Natural Earth 10m, public domain) pre-projected in src/geo.js; pins use the same projection */
+ const M=window.TCC_MAP,C=M.cfg,W=C.W,H=C.H;
+ const P=(lon,lat)=>[(lon-C.x0)*C.k*C.s,(C.y0-lat)*C.s];
+ const km10=10/111.32*C.s;
+ const SIDE={'safety-beach':'l',wonthaggi:'l',inverloch:'b'};
+ const pill=(x,y,side,name,pc,on)=>{
+  const w=Math.round(name.length*7.9+pc.length*6.6+36),h=26;
+  let px=side==='l'?x-16-w:side==='b'?x-w/2:x+16,py=side==='b'?y+10:y-16-h/2;
+  return `<g class="pill"><rect x="${px}" y="${py}" width="${w}" height="${h}" rx="13"/>
+   <text x="${px+12}" y="${py+17}" class="pn">${name}</text><text x="${px+w-12}" y="${py+17}" text-anchor="end" class="pp">${pc}</text></g>`;};
+ const water=(lon,lat,t)=>{const [x,y]=P(lon,lat);return `<text x="${x}" y="${y}" class="wl" text-anchor="middle">${t}</text>`};
+ const [cx,cy]=P(144.9631,-37.8136);
+ const pins=LOCS.map(l=>{const [x,y]=P(l.lon,l.lat);const on=l.s===active;
+  return `<a href="${locUrl(l.s)}" class="pin${on?' on':''}${l.main?' main':''}" data-loc="${l.s}" aria-label="${l.n} clinic${l.main?', main rooms':''}">
+   ${l.main?`<circle class="ring" cx="${x}" cy="${y}" r="6"/>`:''}
+   <g transform="translate(${x} ${y})"><g class="pin-body"><ellipse class="shadow" cx="0" cy="1" rx="5" ry="2"/><path d="M0 0C-1.6-5.4-9-8.6-9-15.5a9 9 0 1 1 18 0C9-8.6 1.6-5.4 0 0Z"/><circle cx="0" cy="-15.5" r="3.4" class="hole"/></g></g>
+   ${pill(x,y,SIDE[l.s]||'r',l.n,l.pc,on)}</a>`;}).join('');
+ return `<svg viewBox="0 0 ${W} ${H}" class="map-svg" role="img" aria-label="Map of the seven Total Cardiovascular Care clinics around Port Phillip, Western Port and the Bass Coast">
+  <defs><pattern id="mdots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".9" class="dot"/></pattern></defs>
+  <rect width="${W}" height="${H}" class="water"/>
+  <path d="${M.land}" class="land" fill-rule="evenodd"/><path d="${M.land}" fill="url(#mdots)" fill-rule="evenodd"/>
+  ${water(144.86,-38.08,'PORT PHILLIP')}${water(145.13,-38.395,'WESTERN PORT')}${water(145.2,-38.69,'BASS STRAIT')}
+  <g class="cbd"><rect x="${cx-4}" y="${cy-4}" width="8" height="8" rx="1.5" transform="rotate(45 ${cx} ${cy})"/><text x="${cx+10}" y="${cy+4}">Melbourne CBD</text></g>
+  ${pins}
+  <g class="mapkey" transform="translate(18 ${H-22})"><path d="M0 0v-6M0 -3H${km10}M${km10} 0v-6"/><text x="${km10+8}" y="0">10 km</text></g>
+  <g class="mapkey" transform="translate(${W-26} 30)"><path d="M0 8 0 -8M-4 -3 0 -8 4 -3"/><text x="0" y="22" text-anchor="middle">N</text></g>
+ </svg>`;}
+function linkMap(root){ /* hovering a list row or a pin highlights both */
+ const sel=s=>root.querySelectorAll(`[data-loc="${s}"]`);
+ root.addEventListener('mouseover',e=>{const t=e.target.closest('[data-loc]');if(t)sel(t.dataset.loc).forEach(n=>n.classList.add('hl'))});
+ root.addEventListener('mouseout',e=>{const t=e.target.closest('[data-loc]');if(t)sel(t.dataset.loc).forEach(n=>n.classList.remove('hl'))});
+ root.addEventListener('focusin',e=>{const t=e.target.closest('[data-loc]');if(t)sel(t.dataset.loc).forEach(n=>n.classList.add('hl'))});
+ root.addEventListener('focusout',e=>{const t=e.target.closest('[data-loc]');if(t)sel(t.dataset.loc).forEach(n=>n.classList.remove('hl'))});
+}
 
 /* ---------- Shared: footer care links ---------- */
 $('footCare').innerHTML=CARE.map((c,i)=>`<li><a href="${home('care-'+i)}" data-care="${i}">${c.name}</a></li>`).join('');
@@ -138,7 +153,7 @@ if(PAGE==='home'){
  setPaused(userPaused);renderRail('all');
 
  $('locList').innerHTML=LOCS.map(locItem).join('');
- $('netmapHome').innerHTML=netmap('frankston');
+ $('netmapHome').innerHTML=netmap('frankston');linkMap($('locations'));
 
  const st=$('statement');
  st.innerHTML=st.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
@@ -238,9 +253,10 @@ if(PAGE==='location'){
  </div>
  ${l.main?`<div class="split" style="margin-top:clamp(48px,6vw,80px)"><h2>Referrals</h2><div style="display:grid;gap:16px"><p class="lede">The Frankston main rooms coordinate referrals for every Total Cardiovascular Care clinic. We accept referrals from practitioners locally, across Australia and internationally.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a></div></div></div>`:''}
  <div class="split" style="grid-template-columns:1fr;${l.main?'':'margin-top:clamp(48px,6vw,80px)'}"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Our clinic network</h2>
-  <div class="locs"><figure class="netmap" style="margin:0">${netmap(l.s)}<figcaption><span>${l.n} highlighted</span><span>Tap a clinic to view it</span></figcaption></figure>
+  <div class="locs"><figure class="netmap" style="margin:0">${netmap(l.s)}<figcaption><span>${l.n} highlighted</span><span>Select a pin to view a clinic</span></figcaption></figure>
   <ul class="loc-list">${others.map(locItem).join('')}</ul></div></div>
  <div class="split" style="grid-template-columns:1fr"><div class="doctor-tools" style="margin:0"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Specialists across our network</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${DOCS.slice(0,8).map(docCard).join('')}</div></div>`;
+ linkMap($('locationRoot'));
 }
 
 /* ---------- Shared behaviour ---------- */

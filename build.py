@@ -81,6 +81,7 @@ def footer(r, home):
   </div>
 </footer>
 <script src="{r}assets/js/data.js"></script>
+<script src="{r}assets/js/geo.js"></script>
 <script src="{r}assets/js/site.js"></script>
 </body>
 </html>
@@ -112,6 +113,7 @@ def build():
     shutil.copytree(SRC / "img", OUT / "assets/img")
     shutil.copy(SRC / "site.css", OUT / "assets/css/site.css")
     shutil.copy(SRC / "site.js", OUT / "assets/js/site.js")
+    shutil.copy(SRC / "geo.js", OUT / "assets/js/geo.js")
     (OUT / "assets/js/data.js").write_text(
         "window.TCC_DOCS=" + json.dumps(DOCS, ensure_ascii=False)
         + ";\nwindow.TCC_LOCS=" + json.dumps(LOCS, ensure_ascii=False) + ";\n",
