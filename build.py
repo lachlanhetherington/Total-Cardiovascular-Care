@@ -54,7 +54,8 @@ def header(r, home):
       <a class="btn head-cta" href="{APPT}" target="_blank" rel="noopener">Request appointment</a>
     </div>
     <a class="head-call" href="tel:0390706116" aria-label="Call 03 9070 6116"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
-    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false">Menu</button>
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mDrawer"><span class="mb-ico" aria-hidden="true"><i></i><i></i></span><span class="mb-label">Menu</span></button>
+    <div class="m-drawer" id="mDrawer" aria-label="Site menu"></div>
   </div>
 </header>
 """

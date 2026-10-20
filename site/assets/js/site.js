@@ -458,8 +458,57 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if
  const sel=()=>{const v=b.parentElement.querySelector('.v');const r=document.createRange();r.selectNodeContents(v);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Ctrl+C';};
  try{navigator.clipboard.writeText(t).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent=o,1600)},sel)}catch(_){sel()}});
 const head=document.querySelector('.site-head'),menuBtn=$('menuBtn');
-menuBtn.addEventListener('click',()=>{const o=head.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
-head.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click',()=>{head.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+/* Mobile drawer: accordion sections built from the same data as the mega menus */
+const drawer=$('mDrawer');
+(function(){
+ const chev='<svg class="m-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>';
+ const go='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+ const row=(href,lead,t,s,ext)=>`<a class="m-item" href="${href}"${ext?' target="_blank" rel="noopener"':''}>${lead}<span><b>${t}</b>${s?`<small>${s}</small>`:''}</span></a>`;
+ const ic=k=>`<span class="m-ic">${ICON[k]}</span>`;
+ const SECTIONS=[
+  ['doctors','Doctors',DOCS.length+' specialists',PG.doctors,'All doctors',
+    DOCS.map(d=>row(docUrl(d.s),`<img class="m-av" src="${IMG(d.img)}" alt="" loading="lazy" width="900" height="1200">`,esc(d.n),esc(d.t))).join('')],
+  ['services','Services','6 areas of care',PG.services,'All services',
+    CARE.map(c=>row(areaUrl(c),`<img class="m-th" src="${IMG(c.img)}" alt="" loading="lazy" width="1800" height="1200">`,c.name,c.items.length+' procedures &amp; tests')).join('')
+    +row(SVC,ic('doc'),'Angioplasty patient guide','Coronary angioplasty &amp; stents')],
+  ['locations','Locations','7 clinics',PG.locations,'Map &amp; all clinics',
+    LOCS.map(l=>row(locUrl(l.s),ic('pin'),l.n+(l.main?' <em>Main rooms</em>':''),esc(l.main?l.a:l.v)+' · '+l.pc)).join('')],
+  ['referrers','Referrers','For referring doctors',PG.referrers,'Referrer information',
+    row(PG.referrers+'#how',ic('doc'),'How to refer','Three steps from referral to appointment')
+    +row('https://totalcardiovascularcare.com.au/contact/',ic('cal'),'Referral form','Send your referral online',1)
+    +row(PG.referrers+'#finder',ic('search'),'Find a specialist','Doctors by discipline')
+    +row('tel:0390706116',ic('phone'),'Call main rooms','03 9070 6116')],
+  ['about','About','Our practice &amp; team',PG.about,'About us',
+    row(PG.about,ic('heart'),'Our practice','Prevention-first cardiology')
+    +row(PG.about+'#team',ic('team'),'Support team','Nurses and administration')
+    +row('https://totalcardiovascularcare.com.au/faqs/',ic('info'),'FAQs','Common questions',1)],
+  ['contact','Contact','Book, call or visit',PG.contact,'Contact page',
+    row(APPT,ic('cal'),'Book online','Reply within 24 hours',1)
+    +row('tel:0390706116',ic('phone'),'Call us','03 9070 6116')
+    +row('mailto:reception@totalcardiovascularcare.com.au',ic('mail'),'Email','General enquiries')
+    +row(PG.contact+'#feedback',ic('chat'),'Feedback','Tell us how we did')]
+ ];
+ drawer.innerHTML=`<nav class="m-nav" aria-label="Mobile">${SECTIONS.map(([k,label,hint,href,allLabel,items])=>`
+  <div class="m-group${PAGE===k||(k==='doctors'&&PAGE==='doctor')||(k==='locations'&&PAGE==='location')||(k==='services'&&(PAGE==='area'||PAGE==='service'))?' is-current':''}">
+   <button class="m-row" type="button" aria-expanded="false" aria-controls="m-sub-${k}"><span><b>${label}</b><small>${hint}</small></span>${chev}</button>
+   <div class="m-sub" id="m-sub-${k}"><div class="m-sub-in">
+    <a class="m-all" href="${href}">${allLabel} ${go}</a>
+    <div class="m-list">${items}</div>
+   </div></div>
+  </div>`).join('')}
+  <div class="m-foot">
+   <a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>
+   <a class="btn btn--ghost" href="tel:0390706116">${ICON.phone} Call 03 9070 6116</a>
+   <p>${ICON.pin}<span>Main rooms: 11 Hastings Road, Frankston VIC 3199<br>Monday to Friday, 9:00 am – 5:00 pm</span></p>
+  </div></nav>`;
+ const groups=[...drawer.querySelectorAll('.m-group')];
+ groups.forEach(g=>{const b=g.querySelector('.m-row');b.addEventListener('click',()=>{const open=!g.classList.contains('open');groups.forEach(x=>{x.classList.remove('open');x.querySelector('.m-row').setAttribute('aria-expanded','false')});if(open){g.classList.add('open');b.setAttribute('aria-expanded','true');setTimeout(()=>{const r=g.getBoundingClientRect();if(r.top<90)drawer.scrollBy({top:r.top-90,behavior:'smooth'})},320)}})});
+})();
+const setMenu=o=>{head.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o);menuBtn.querySelector('.mb-label').textContent=o?'Close':'Menu';document.documentElement.classList.toggle('menu-lock',o);if(!o)drawer.querySelectorAll('.m-group.open').forEach(g=>{g.classList.remove('open');g.querySelector('.m-row').setAttribute('aria-expanded','false')})};
+menuBtn.addEventListener('click',()=>setMenu(!head.classList.contains('open')));
+drawer.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&head.classList.contains('open')){setMenu(false);menuBtn.focus()}});
+addEventListener('resize',()=>{if(innerWidth>900&&head.classList.contains('open'))setMenu(false)});
 const onScroll=()=>head.classList.toggle('scrolled',scrollY>10);
 addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
