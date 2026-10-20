@@ -48,6 +48,8 @@ function docCard(d){return `<a class="doc" href="${docUrl(d.s)}" aria-label="${e
   <div class="ph"><img src="${IMG(d.img)}" alt="" loading="lazy" width="900" height="900"></div>
   <span class="go" aria-hidden="true">${arrow}</span>
   <div class="meta"><span class="role">${esc(d.t)}</span><h3>${esc(d.n)}</h3><span class="cred">${esc(d.c)}</span></div></a>`;}
+const areaCard=c=>`<article class="area-card"><a class="area-img" href="${home('care-'+CARE.indexOf(c))}" tabindex="-1" aria-hidden="true"><img src="${IMG(c.img)}" alt="" loading="lazy" width="1800" height="1200"></a>
+  <div class="area-body"><h3>${c.name}</h3><p>${c.blurb}</p><div class="svc-cloud">${c.items.map(it=>c.link&&c.link[it]?`<a href="${c.link[it]}">${it}</a>`:`<span>${it}</span>`).join('')}</div></div></article>`;
 const locItem=o=>`<li><a href="${locUrl(o.s)}" data-loc="${o.s}"><strong>${o.n}${o.main?'<span class="main">Main rooms</span>':''}</strong><span>${esc(o.main?o.a:o.v)}</span><span class="pc">${o.pc}<i>&rarr;</i></span></a></li>`;
 
 function netmap(active){
@@ -216,6 +218,7 @@ if(PAGE==='doctor'){
  const gl=[];creds.forEach(c=>{const k=c.replace(/[()]/g,'');if(GLOSS[k]&&!gl.find(g=>g[0]===k))gl.push([k,GLOSS[k]])});
  const peers=DOCS.filter(x=>x.s!==d.s&&groupsOf(x).some(g=>groupsOf(d).includes(g))).slice(0,6);
  $('doctorRoot').innerHTML=`
+ <div class="band page-hero">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="${ROOT}index.html">Home</a>/<a href="${home('doctors')}">Doctors</a>/<span aria-current="page">${esc(d.n)}</span></nav>
  <div class="dr-hero">
   <div>
@@ -223,28 +226,31 @@ if(PAGE==='doctor'){
    <h1>${esc(d.n)}</h1>
    <div class="cred">${creds.map(c=>{const k=c.replace(/[()]/g,'');return GLOSS[k]?`<abbr title="${esc(GLOSS[k])}">${esc(c)}</abbr>`:`<span style="padding:4px 2px">${esc(c)}</span>`}).join('')}</div>
    <p class="lede bio">${esc(d.b)}</p>
-   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Book an appointment ${arrow}</a><a class="btn btn--ghost" href="#d-referral">Referral details</a></div>
+   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Book an appointment ${arrow}</a><a class="btn btn--ghost" href="#d-referral">How to book</a></div>
   </div>
-  <figure class="dr-portrait" style="margin:0"><img src="${IMG(d.img)}" alt="Portrait of ${esc(d.n)}" width="900" height="900">
+  <figure class="dr-portrait" style="margin:0"><img src="${IMG(d.img)}" alt="Portrait of ${esc(d.n)}" width="900" height="1200">
    <figcaption class="badge glass"><b style="font-weight:500">${esc(d.n)}</b><span>Total Cardiovascular Care</span></figcaption></figure>
  </div>
- <div class="split"><h2>Disciplines</h2>
-  <ul class="disc-list">${d.d.map(x=>`<li><b>${esc(x)}</b></li>`).join('')}</ul></div>
- ${care.length?`<div class="split"><h2>Areas of care</h2>
-  <div style="display:grid;gap:26px">${care.map(c=>`<div style="display:grid;gap:12px"><span class="eyebrow">${c.name}</span><div class="svc-cloud">${c.items.map(it=>c.link&&c.link[it]?`<a href="${c.link[it]}">${it}</a>`:`<span>${it}</span>`).join('')}</div></div>`).join('')}</div></div>`:''}
- <div class="split"><h2>Qualifications</h2><dl class="gloss">${gl.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl></div>
+ </div>
+ <div class="split"><h2>Profile</h2>
+  <div class="profile-grid">
+   <div><span class="eyebrow">Disciplines</span><ul class="disc-list">${d.d.map(x=>`<li><b>${esc(x)}</b></li>`).join('')}</ul></div>
+   <div><span class="eyebrow">Qualifications</span><dl class="gloss gloss--one">${gl.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl></div>
+  </div></div>
+ ${care.length?`<div class="split split--full"><div class="doctor-tools"><h2>Areas of care</h2><a href="${home('care')}">All services &rarr;</a></div><div class="area-grid">${care.map(areaCard).join('')}</div></div>`:''}
  <div class="split band" id="d-referral"><h2>Booking an appointment</h2>
   <ol class="steps">
    <li><b>Get a referral</b><p>Ask your GP or specialist for a referral addressed to ${esc(d.n)}.</p></li>
    <li><b>Send your request</b><p>Complete the online request form, or call <a class="tel" href="tel:0390706116">03 9070 6116</a>.</p></li>
    <li><b>We'll be in touch</b><p>Our team will contact you within 24 hours to arrange a time and clinic.</p></li>
   </ol></div>
- ${peers.length?`<div class="split" style="grid-template-columns:1fr"><div class="doctor-tools" style="margin:0"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Related specialists</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${peers.map(docCard).join('')}</div></div>`:''}`;
+ ${peers.length?`<div class="band-ink band-ink--inline"><div class="doctor-tools"><h2>Related specialists</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${peers.map(docCard).join('')}</div></div>`:''}`;
 }
 
 /* ---------- Service ---------- */
 if(PAGE==='service'){
  $('svcRail').innerHTML=DOCS.filter(d=>/interventional/i.test(d.d.join(' '))&&!/heart failure/i.test(d.d.join(' '))).map(docCard).join('');
+ $('svcRelated').innerHTML=CARE.filter(c=>['interventional','structural'].includes(c.k)).map(areaCard).join('');
  const tocLinks=[...document.querySelectorAll('#toc a')];
  const spy=()=>{let on=tocLinks[0];tocLinks.forEach(a=>{const s=$(a.getAttribute('href').slice(1));if(s&&s.getBoundingClientRect().top<160)on=a});tocLinks.forEach(a=>a.classList.toggle('on',a===on));};
  addEventListener('scroll',()=>requestAnimationFrame(spy),{passive:true});spy();
@@ -258,9 +264,10 @@ if(PAGE==='location'){
  const isOpen=l.main&&today<5&&mins>=540&&mins<1020;
  const others=LOCS.filter(x=>x.s!==l.s);
  $('locationRoot').innerHTML=`
+ <div class="band page-hero page-hero--lift">
  <nav class="crumbs" aria-label="Breadcrumb"><a href="${ROOT}index.html">Home</a>/<a href="${home('locations')}">Locations</a>/<span aria-current="page">${l.n}</span></nav>
  <div class="lc-hero">
-  <div style="display:flex;flex-direction:column;justify-content:flex-end">
+  <div style="display:flex;flex-direction:column;justify-content:center">
    <span class="eyebrow">${l.main?'Main rooms · Cardiology clinic':'Cardiology clinic'}</span>
    <h1>${l.n}</h1>
    <p class="venue">${esc(l.v)}</p>
@@ -270,16 +277,22 @@ if(PAGE==='location'){
   <figure class="lc-photo" style="margin:0"><img src="${IMG(l.img)}" alt="Street view of the ${esc(l.n)} clinic at ${esc(l.a)}" width="1200" height="1200">
    ${l.main?`<span class="status glass ${isOpen?'open':''}"><i></i>${isOpen?'Open now · until 5:00 pm':'Closed now · opens 9:00 am weekdays'}</span>`:''}</figure>
  </div>
- <div class="band band--cards"><div class="info-grid">
-  <div class="info"><h3>Phone</h3><div class="v">03 9070 6116</div><p>${l.main?'Call ahead before visiting. Appointments are required.':'All bookings for this clinic go through our main rooms.'}</p><button class="copy-btn" type="button" data-copy="03 9070 6116">Copy number</button></div>
-  <div class="info"><h3>Email</h3><div class="v">reception@totalcardiovascular&shy;care.com.au</div><p>For general enquiries. Please call for urgent appointments.</p><button class="copy-btn" type="button" data-copy="reception@totalcardiovascularcare.com.au">Copy email</button></div>
-  <div class="info"><h3>Opening hours</h3>${l.main?`<table class="hours"><tbody>${HOURS_FRANKSTON.map((h,i)=>`<tr class="${h[1]==='Closed'?'closed':''} ${i===today?'today':''}"><td>${h[0]}</td><td>${h[1]}</td></tr>`).join('')}</tbody></table><p class="src">Hours may change on public holidays.</p>`:`<div class="v">Session days vary</div><p>Our specialists consult here on set days. Call 03 9070 6116 to find the next available appointment.</p>`}</div>
- </div></div>
- ${l.main?`<div class="split" style="margin-top:clamp(48px,6vw,80px)"><h2>Referrals</h2><div style="display:grid;gap:16px"><p class="lede">The Frankston main rooms coordinate referrals for every Total Cardiovascular Care clinic. We accept referrals from practitioners locally, across Australia and internationally.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a></div></div></div>`:''}
- <div class="split" style="grid-template-columns:1fr;${l.main?'':'margin-top:clamp(48px,6vw,80px)'}"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Our clinic network</h2>
+ </div>
+ <div class="info-grid info-grid--lift">
+  <div class="info"><span class="ico-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><h3>Phone</h3><div class="v">03 9070 6116</div><p>${l.main?'Call ahead before visiting. Appointments are required.':'All bookings for this clinic go through our main rooms.'}</p><button class="copy-btn" type="button" data-copy="03 9070 6116">Copy number</button></div>
+  <div class="info"><span class="ico-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span><h3>Email</h3><div class="v">reception@totalcardiovascular&shy;care.com.au</div><p>For general enquiries. Please call for urgent appointments.</p><button class="copy-btn" type="button" data-copy="reception@totalcardiovascularcare.com.au">Copy email</button></div>
+  <div class="info"><span class="ico-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Opening hours</h3>${l.main?`<table class="hours"><tbody>${HOURS_FRANKSTON.map((h,i)=>`<tr class="${h[1]==='Closed'?'closed':''} ${i===today?'today':''}"><td>${h[0]}</td><td>${h[1]}</td></tr>`).join('')}</tbody></table><p class="src">Hours may change on public holidays.</p>`:`<div class="v">Session days vary</div><p>Our specialists consult here on set days. Call 03 9070 6116 to find the next available appointment.</p>`}</div>
+ </div>
+ <div class="ref-band ref-band--page">
+  <figure class="ref-img"><img src="${IMG('tcc_experts')}" alt="Three Total Cardiovascular Care cardiologists" width="1800" height="1200" loading="lazy"></figure>
+  <div class="copy"><span class="eyebrow">Referrals</span><h2>${l.main?'Referrals for every clinic':'Referring to '+l.n}</h2>
+   <p>${l.main?'The Frankston main rooms coordinate referrals for every Total Cardiovascular Care clinic. We accept referrals from practitioners locally, across Australia and internationally.':'Referrals for '+l.n+' are coordinated by our main rooms in Frankston. Address your referral to the specialist and we will arrange the appointment here.'}</p>
+   <div class="actions"><a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a>${l.main?'':`<a class="btn btn--ghost" href="${locUrl('frankston')}">Main rooms details</a>`}</div></div>
+ </div>
+ <div class="split split--full"><div class="doctor-tools"><h2>Our clinic network</h2><a href="${home('locations')}">All locations &rarr;</a></div>
   <div class="locs"><figure class="netmap" style="margin:0">${netmap(l.s)}<figcaption><span>${l.n} highlighted</span><span>Select a pin to view a clinic</span></figcaption></figure>
   <ul class="loc-list">${others.map(locItem).join('')}</ul></div></div>
- <div class="split band" style="grid-template-columns:1fr"><div class="doctor-tools" style="margin:0"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Specialists across our network</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${DOCS.slice(0,8).map(docCard).join('')}</div></div>`;
+ <div class="band-ink band-ink--inline"><div class="doctor-tools"><h2>Specialists across our network</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${DOCS.slice(0,8).map(docCard).join('')}</div></div>`;
  linkMap($('locationRoot'));
 }
 

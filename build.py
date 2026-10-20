@@ -88,6 +88,12 @@ def footer(r, home):
 """
 
 
+def assemble(body, home):
+    """Every page ends with the shared contact section; home places it via {CONTACT}."""
+    contact = (SRC / "contact.html").read_text(encoding="utf-8")
+    return body.replace("{CONTACT}", contact) if home else body + contact
+
+
 def page(path, title, desc, kind, body, slug=""):
     depth = len(Path(path).parts) - 1
     r = "../" * depth
@@ -96,7 +102,7 @@ def page(path, title, desc, kind, body, slug=""):
         head(title, desc, r)
         + f'<body data-page="{kind}" data-root="{r}"' + (f' data-slug="{slug}"' if slug else "") + ">\n"
         + header(r, home)
-        + "<main>\n" + body.replace("{R}", r) + "</main>\n"
+        + "<main>\n" + assemble(body, home).replace("{R}", r).replace("{A}", "#" if home else r + "index.html#") + "</main>\n"
         + footer(r, home)
     )
     out = OUT / path

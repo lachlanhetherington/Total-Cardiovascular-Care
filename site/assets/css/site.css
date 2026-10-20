@@ -291,7 +291,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 .crumbs span[aria-current]{color:var(--ink)}
 
 /* Doctor */
-.dr-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center;padding-block:clamp(28px,4vw,48px) clamp(56px,7vw,96px)}
+.dr-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center;padding-block:clamp(28px,4vw,48px) 0}
 .dr-hero h1{font-weight:300;font-size:clamp(44px,6.2vw,88px);line-height:.98;letter-spacing:-.045em;margin-block:18px 18px}
 .dr-hero .cred{font-family:var(--f-mono);font-size:14px;color:var(--ink);display:flex;flex-wrap:wrap;gap:6px}
 .dr-hero .cred abbr{text-decoration:none;border:1px solid var(--line);border-radius:var(--r-pill);padding:4px 10px;cursor:help;background:var(--white)}
@@ -354,8 +354,10 @@ section{padding-block:clamp(72px,10vw,140px)}
 .prose ul.tick li::before{content:"";position:absolute;left:4px;top:21px;width:12px;height:6px;border-left:1.5px solid var(--cyan-deep);border-bottom:1.5px solid var(--cyan-deep);transform:rotate(-45deg)}
 .prose ul.warn li::before{border:0;width:8px;height:8px;border-radius:50%;background:#E0533D;top:20px;transform:none}
 .proc{list-style:none;margin:0;padding:0;counter-reset:p;display:grid;gap:0;max-width:72ch}
-.proc li{counter-increment:p;display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
-.proc li::before{content:counter(p,decimal-leading-zero);font-family:var(--f-mono);font-size:13px;color:var(--cyan-deep);padding-top:3px}
+.proc li{counter-increment:p;display:grid;grid-template-columns:40px minmax(0,1fr);gap:18px;padding:0 0 26px;position:relative}
+.proc li::before{content:counter(p);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--tint);color:var(--cyan-deep);font:500 15px var(--f-body);position:relative;z-index:1}
+.proc li:not(:last-child)::after{content:"";position:absolute;left:19.5px;top:44px;bottom:4px;width:1px;background:var(--line)}
+.proc li>div{padding-top:8px}
 .proc b{display:block;font-weight:500;color:var(--ink);margin-bottom:2px}
 .chart{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,28px);max-width:720px}
 .chart h3{font-weight:400;font-size:18px;letter-spacing:-.01em}
@@ -375,7 +377,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 @media (max-width:860px){.side-cta{grid-template-columns:1fr}}
 
 /* Location */
-.lc-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding-block:clamp(28px,4vw,48px) clamp(48px,6vw,80px);align-items:stretch}
+.lc-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding-block:clamp(28px,4vw,48px) 0;align-items:stretch}
 .lc-hero h1{font-weight:300;font-size:clamp(48px,7vw,104px);line-height:.95;letter-spacing:-.05em;margin-block:18px 14px}
 .lc-hero .venue{font-size:19px;color:var(--ink)}
 .lc-hero .addr{color:var(--muted);margin-top:4px}
@@ -479,3 +481,53 @@ body[data-page="home"] .site-head:not(.scrolled):not(.open) .head-phone:hover{ba
 .way-link{margin-top:auto;font-weight:500;font-size:15px}
 @media (max-width:900px){.take{grid-template-columns:1fr}.take-img{min-height:0;aspect-ratio:4/3}}
 @media (max-width:560px){.take .ways{grid-template-columns:1fr}}
+
+/* ================= Inner pages: aligned structure ================= */
+/* 1. Hero band: breadcrumb + title + media on soft blue */
+.page-hero{padding-bottom:clamp(48px,6vw,84px)}
+.page-hero .crumbs{padding-top:clamp(24px,3vw,36px)}
+.svc-hero.page-hero{padding-top:0;padding-bottom:clamp(36px,4vw,56px)}
+.svc-hero .quick{background:var(--white);border:1px solid var(--line);border-radius:22px;margin-top:16px;padding-inline:22px}
+.svc-hero .quick div{padding-block:18px}
+.page-hero--lift{padding-bottom:clamp(120px,11vw,150px)}
+.dr-portrait{box-shadow:0 30px 60px -36px rgba(0,5,34,.35)}
+.lc-photo{box-shadow:0 30px 60px -36px rgba(0,5,34,.35)}
+/* 2. Location info cards float over the hero band */
+.info-grid--lift{position:relative;z-index:1;margin-top:calc(-1 * clamp(84px,8vw,110px))}
+.info-grid--lift .info{box-shadow:0 24px 48px -30px rgba(0,5,34,.3)}
+.ico-s{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--tint);color:var(--cyan-deep)}
+.ico-s svg{width:19px;height:19px}
+.ref-band--page{margin-top:clamp(56px,7vw,96px)}
+/* 3. Content sections */
+.split--full{grid-template-columns:1fr}
+.split--full .doctor-tools{margin:0}
+.split h2,.split--full .doctor-tools h2,.band-ink h2{font-weight:300;font-size:clamp(28px,3vw,40px);line-height:1.08}
+.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px}
+.profile-grid>div{display:grid;gap:14px;align-content:start}
+.gloss--one{grid-template-columns:1fr}
+.gloss--one div:first-child{padding-top:0}
+.disc-list li:first-child{padding-top:18px}
+@media (max-width:860px){.profile-grid{grid-template-columns:1fr}}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.area-card{background:var(--white);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .4s,transform .4s var(--ease)}
+.area-card:hover{box-shadow:0 26px 50px -34px rgba(0,5,34,.35);transform:translateY(-2px)}
+.area-img{display:block;aspect-ratio:16/9;overflow:hidden;background:var(--sky)}
+.area-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.area-card:hover .area-img img{transform:scale(1.04)}
+.area-body{padding:22px 24px 26px;display:grid;gap:12px}
+.area-body h3{font-weight:400;font-size:22px;letter-spacing:-.015em}
+.area-body p{font-size:15px;color:var(--muted)}
+.area-body .svc-cloud a,.area-body .svc-cloud span{font-size:13.5px;padding:7px 12px}
+.split.band .steps li{background:var(--white)}
+/* 4. Navy specialists band (full bleed, same look as home "Meet our doctors") */
+.band-ink{background:var(--ink);color:#C9D3E0;padding-block:clamp(72px,9vw,120px)}
+.band-ink--inline{position:relative;box-shadow:0 0 0 100vmax var(--ink);clip-path:inset(0 -100vmax);margin-top:clamp(56px,7vw,96px)}
+.band-ink h2{color:var(--white)}
+.band-ink .lede{color:#AEB9CB}
+.band-ink .doctor-tools a{color:#7FD3F5}
+.band-ink .doctor-tools a:hover{color:var(--white)}
+.band-ink .doctor-tools{margin-bottom:28px}
+.band-ink .doc{box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+/* service page: related section spacing */
+#s-related .area-grid{margin-top:6px}
+.split.band + .band-ink--inline{margin-top:0}
