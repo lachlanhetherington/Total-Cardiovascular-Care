@@ -44,11 +44,10 @@ function careFor(d){const j=d.d.join(' ').toLowerCase(),o=[];
  if(/rhythm|electrophysiolog/.test(j))add('rhythm');
  return o;}
 
-function docCard(d){return `<a class="doc" href="${docUrl(d.s)}">
-  <div class="ph"><img src="${IMG(d.img)}" alt="Portrait of ${esc(d.n)}" loading="lazy" width="900" height="900"></div>
-  <div><h3>${esc(d.n)}</h3><div class="cred">${esc(d.c)}</div></div>
-  <p class="disc">${esc(d.d.slice(0,2).join(' · '))}</p>
-  <span class="more">View profile ${arrow.replace('<svg','<svg width="14" height="14"')}</span></a>`;}
+function docCard(d){return `<a class="doc" href="${docUrl(d.s)}" aria-label="${esc(d.n)}, ${esc(d.t)}. View profile">
+  <div class="ph"><img src="${IMG(d.img)}" alt="" loading="lazy" width="900" height="900"></div>
+  <span class="go" aria-hidden="true">${arrow}</span>
+  <div class="meta"><span class="role">${esc(d.t)}</span><h3>${esc(d.n)}</h3><span class="cred">${esc(d.c)}</span></div></a>`;}
 const locItem=o=>`<li><a href="${locUrl(o.s)}"><strong>${o.n}${o.main?'<span class="main">Main rooms</span>':''}</strong><span>${esc(o.main?o.a:o.v)}</span><span class="pc">${o.pc}<i>&rarr;</i></span></a></li>`;
 
 function netmap(active){
@@ -94,7 +93,7 @@ if(PAGE==='home'){
  const FILTERS=[['all','All doctors'],['interventional','Interventional & structural'],['imaging','Imaging'],['hf','Heart failure'],['rhythm','Rhythm'],['paeds','Paediatric & fetal'],['physician','Physicians']];
  const fBox=$('docFilters'),rail=$('docRail');
  fBox.innerHTML=FILTERS.map(([k,l],i)=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
- const renderRail=f=>{rail.innerHTML=DOCS.filter(d=>f==='all'||groupsOf(d).includes(f)).map(docCard).join('');rail.scrollLeft=0;};
+ const renderRail=f=>{const list=DOCS.filter(d=>f==='all'||groupsOf(d).includes(f));rail.innerHTML=list.map(docCard).join('');rail.scrollLeft=0;$('docCount').textContent=list.length+(list.length===1?' doctor':' doctors');};
  fBox.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;fBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));renderRail(b.dataset.f)});
  document.querySelectorAll('[data-rail]').forEach(b=>b.addEventListener('click',()=>rail.scrollBy({left:+b.dataset.rail*(rail.clientWidth*.8),behavior:'smooth'})));
  renderRail('all');

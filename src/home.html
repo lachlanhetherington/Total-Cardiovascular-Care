@@ -63,12 +63,13 @@
       </div>
       <div class="doctor-tools">
         <div class="chips" id="docFilters" aria-label="Filter doctors"></div>
-        <div class="rail-ctrl">
+        <div class="rail-ctrl" style="align-items:center;gap:14px">
+          <span class="doctors-count" id="docCount" aria-live="polite"></span>
           <button type="button" data-rail="-1" aria-label="Previous doctors"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
           <button type="button" data-rail="1" aria-label="Next doctors"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
         </div>
       </div>
-      <div class="rail" id="docRail"></div>
+      <div class="rail rail--bleed" id="docRail"></div>
     </div>
   </section>
 
