@@ -83,8 +83,15 @@
         <h2>Six areas of care, one practice</h2>
         <p class="lede">From a first consultation and ECG to valve intervention, your care stays with the same team.</p>
       </div>
-      <div class="tabs" role="tablist" aria-label="Areas of care" id="careTabs"></div>
-      <div class="care-panel" id="carePanel" role="tabpanel"></div>
+      <div class="care-bar">
+        <div class="tabs" role="tablist" aria-label="Areas of care" id="careTabs"></div>
+        <div class="rail-ctrl">
+          <button type="button" class="dc-pause" id="carePause" aria-pressed="false" aria-label="Pause services carousel"><svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg></button>
+          <button type="button" data-care-step="-1" aria-label="Previous service"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
+          <button type="button" data-care-step="1" aria-label="Next service"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+        </div>
+      </div>
+      <div class="care-viewport" id="careView" role="region" aria-roledescription="carousel" aria-label="Areas of care"><div class="care-track" id="careTrack"></div></div>
     </div>
   </section>
 
@@ -131,7 +138,7 @@
           <span class="eyebrow">Referrers</span>
           <h2>For referring doctors</h2>
           <p>We accept referrals from practitioners locally, across Australia and internationally, and work with referring clinicians to meet their requirements and those of their patients.</p>
-          <p style="color:var(--muted)">To arrange a referral, contact our main rooms in Frankston on <span class="mono" style="color:var(--ink)">03 9070 6116</span>.</p>
+          <p style="color:var(--muted)">To arrange a referral, contact our main rooms in Frankston on <a class="tel" href="tel:0390706116">03 9070 6116</a>.</p>
           <div class="actions">
             <a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a>
             <a class="btn btn--ghost" href="locations/frankston.html">Main rooms details</a>
@@ -185,7 +192,7 @@
         <li><a href="#doctors">Doctors</a></li><li><a href="#locations">Locations</a></li><li><a href="https://totalcardiovascularcare.com.au/our-team/" target="_blank" rel="noopener">Our team</a></li><li><a href="https://totalcardiovascularcare.com.au/faqs/" target="_blank" rel="noopener">FAQs</a></li><li><a href="#referrers">Referring doctors</a></li></ul></div>
       <div><h4>Get in touch</h4><ul>
         <li>11 Hastings Road<br>Frankston VIC 3199</li>
-        <li><a href="tel:0390706116" class="mono">03 9070 6116</a></li>
+        <li><a href="tel:0390706116" style="white-space:nowrap">03 9070 6116</a></li>
         <li style="overflow-wrap:anywhere"><a href="mailto:reception@totalcardiovascularcare.com.au">reception@totalcardiovascularcare.com.au</a></li></ul></div>
     </div>
     <div class="foot-base">

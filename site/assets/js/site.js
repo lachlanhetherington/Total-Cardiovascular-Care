@@ -92,18 +92,44 @@ $('footCare').innerHTML=CARE.map((c,i)=>`<li><a href="${home('care-'+i)}" data-c
 /* ---------- Home ---------- */
 let showCare=()=>{};
 if(PAGE==='home'){
- const tabs=$('careTabs'),panel=$('carePanel');
- tabs.innerHTML=CARE.map((c,i)=>`<button role="tab" type="button" id="tab-${c.k}" aria-selected="${i===0}" data-i="${i}">${c.name}</button>`).join('');
- showCare=i=>{const c=CARE[i];
-  tabs.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',j===i));
-  panel.setAttribute('aria-labelledby','tab-'+c.k);
-  panel.innerHTML=`<div class="care-img fade-swap"><img src="${IMG(c.img)}" alt="${esc(c.name)} at Total Cardiovascular Care" width="1800" height="1200"><span class="tag glass">${String(c.items.length).padStart(2,'0')} services</span></div>
-   <div class="care-body fade-swap"><h3>${c.name}</h3><p style="color:var(--muted)">${c.blurb}</p>
+ /* Areas of care: infinite carousel (slides rendered 3x, index kept in middle copy), synced tabs */
+ const tabs=$('careTabs'),cView=$('careView'),cTrack=$('careTrack'),cPause=$('carePause'),N=CARE.length;
+ const C_DWELL=6000,cReduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let ci=N,cTimer=null,cUserPaused=cReduce,cHold=false,cBusy=false;
+ tabs.innerHTML=CARE.map((c,i)=>`<button role="tab" type="button" id="tab-${c.k}" aria-selected="${i===0}" aria-controls="careView" data-i="${i}"><span>${c.name}</span><i aria-hidden="true"></i></button>`).join('');
+ tabs.style.setProperty('--dur',C_DWELL+'ms');
+ const slide=(c,clone)=>`<article class="care-slide"${clone?' aria-hidden="true" inert':''}>
+   <div class="care-img"><img src="${IMG(c.img)}" alt="${clone?'':esc(c.name)+' at Total Cardiovascular Care'}" width="1800" height="1200" loading="lazy"><span class="tag glass">${String(c.items.length).padStart(2,'0')} services</span></div>
+   <div class="care-body"><h3>${c.name}</h3><p style="color:var(--muted)">${c.blurb}</p>
    <ul>${c.items.map(it=>c.link&&c.link[it]?`<li><a href="${c.link[it]}">${it}<span>Read guide &rarr;</span></a></li>`:`<li>${it}</li>`).join('')}</ul>
-   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>${c.link?`<a class="btn btn--ghost" href="${SVC}">About angioplasty &amp; stents</a>`:''}</div></div>`;};
+   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>${c.link?`<a class="btn btn--ghost" href="${SVC}">About angioplasty &amp; stents</a>`:''}</div></div></article>`;
+ cTrack.innerHTML=CARE.map(c=>slide(c,1)).join('')+CARE.map(c=>slide(c,0)).join('')+CARE.map(c=>slide(c,1)).join('');
+ const cSlides=[...cTrack.children];
+ const sizeSlides=()=>{const wr=cView.parentElement,cs=getComputedStyle(wr);cView.style.setProperty('--slideW',(wr.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight))+'px')};
+ const cStep=()=>cSlides[1].offsetLeft-cSlides[0].offsetLeft;
+ const cPlace=anim=>{cTrack.classList.toggle('no-anim',!anim);cTrack.style.transform=`translate3d(${-ci*cStep()}px,0,0)`;cSlides.forEach((el,j)=>el.classList.toggle('is-current',j===ci));if(!anim)void cTrack.offsetWidth;};
+ const syncTabs=()=>{const k=((ci%N)+N)%N;const bs=tabs.querySelectorAll('button');bs.forEach((b,j)=>{b.setAttribute('aria-selected',j===k);b.classList.remove('run')});void tabs.offsetWidth;if(!cUserPaused&&!cHold)bs[k].classList.add('run');};
+ function cGo(target,anim=true){if(cBusy&&anim)return;cBusy=anim;ci=target;cPlace(anim);syncTabs();cSchedule();}
+ cTrack.addEventListener('transitionend',e=>{if(e.target!==cTrack)return;cBusy=false;if(ci>=2*N){ci-=N;cPlace(false)}else if(ci<N){ci+=N;cPlace(false)}});
+ function cSchedule(){clearTimeout(cTimer);if(!cUserPaused&&!cHold&&!document.hidden)cTimer=setTimeout(()=>cGo(ci+1),C_DWELL);}
+ const cSetHold=h=>{cHold=h;syncTabs();cSchedule()};
+ function cSetPaused(p){cUserPaused=p;cPause.setAttribute('aria-pressed',p);cPause.setAttribute('aria-label',p?'Play services carousel':'Pause services carousel');syncTabs();cSchedule();}
+ showCare=i=>{const cur=((ci%N)+N)%N;const t=ci+(i-cur);cGo(t,t!==ci);};
  tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)showCare(+b.dataset.i)});
- tabs.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const bs=[...tabs.querySelectorAll('button')];let i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');i=(i+(e.key==='ArrowRight'?1:-1)+bs.length)%bs.length;showCare(i);bs[i].focus()});
- showCare(0);
+ tabs.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const bs=[...tabs.querySelectorAll('button')];let i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');i=(i+(e.key==='ArrowRight'?1:-1)+N)%N;showCare(i);bs[i].focus()});
+ document.querySelectorAll('[data-care-step]').forEach(b=>b.addEventListener('click',()=>cGo(ci+ +b.dataset.careStep)));
+ cPause.addEventListener('click',()=>cSetPaused(!cUserPaused));
+ const careSec=$('care');
+ careSec.addEventListener('mouseenter',()=>cSetHold(true));careSec.addEventListener('mouseleave',()=>cSetHold(false));
+ cView.addEventListener('focusin',()=>cSetHold(true));cView.addEventListener('focusout',()=>cSetHold(false));
+ document.addEventListener('visibilitychange',cSchedule);
+ let csx=null,cSwiped=false;
+ cView.addEventListener('pointerdown',e=>{csx=e.clientX;cSwiped=false});
+ cView.addEventListener('pointerup',e=>{if(csx===null)return;const dx=e.clientX-csx;csx=null;if(Math.abs(dx)>50){cSwiped=true;cGo(ci+(dx<0?1:-1))}});
+ cView.addEventListener('click',e=>{if(cSwiped){e.preventDefault();cSwiped=false}},true);
+ cView.addEventListener('dragstart',e=>e.preventDefault());
+ addEventListener('resize',()=>{sizeSlides();cPlace(false)});
+ sizeSlides();cPlace(false);cSetPaused(cUserPaused);
 
  const FILTERS=[['all','All doctors'],['interventional','Interventional & structural'],['imaging','Imaging'],['hf','Heart failure'],['rhythm','Rhythm'],['paeds','Paediatric & fetal'],['physician','Physicians']];
  const fBox=$('docFilters'),rail=$('docRail');
@@ -212,7 +238,7 @@ if(PAGE==='doctor'){
  <div class="split" id="d-referral"><h2>Booking an appointment</h2>
   <ol class="steps">
    <li><b>Get a referral</b><p>Ask your GP or specialist for a referral addressed to ${esc(d.n)}.</p></li>
-   <li><b>Send your request</b><p>Complete the online request form, or call <span class="mono" style="color:var(--ink)">03 9070 6116</span>.</p></li>
+   <li><b>Send your request</b><p>Complete the online request form, or call <a class="tel" href="tel:0390706116">03 9070 6116</a>.</p></li>
    <li><b>We'll be in touch</b><p>Our team will contact you within 24 hours to arrange a time and clinic.</p></li>
   </ol></div>
  ${peers.length?`<div class="split" style="grid-template-columns:1fr"><div class="doctor-tools" style="margin:0"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Related specialists</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${peers.map(docCard).join('')}</div></div>`:''}`;
@@ -247,8 +273,8 @@ if(PAGE==='location'){
    ${l.main?`<span class="status glass ${isOpen?'open':''}"><i></i>${isOpen?'Open now · until 5:00 pm':'Closed now · opens 9:00 am weekdays'}</span>`:''}</figure>
  </div>
  <div class="info-grid">
-  <div class="info"><h3>Phone</h3><div class="v mono">03 9070 6116</div><p>${l.main?'Call ahead before visiting. Appointments are required.':'All bookings for this clinic go through our main rooms.'}</p><button class="copy-btn" type="button" data-copy="03 9070 6116">Copy number</button></div>
-  <div class="info"><h3>Email</h3><div class="v mono">reception@totalcardiovascular&shy;care.com.au</div><p>For general enquiries. Please call for urgent appointments.</p><button class="copy-btn" type="button" data-copy="reception@totalcardiovascularcare.com.au">Copy email</button></div>
+  <div class="info"><h3>Phone</h3><div class="v">03 9070 6116</div><p>${l.main?'Call ahead before visiting. Appointments are required.':'All bookings for this clinic go through our main rooms.'}</p><button class="copy-btn" type="button" data-copy="03 9070 6116">Copy number</button></div>
+  <div class="info"><h3>Email</h3><div class="v">reception@totalcardiovascular&shy;care.com.au</div><p>For general enquiries. Please call for urgent appointments.</p><button class="copy-btn" type="button" data-copy="reception@totalcardiovascularcare.com.au">Copy email</button></div>
   <div class="info"><h3>Opening hours</h3>${l.main?`<table class="hours"><tbody>${HOURS_FRANKSTON.map((h,i)=>`<tr class="${h[1]==='Closed'?'closed':''} ${i===today?'today':''}"><td>${h[0]}</td><td>${h[1]}</td></tr>`).join('')}</tbody></table><p class="src">Hours may change on public holidays.</p>`:`<div class="v">Session days vary</div><p>Our specialists consult here on set days. Call 03 9070 6116 to find the next available appointment.</p>`}</div>
  </div>
  ${l.main?`<div class="split" style="margin-top:clamp(48px,6vw,80px)"><h2>Referrals</h2><div style="display:grid;gap:16px"><p class="lede">The Frankston main rooms coordinate referrals for every Total Cardiovascular Care clinic. We accept referrals from practitioners locally, across Australia and internationally.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a></div></div></div>`:''}
