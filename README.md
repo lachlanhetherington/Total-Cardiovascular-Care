@@ -15,7 +15,8 @@ Static concept site for client review, hosted on Vercel. Light redesign of total
 | Location (one template) | `/locations/frankston` etc. |
 | Referrers | `/referrers` |
 | About (approach + support team) | `/about` |
-| Contact | `/contact` |
+| Contact (with message form) | `/contact` |
+| Request an appointment (3-step form) | `/appointment` |
 
 Every nav item opens a mega menu on desktop, built from the same data.
 
@@ -27,6 +28,9 @@ python build.py
 ```
 
 This regenerates `site/`, which is what Vercel serves (see `vercel.json`). Commit `site/` along with your changes.
+
+## Forms
+The appointment and contact forms validate entries and show a confirmation, but send nothing: this preview has no server, and the forms ask for health details and Medicare numbers. On the live WordPress build, connect them to a form plugin or the practice's booking system.
 
 ## Deploy
 Import this repo in Vercel and leave the defaults. `vercel.json` sets the output directory to `site` and turns on clean URLs. Pages carry `noindex` so the preview stays out of search results.

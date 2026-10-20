@@ -1,0 +1,99 @@
+<div class="wrap">
+  <div class="band page-hero page-hero--compact">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{R}index.html">Home</a>/<span aria-current="page">Request an appointment</span></nav>
+    <div class="ap-head">
+      <div>
+        <span class="eyebrow">Appointments</span>
+        <h1>Request an appointment</h1>
+        <p class="lede">Complete the form and our team will contact you within 24 hours to arrange your appointment. For urgent appointments, please call <a class="tel" href="tel:0390706116">03 9070 6116</a>.</p>
+      </div>
+      <ol class="ap-steps-mini" aria-hidden="true"><li><b>3</b> short steps</li><li><b>~4</b> minutes</li><li><b>24h</b> reply</li></ol>
+    </div>
+  </div>
+
+  <div class="ap-layout">
+    <form class="tcc-form ap-form" id="apForm" data-form="appointment" novalidate>
+      <div class="ap-progress" aria-hidden="true"><span id="apBar"></span></div>
+      <ol class="ap-tabs" id="apTabs">
+        <li class="on"><b>1</b>About you</li>
+        <li><b>2</b>Your appointment</li>
+        <li><b>3</b>Cover &amp; notes</li>
+      </ol>
+
+      <fieldset class="ap-step" data-step="1">
+        <legend>About you</legend>
+        <div class="f-grid">
+          <div class="f"><label for="ap-first">First name <i>*</i></label><input id="ap-first" name="first_name" autocomplete="given-name" required></div>
+          <div class="f"><label for="ap-last">Last name <i>*</i></label><input id="ap-last" name="last_name" autocomplete="family-name" required></div>
+          <div class="f"><label for="ap-dob">Date of birth <i>*</i></label><input id="ap-dob" name="dob" type="date" required></div>
+          <div class="f"><label for="ap-phone">Phone <i>*</i></label><input id="ap-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 +()-]{8,}" required><small class="f-hint">We'll call you on this number to confirm.</small></div>
+          <div class="f f--wide"><label for="ap-email">Email <i>*</i></label><input id="ap-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="f f--wide"><label for="ap-address">Address</label><input id="ap-address" name="address" autocomplete="street-address"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ap-step" data-step="2" hidden>
+        <legend>Your appointment</legend>
+        <div class="f-grid">
+          <div class="f"><label for="ap-loc">Preferred clinic <i>*</i></label><select id="ap-loc" name="location" required><option value="">Select a clinic</option></select></div>
+          <div class="f"><label for="ap-doc">Preferred doctor</label><select id="ap-doc" name="doctor"><option value="">No preference</option></select></div>
+          <div class="f f--wide"><label for="ap-ref">Referring doctor</label><input id="ap-ref" name="referring_doctor" placeholder="Name and practice of your GP or specialist"><small class="f-hint">A GP or specialist referral is needed for Medicare rebates.</small></div>
+          <div class="f f--wide">
+            <span class="f-label" id="ap-svc-l">What do you need? <small>Select any that apply</small></span>
+            <div class="f-checks" role="group" aria-labelledby="ap-svc-l" id="apServices"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ap-step" data-step="3" hidden>
+        <legend>Cover &amp; notes</legend>
+        <div class="f-grid">
+          <div class="f"><label for="ap-fund">Private health fund</label><input id="ap-fund" name="health_fund" placeholder="If applicable"></div>
+          <div class="f"><label for="ap-medicare">Medicare number</label><input id="ap-medicare" name="medicare" inputmode="numeric" pattern="[0-9 ]{10,12}" placeholder="10 digits"><small class="f-hint">Optional. You can also bring your card on the day.</small></div>
+          <div class="f f--wide"><label for="ap-msg">Message <i>*</i></label><textarea id="ap-msg" name="message" rows="4" required placeholder="Briefly describe your symptoms or reason for the appointment, and any times that suit you."></textarea></div>
+          <div class="f f--wide">
+            <span class="f-label" id="ap-heard-l">How did you hear about us?</span>
+            <div class="f-pills" role="radiogroup" aria-labelledby="ap-heard-l">
+              <label><input type="radio" name="heard" value="Specialist or medical practitioner"><span>Specialist or practitioner</span></label>
+              <label><input type="radio" name="heard" value="GP"><span>GP</span></label>
+              <label><input type="radio" name="heard" value="Family or friend"><span>Family or friend</span></label>
+              <label><input type="radio" name="heard" value="Google"><span>Google</span></label>
+              <label><input type="radio" name="heard" value="Social media"><span>Social media</span></label>
+              <label><input type="radio" name="heard" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+          <div class="f f--wide"><label class="f-consent"><input type="checkbox" name="consent" required><span>I agree to Total Cardiovascular Care using these details to arrange my appointment, in line with the <a href="https://totalcardiovascularcare.com.au/privacy-policy/" target="_blank" rel="noopener">privacy policy</a>. <i>*</i></span></label></div>
+        </div>
+        <div class="ap-review" id="apReview"></div>
+      </fieldset>
+
+      <div class="f-error" id="apError" role="alert" hidden></div>
+      <div class="ap-nav">
+        <button type="button" class="btn btn--ghost" id="apBack" hidden>Back</button>
+        <button type="button" class="btn btn--ink" id="apNext">Continue</button>
+        <button type="submit" class="btn" id="apSubmit" hidden>Send request</button>
+      </div>
+      <p class="f-preview">Preview only: this form checks your entries but does not send them. On the live site it will connect to the practice's booking system.</p>
+
+      <div class="f-done" id="apDone" hidden tabindex="-1">
+        <span class="f-done-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <h2>Request received</h2>
+        <p id="apDoneText">Thank you. Our team will contact you within 24 hours to arrange your appointment.</p>
+        <div class="actions"><a class="btn btn--ghost" href="{R}index.html">Back to home</a><a class="btn btn--ghost" href="{R}doctors.html">Meet our doctors</a></div>
+      </div>
+    </form>
+
+    <aside class="ap-side">
+      <div class="ap-card">
+        <h3>What happens next</h3>
+        <ol class="ap-next">
+          <li><b>We review your request</b><span>Our reception team checks your details and referral.</span></li>
+          <li><b>We call you within 24 hours</b><span>To confirm a time, clinic and specialist.</span></li>
+          <li><b>Your appointment</b><span>Bring your referral, Medicare card and a list of your medications.</span></li>
+        </ol>
+      </div>
+      <a class="ap-call" href="tel:0390706116"><span class="ico-s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Prefer to talk?</small><b>03 9070 6116</b><small>Mon–Fri, 9am–5pm</small></span></a>
+      <div class="ap-urgent"><b>Chest pain or a medical emergency?</b> Call <strong>000</strong> immediately. Do not use this form.</div>
+    </aside>
+  </div>
+</div>

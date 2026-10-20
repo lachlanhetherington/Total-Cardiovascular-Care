@@ -47,11 +47,11 @@ def header(r, home):
       <div class="nav-item" data-mega="referrers"><a class="nav-link" href="{r}referrers.html">Referrers<svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></a><div class="mega"></div></div>
       <div class="nav-item" data-mega="about"><a class="nav-link" href="{r}about.html">About<svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></a><div class="mega"></div></div>
       <div class="nav-item" data-mega="contact"><a class="nav-link" href="{r}contact.html">Contact<svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></a><div class="mega"></div></div>
-      <div class="nav-cta"><a class="btn" href="{APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="tel:0390706116">Call 03 9070 6116</a></div>
+      <div class="nav-cta"><a class="btn" href="{r}appointment.html">Request an appointment</a><a class="btn btn--ghost" href="tel:0390706116">Call 03 9070 6116</a></div>
     </nav>
     <div class="head-actions">
       <a class="head-phone" href="tel:0390706116" aria-label="Call 03 9070 6116"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>03 9070 6116</a>
-      <a class="btn head-cta" href="{APPT}" target="_blank" rel="noopener">Request appointment</a>
+      <a class="btn head-cta" href="{r}appointment.html">Request appointment</a>
     </div>
     <a class="head-call" href="tel:0390706116" aria-label="Call 03 9070 6116"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
     <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="mDrawer"><span class="mb-ico" aria-hidden="true"><i></i><i></i></span><span class="mb-label">Menu</span></button>
@@ -69,7 +69,7 @@ def footer(r, home):
       <div class="about">
         <a class="logo" href="{r}index.html"><img src="{r}assets/img/tcc-logo.webp" alt="Total Cardiovascular Care" width="132" height="58"></a>
         <p>A comprehensive cardiology practice dedicated to helping patients achieve optimal heart health.</p>
-        <a class="btn" style="justify-self:start" href="{APPT}" target="_blank" rel="noopener">Request an appointment</a>
+        <a class="btn" style="justify-self:start" href="{r}appointment.html">Request an appointment</a>
       </div>
       <div><h4>Care</h4><ul id="footCare"></ul></div>
       <div><h4>Practice</h4><ul>
@@ -98,7 +98,7 @@ def assemble(body, home, kind=""):
     contact = (SRC / "contact.html").read_text(encoding="utf-8")
     if home:
         return body.replace("{CONTACT}", contact)
-    return body if kind == "contact" else body + contact
+    return body if kind in ("contact", "appointment") else body + contact
 
 
 AREAS = [
@@ -160,7 +160,7 @@ def area_body(key, slug, name, blurb, img, procs):
         items.append(f"""      <details class="pacc" id="{pid}"{' open' if i == 1 else ''}>
         <summary><span class="pacc-n">{i:02d}</span><span class="pacc-t"><b>{html.escape(p["title"])}</b>{f'<small>{html.escape(intro)}</small>' if intro else ''}</span><span class="pacc-x" aria-hidden="true"></span></summary>
         <div class="pacc-body prose-s">{body}
-          <div class="pacc-actions"><a class="btn btn--sm" href="{APPT}" target="_blank" rel="noopener">Request an appointment</a>{guide_link}</div>
+          <div class="pacc-actions"><a class="btn btn--sm" href="{{R}}appointment.html">Request an appointment</a>{guide_link}</div>
         </div>
       </details>""")
     return f"""<div class="wrap">
@@ -171,7 +171,7 @@ def area_body(key, slug, name, blurb, img, procs):
         <span class="eyebrow">Area of care</span>
         <h1>{html.escape(name)}</h1>
         <p class="lede">{html.escape(blurb)}</p>
-        <div class="actions"><a class="btn" href="{APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="#area-team">Our specialists</a></div>
+        <div class="actions"><a class="btn" href="{{R}}appointment.html">Request an appointment</a><a class="btn btn--ghost" href="#area-team">Our specialists</a></div>
       </div>
       <figure class="ph-media"><img src="{{R}}assets/img/{img}.webp" alt="{html.escape(name)} at Total Cardiovascular Care" width="1800" height="1200" fetchpriority="high"></figure>
     </div>
@@ -252,6 +252,7 @@ def build():
         ("referrers", "For referring doctors | Total Cardiovascular Care", "How to refer to Total Cardiovascular Care specialists, and contact details for our Frankston main rooms."),
         ("about", "About us | Total Cardiovascular Care", "A comprehensive cardiology practice dedicated to helping patients achieve optimal heart health."),
         ("contact", "Contact | Total Cardiovascular Care", "Book online, call 03 9070 6116, email or visit one of our seven clinics."),
+        ("appointment", "Request an appointment | Total Cardiovascular Care", "Request an appointment with a Total Cardiovascular Care specialist. Our team will contact you within 24 hours."),
     ]
     for k, title, desc in INDEX:
         built.append(page(f"{k}.html", title, desc, k, (SRC / "pages" / f"{k}.html").read_text(encoding="utf-8")))

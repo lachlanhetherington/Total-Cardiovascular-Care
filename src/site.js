@@ -1,6 +1,6 @@
 (function(){
 const B=document.body,ROOT=B.dataset.root||'',PAGE=B.dataset.page,SLUG=B.dataset.slug;
-const APPT='https://totalcardiovascularcare.com.au/appointment/';
+const APPT=ROOT+'appointment.html';
 const IMG=n=>ROOT+'assets/img/'+n+'.webp';
 const docUrl=s=>ROOT+'doctors/'+s+'.html';
 const locUrl=s=>ROOT+'locations/'+s+'.html';
@@ -130,7 +130,7 @@ if(PAGE==='home'){
    <div class="care-img"><img src="${IMG(c.img)}" alt="${clone?'':esc(c.name)+' at Total Cardiovascular Care'}" width="1800" height="1200" loading="lazy"><span class="tag glass">${c.name}</span></div>
    <div class="care-body"><h3>${c.name}</h3><p style="color:var(--muted)">${c.blurb}</p>
    <ul>${c.items.map(it=>c.link&&c.link[it]?`<li><a href="${c.link[it]}">${it}<span>Read guide &rarr;</span></a></li>`:`<li>${it}</li>`).join('')}</ul>
-   <div class="actions"><a class="btn" href="${areaUrl(c)}">Explore ${c.name.toLowerCase()}</a><a class="btn btn--ghost" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a></div></div></article>`;
+   <div class="actions"><a class="btn" href="${areaUrl(c)}">Explore ${c.name.toLowerCase()}</a><a class="btn btn--ghost" href="${APPT}">Request an appointment</a></div></div></article>`;
  cTrack.innerHTML=CARE.map(c=>slide(c,1)).join('')+CARE.map(c=>slide(c,0)).join('')+CARE.map(c=>slide(c,1)).join('');
  const cSlides=[...cTrack.children];
  const sizeSlides=()=>{const wr=cView.parentElement,cs=getComputedStyle(wr);cView.style.setProperty('--slideW',(wr.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight))+'px')};
@@ -255,7 +255,7 @@ if(PAGE==='doctor'){
    <h1>${esc(d.n)}</h1>
    <p class="lede bio">${esc(d.b)}</p>
    <ul class="dr-tags">${d.d.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
-   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Book an appointment ${arrow}</a><a class="btn btn--ghost" href="#d-referral">How to book</a></div>
+   <div class="actions"><a class="btn" href="${APPT}?doctor=${encodeURIComponent(d.n)}">Book an appointment ${arrow}</a><a class="btn btn--ghost" href="#d-referral">How to book</a></div>
   </div>
   <div class="dr-visual">
    <svg class="dr-ecg" viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 H230 l12 0 l9 -12 l9 12 l10 0 l9 22 l15 -70 l14 64 l9 -16 l12 0 l12 -6 l12 6 H600"/></svg>
@@ -315,7 +315,7 @@ if(PAGE==='location'){
    <h1>${l.n}</h1>
    <p class="venue">${esc(l.v)}</p>
    <p class="addr">${esc(l.a)}, ${esc(l.sub)}</p>
-   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="${maps(l)}" target="_blank" rel="noopener">Get directions ${arrow}</a></div>
+   <div class="actions"><a class="btn" href="${APPT}">Request an appointment</a><a class="btn btn--ghost" href="${maps(l)}" target="_blank" rel="noopener">Get directions ${arrow}</a></div>
   </div>
   <figure class="lc-photo" style="margin:0"><img src="${IMG(l.img)}" alt="Street view of the ${esc(l.n)} clinic at ${esc(l.a)}" width="1200" height="1200">
    ${l.main?`<span class="status glass ${isOpen?'open':''}"><i></i>${isOpen?'Open now · until 5:00 pm':'Closed now · opens 9:00 am weekdays'}</span>`:''}</figure>
@@ -375,7 +375,7 @@ const ctaTile=(eb,t,p,btns)=>{const el=document.createElement('div');el.classNam
    ${strip([['team',DOCS.length+' specialists'],['pin','7 clinics, Highett to Inverloch'],['pulse','6 areas of cardiac care']])}</div>
    ${feature(PG.about,'hero-consult','About us','Professional &amp; personal care','Our approach')}`,
   contact:`<div class="mega-main"><div class="mega-head"><b>Get in touch</b><a href="${PG.contact}">Contact page &rarr;</a></div>
-   <div class="mm-tiles">${tile(APPT,'cal','Book online','Request a time. We reply within 24 hours.',1,1)}${tile('tel:0390706116','phone','Call us','03 9070 6116 for urgent appointments.')}${tile('mailto:reception@totalcardiovascularcare.com.au','mail','Email','General enquiries to our reception team.')}${tile(PG.contact+'#feedback','chat','Feedback','Tell us how we did, good or bad.')}</div>
+   <div class="mm-tiles">${tile(APPT,'cal','Book online','Request a time. We reply within 24 hours.',0,1)}${tile('tel:0390706116','phone','Call us','03 9070 6116 for urgent appointments.')}${tile('mailto:reception@totalcardiovascularcare.com.au','mail','Email','General enquiries to our reception team.')}${tile(PG.contact+'#feedback','chat','Feedback','Tell us how we did, good or bad.')}</div>
    ${strip([['pin','Main rooms: 11 Hastings Road, Frankston'],['cal','Monday to Friday, 9:00 am – 5:00 pm']])}</div>
    ${feature(PG.locations,'tcc_banner_9','Visit us','Seven clinics near you','Find a clinic')}`
  };
@@ -394,7 +394,7 @@ const ctaTile=(eb,t,p,btns)=>{const el=document.createElement('div');el.classNam
 if(PAGE==='doctors'){
  const fBox=$('docFilters'),grid=$('docGrid');
  fBox.innerHTML=DFILTERS.map(([k,l],i)=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
- const render=f=>{const list=docsIn(f);grid.innerHTML=list.map(docCard).join('');fillRow(grid,ctaTile('Not sure who to see?','We can match you with the right specialist','Request an appointment and our team will book you with a doctor suited to your referral and symptoms.',`<a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="tel:0390706116">Call 03 9070 6116</a>`));$('docCount').textContent=list.length+(list.length===1?' doctor':' doctors');fBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===f));};
+ const render=f=>{const list=docsIn(f);grid.innerHTML=list.map(docCard).join('');fillRow(grid,ctaTile('Not sure who to see?','We can match you with the right specialist','Request an appointment and our team will book you with a doctor suited to your referral and symptoms.',`<a class="btn" href="${APPT}">Request an appointment</a><a class="btn btn--ghost" href="tel:0390706116">Call 03 9070 6116</a>`));$('docCount').textContent=list.length+(list.length===1?' doctor':' doctors');fBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===f));};
  fBox.addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){render(b.dataset.f);history.replaceState(null,'',b.dataset.f==='all'?location.pathname:'#f-'+b.dataset.f)}});
  const fromHash=()=>{const m=location.hash.match(/^#f-([a-z]+)$/);render(m&&DFILTERS.some(x=>x[0]===m[1])?m[1]:'all');};
  addEventListener('hashchange',fromHash);fromHash();
@@ -410,7 +410,7 @@ if(PAGE==='services'){
    <div class="svc-row-body"><span class="eyebrow">${String(i+1).padStart(2,'0')} / 06</span><h2>${c.name}</h2><p class="lede">${c.blurb}</p>
     <ul class="proc-list">${c.items.map(it=>c.link&&c.link[it]?`<li><a href="${c.link[it]}">${it}<span>Patient guide &rarr;</span></a></li>`:`<li>${it}</li>`).join('')}</ul>
     <div class="svc-team">${avatars(team)}<span>${team.length} specialist${team.length===1?'':'s'} in this area</span></div>
-    <div class="actions"><a class="btn btn--ink" href="${areaUrl(c)}">Explore ${c.name.toLowerCase()} ${arrow}</a><a class="btn btn--ghost" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a></div></div>
+    <div class="actions"><a class="btn btn--ink" href="${areaUrl(c)}">Explore ${c.name.toLowerCase()} ${arrow}</a><a class="btn btn--ghost" href="${APPT}">Request an appointment</a></div></div>
   </section>`;}).join('');
 }
 
@@ -425,7 +425,7 @@ if(PAGE==='locations'){
   <a class="loc-card-img" href="${locUrl(l.s)}" tabindex="-1" aria-hidden="true"><img src="${IMG(l.img)}" alt="" loading="lazy" width="1200" height="1200">${l.main?'<span class="tag glass">Main rooms</span>':''}</a>
   <div class="loc-card-body"><span class="eyebrow">${l.pc}</span><h3>${l.n}</h3><p><b>${esc(l.v)}</b><br>${esc(l.a)}, ${esc(l.sub)}</p>
   <div class="loc-card-links"><a href="${locUrl(l.s)}">Clinic details &rarr;</a><a href="${maps(l)}" target="_blank" rel="noopener">Directions</a></div></div></article>`).join('');
- fillRow($('locGrid'),ctaTile('Not sure which clinic?','We will find the closest appointment','All seven clinics are booked through our main rooms in Frankston. Tell us where you live and we will suggest the nearest clinic with availability.',`<a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="tel:0390706116">Call 03 9070 6116</a>`));
+ fillRow($('locGrid'),ctaTile('Not sure which clinic?','We will find the closest appointment','All seven clinics are booked through our main rooms in Frankston. Tell us where you live and we will suggest the nearest clinic with availability.',`<a class="btn" href="${APPT}">Request an appointment</a><a class="btn btn--ghost" href="tel:0390706116">Call 03 9070 6116</a>`));
 }
 
 /* ---------- Referrers ---------- */
@@ -446,10 +446,10 @@ if(PAGE==='area'){
  const GKA={general:null,interventional:'interventional',structural:'interventional',imaging:'imaging',hf:'hf',rhythm:'rhythm'};
  const team=c.k==='general'?DOCS.filter(d=>/general cardiolog/i.test(d.d.join(' '))):docsIn(GKA[c.k]);
  $('areaRail').innerHTML=team.map(docCard).join('');
- fillRow($('areaRail'),ctaTile('Not sure who to see?','We will match you with the right specialist',`Request an appointment and our team will book you with a doctor experienced in ${c.name.toLowerCase()}.`,`<a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="${PG.doctors}">All doctors</a>`));
+ fillRow($('areaRail'),ctaTile('Not sure who to see?','We will match you with the right specialist',`Request an appointment and our team will book you with a doctor experienced in ${c.name.toLowerCase()}.`,`<a class="btn" href="${APPT}">Request an appointment</a><a class="btn btn--ghost" href="${PG.doctors}">All doctors</a>`));
  $('areaCount').textContent=String(team.length).padStart(2,'0');
  $('areaOthers').innerHTML=CARE.filter(x=>x.k!==c.k).map(areaCard).join('');
- fillRow($('areaOthers'),ctaTile('Not sure which service you need?','Start with a consultation','A cardiology consultation is the usual first step. Your specialist will recommend any tests or procedures you need.',`<a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="${PG.services}">All services</a>`));
+ fillRow($('areaOthers'),ctaTile('Not sure which service you need?','Start with a consultation','A cardiology consultation is the usual first step. Your specialist will recommend any tests or procedures you need.',`<a class="btn" href="${APPT}">Request an appointment</a><a class="btn btn--ghost" href="${PG.services}">All services</a>`));
  /* opening a procedure from the jump links or a #hash */
  const openHash=()=>{const el=location.hash&&document.getElementById(location.hash.slice(1));if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView({block:'start'})}};
  addEventListener('hashchange',openHash);openHash();
@@ -471,6 +471,62 @@ if(PAGE==='area'){
   list.addEventListener('scroll',()=>requestAnimationFrame(sync),{passive:true});addEventListener('resize',sync);sync();
  });
 })();
+
+/* ---------- Forms (preview: validate + confirm, nothing is sent) ---------- */
+const MSG={valueMissing:'Please fill in this field.',typeMismatch:'Please enter a valid email address.',patternMismatch:'Please check the format of this field.'};
+const fieldMsg=el=>{const v=el.validity;if(el.type==='checkbox'&&v.valueMissing)return 'Please tick this box to continue.';if(el.type==='date'&&v.valueMissing)return 'Please enter your date of birth.';for(const k in MSG)if(v[k])return MSG[k];return el.validationMessage};
+function validate(scope){
+ let first=null;
+ scope.querySelectorAll('input,select,textarea').forEach(el=>{
+  const box=el.closest('.f')||el.parentElement;let err=box.querySelector('.f-msg');
+  if(!el.checkValidity()){if(!err){err=document.createElement('small');err.className='f-msg';box.appendChild(err)}err.textContent=fieldMsg(el);el.setAttribute('aria-invalid','true');box.classList.add('f--bad');if(err.id===''){err.id='e-'+Math.random().toString(36).slice(2,8)}el.setAttribute('aria-describedby',err.id);first=first||el;}
+  else{if(err)err.remove();el.removeAttribute('aria-invalid');box.classList.remove('f--bad')}
+ });
+ if(first){first.focus({preventScroll:true});first.scrollIntoView({block:'center',behavior:'smooth'})}
+ return !first;
+}
+document.querySelectorAll('.tcc-form').forEach(form=>{
+ form.addEventListener('input',e=>{const box=e.target.closest('.f');if(box&&box.classList.contains('f--bad')&&e.target.checkValidity()){box.classList.remove('f--bad');box.querySelector('.f-msg')?.remove();e.target.removeAttribute('aria-invalid')}});
+ form.addEventListener('change',e=>{const box=e.target.closest('.f');if(box&&box.classList.contains('f--bad')&&e.target.checkValidity()){box.classList.remove('f--bad');box.querySelector('.f-msg')?.remove();e.target.removeAttribute('aria-invalid')}});
+});
+const fillClinics=sel=>{if(sel)sel.insertAdjacentHTML('beforeend',LOCS.map(l=>`<option value="${l.n}">${l.n} · ${esc(l.v)}</option>`).join(''))};
+
+if(PAGE==='appointment'){
+ const form=$('apForm'),steps=[...form.querySelectorAll('.ap-step')],tabsEl=[...$('apTabs').children];
+ fillClinics($('ap-loc'));
+ $('ap-doc').insertAdjacentHTML('beforeend',DOCS.map(d=>`<option value="${esc(d.n)}">${esc(d.n)} · ${esc(d.t)}</option>`).join(''));
+ const SERVICES=['Review by a cardiologist','Transthoracic echocardiogram','Stress echocardiogram','Dobutamine stress echocardiogram','Contrast echocardiogram','ECG','24-hour Holter monitor','3-day Holter monitor','7-day Holter monitor','24-hour blood pressure monitor'];
+ $('apServices').innerHTML=SERVICES.map((s,i)=>`<label><input type="checkbox" name="services" value="${s}"><span>${s}</span></label>`).join('');
+ const pre=new URLSearchParams(location.search);const dr=pre.get('doctor');if(dr){const o=[...$('ap-doc').options].find(o=>o.value===dr);if(o)o.selected=true}
+ let cur=0;
+ const show=i=>{cur=i;steps.forEach((s,j)=>s.hidden=j!==i);tabsEl.forEach((t,j)=>{t.classList.toggle('on',j===i);t.classList.toggle('done',j<i)});$('apBar').style.width=((i+1)/steps.length*100)+'%';$('apBack').hidden=i===0;$('apNext').hidden=i===steps.length-1;$('apSubmit').hidden=i!==steps.length-1;if(i===steps.length-1)review();form.scrollIntoView({block:'start',behavior:'smooth'})};
+ const val=n=>form.elements[n]?.value?.trim()||'';
+ function review(){const svc=[...form.querySelectorAll('[name=services]:checked')].map(x=>x.value);
+  $('apReview').innerHTML=`<h4>Check your details</h4><dl>
+   <div><dt>Patient</dt><dd>${esc(val('first_name')+' '+val('last_name'))}${val('dob')?' · born '+esc(new Date(val('dob')).toLocaleDateString('en-AU')):''}</dd></div>
+   <div><dt>Contact</dt><dd>${esc(val('phone'))}<br>${esc(val('email'))}</dd></div>
+   <div><dt>Clinic</dt><dd>${esc(val('location')||'Not selected')}</dd></div>
+   <div><dt>Doctor</dt><dd>${esc(val('doctor')||'No preference')}</dd></div>
+   <div><dt>Services</dt><dd>${svc.length?esc(svc.join(', ')):'Not specified'}</dd></div></dl>
+   <button type="button" class="ap-edit" data-go="0">Edit details</button>`;}
+ form.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)show(+g.dataset.go)});
+ $('apNext').addEventListener('click',()=>{if(validate(steps[cur]))show(cur+1)});
+ $('apBack').addEventListener('click',()=>show(cur-1));
+ tabsEl.forEach((t,j)=>t.addEventListener('click',()=>{if(j<cur)show(j)}));
+ form.addEventListener('submit',e=>{e.preventDefault();if(!validate(steps[cur]))return;
+  form.querySelectorAll('.ap-step,.ap-nav,.ap-tabs,.ap-progress,.f-preview').forEach(x=>x.hidden=true);
+  $('apDoneText').textContent=`Thank you, ${val('first_name')}. Our team will call you on ${val('phone')} within 24 hours to arrange your appointment${val('location')?' at '+val('location'):''}.`;
+  const d=$('apDone');d.hidden=false;d.focus();d.scrollIntoView({block:'center',behavior:'smooth'});});
+ show(0);
+}
+if(PAGE==='contact'){
+ const form=$('msgForm');fillClinics($('m-loc'));
+ document.querySelectorAll('[data-msg-type]').forEach(a=>a.addEventListener('click',()=>{const r=form.querySelector(`[name=type][value="${a.dataset.msgType}"]`);if(r)r.checked=true;setTimeout(()=>$('m-first').focus({preventScroll:true}),400)}));
+ form.addEventListener('submit',e=>{e.preventDefault();if(!validate(form))return;
+  [...form.children].forEach(c=>{if(!c.classList.contains('f-done'))c.hidden=true});
+  const d=form.querySelector('.f-done');d.hidden=false;d.focus();});
+ form.querySelector('[data-form-reset]').addEventListener('click',()=>{form.reset();[...form.children].forEach(c=>c.hidden=c.classList.contains('f-done')||c.classList.contains('f-error'));});
+}
 
 /* ---------- Shared behaviour ---------- */
 document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(!b)return;const t=b.dataset.copy,o=b.textContent;
@@ -502,7 +558,7 @@ const drawer=$('mDrawer');
     +row(PG.about+'#team',ic('team'),'Support team','Nurses and administration')
     +row('https://totalcardiovascularcare.com.au/faqs/',ic('info'),'FAQs','Common questions',1)],
   ['contact','Contact','Book, call or visit',PG.contact,'Contact page',
-    row(APPT,ic('cal'),'Book online','Reply within 24 hours',1)
+    row(APPT,ic('cal'),'Book online','Reply within 24 hours')
     +row('tel:0390706116',ic('phone'),'Call us','03 9070 6116')
     +row('mailto:reception@totalcardiovascularcare.com.au',ic('mail'),'Email','General enquiries')
     +row(PG.contact+'#feedback',ic('chat'),'Feedback','Tell us how we did')]
@@ -516,7 +572,7 @@ const drawer=$('mDrawer');
    </div></div>
   </div>`).join('')}
   <div class="m-foot">
-   <a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>
+   <a class="btn" href="${APPT}">Request an appointment</a>
    <a class="btn btn--ghost" href="tel:0390706116">${ICON.phone} Call 03 9070 6116</a>
    <p>${ICON.pin}<span>Main rooms: 11 Hastings Road, Frankston VIC 3199<br>Monday to Friday, 9:00 am – 5:00 pm</span></p>
   </div></nav>`;
