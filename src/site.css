@@ -990,3 +990,15 @@ html.menu-lock,html.menu-lock body{overflow:hidden}
 .m-toggle .m-chev{width:13px;height:13px;display:block;margin:0}
 .m-group.open .m-toggle{background:var(--ink);border-color:var(--ink)}
 .m-row:hover .m-toggle{border-color:var(--ink)}
+
+/* Meet our doctors: touch layout (filters as swipe row, count + arrows on one line) */
+@media (max-width:900px){
+  #doctors .doctor-tools{flex-direction:column;align-items:stretch;gap:14px;margin-bottom:22px}
+  #doctors .chips{width:100%;min-width:0;max-width:none;scroll-behavior:smooth;-webkit-mask-image:linear-gradient(to right,#000 0,#000 82%,transparent);mask-image:linear-gradient(to right,#000 0,#000 82%,transparent)}
+  #doctors .rail-ctrl{display:flex;align-items:center;gap:8px;width:100%}
+  #doctors .doctors-count{margin-right:auto;font-size:13px;color:#AEB9CB}
+}
+@media (max-width:700px){
+  #doctors .dc-track .doc{flex-basis:min(78vw,320px)}
+  #doctors .dc-track{gap:12px}
+}

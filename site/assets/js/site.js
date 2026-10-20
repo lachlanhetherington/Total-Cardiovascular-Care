@@ -203,7 +203,7 @@ if(PAGE==='home'){
  view.addEventListener('click',e=>{if(swiped){e.preventDefault();swiped=false}},true);
  view.addEventListener('dragstart',e=>e.preventDefault());
  addEventListener('resize',()=>place(false));
- fBox.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;fBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));renderRail(b.dataset.f)});
+ fBox.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;fBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));if(fBox.scrollWidth>fBox.clientWidth)fBox.scrollTo({left:b.offsetLeft-(fBox.clientWidth-b.offsetWidth)/2,behavior:'smooth'});renderRail(b.dataset.f)});
  setPaused(userPaused);renderRail('all');
 
  $('locList').innerHTML=LOCS.map(locItem).join('');
