@@ -463,7 +463,7 @@ const head=document.querySelector('.site-head'),menuBtn=$('menuBtn');
 /* Mobile drawer: accordion sections built from the same data as the mega menus */
 const drawer=$('mDrawer');
 (function(){
- const chev='<svg class="m-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg>';
+ const chev='<span class="m-toggle" aria-hidden="true"><svg class="m-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 4.5 3 3 3-3"/></svg></span>';
  const go='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
  const row=(href,lead,t,s,ext)=>`<a class="m-item" href="${href}"${ext?' target="_blank" rel="noopener"':''}>${lead}<span><b>${t}</b>${s?`<small>${s}</small>`:''}</span></a>`;
  const ic=k=>`<span class="m-ic">${ICON[k]}</span>`;

@@ -936,11 +936,7 @@ html.menu-lock,html.menu-lock body{overflow:hidden}
 .m-row small{display:block;font-size:13px;color:var(--muted);margin-top:3px}
 .m-group.is-current .m-row b{color:var(--cyan-deep)}
 .m-chev{width:14px;height:14px;flex:none;color:var(--ink);transition:transform .35s var(--ease)}
-.m-row{position:relative}
-.m-row::after{content:"";position:absolute;right:-6px;top:50%;width:36px;height:36px;margin-top:-18px;border-radius:50%;border:1px solid var(--line);transition:background .25s,border-color .25s}
-.m-chev{margin-right:5px;position:relative;z-index:1}
 .m-group.open .m-chev{transform:rotate(180deg)}
-.m-group.open .m-row::after{background:var(--ink);border-color:var(--ink)}
 .m-group.open .m-chev{color:var(--white)}
 .m-sub{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
 .m-group.open .m-sub{grid-template-rows:1fr}
@@ -988,3 +984,9 @@ html.menu-lock,html.menu-lock body{overflow:hidden}
   .care-body h3{font-size:30px}
 }
 @media (max-width:900px){.care-bar{min-width:0}.care-bar .tabs{width:100%;min-width:0}}
+
+/* Drawer toggle: chevron centred inside its own circle */
+.m-toggle{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .25s,border-color .25s}
+.m-toggle .m-chev{width:13px;height:13px;display:block;margin:0}
+.m-group.open .m-toggle{background:var(--ink);border-color:var(--ink)}
+.m-row:hover .m-toggle{border-color:var(--ink)}
