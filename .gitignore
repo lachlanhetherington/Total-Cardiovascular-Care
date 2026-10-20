@@ -1,0 +1,5 @@
+research/
+preview/
+__pycache__/
+.vercel/
+.playwright-cli/

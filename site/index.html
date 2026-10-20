@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Total Cardiovascular Care | Cardiologists in Melbourne, Mornington Peninsula &amp; Bass Coast</title>
+<meta name="description" content="Thirteen specialists and seven clinics across Melbourne, the Mornington Peninsula and the Bass Coast.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="home" data-root="">
+<header class="site-head" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Total Cardiovascular Care home"><img src="assets/img/tcc-logo-navy.webp" alt="Total Cardiovascular Care" width="123" height="54"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#doctors">Doctors</a>
+      <a href="#care">Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#referrers">Referrers</a>
+      <a href="https://totalcardiovascularcare.com.au/about/" target="_blank" rel="noopener">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="head-phone">03 9070 6116</span>
+    <a class="btn btn--sm" href="https://totalcardiovascularcare.com.au/appointment/" target="_blank" rel="noopener">Request appointment</a>
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false">Menu</button>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <span class="eyebrow">Cardiology practice · Victoria</span>
+          <h1 style="margin-top:20px">Professional &amp; personal <em>cardiovascular</em> care</h1>
+        </div>
+        <div class="hero-side">
+          <p class="lede">Thirteen specialists and seven clinics across Melbourne, the Mornington Peninsula and the Bass Coast. Your heart health is our priority.</p>
+          <div class="actions">
+            <a class="btn" href="https://totalcardiovascularcare.com.au/appointment/" target="_blank" rel="noopener">Request an appointment <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a class="btn btn--ghost" href="#locations">Find a clinic</a>
+          </div>
+        </div>
+      </div>
+      <svg class="ecg" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 34 H520 l14 0 l10 -10 l10 10 l12 0 l10 18 l16 -50 l14 46 l10 -14 l12 0 l12 -6 l12 6 H1188"/>
+        <circle cx="1192" cy="34" r="4"/>
+      </svg>
+      <div class="hero-plate-wrap">
+        <div class="hero-plate">
+          <img src="assets/img/tcc_banner_11.webp" alt="A Total Cardiovascular Care cardiologist in conversation with a patient in a consulting room" width="1800" height="1200" fetchpriority="high">
+          <div class="hero-card glass">
+            <span class="dot" aria-hidden="true"></span>
+            <p>Request an appointment online. <span>Our team will contact you within 24 hours. For urgent appointments, call 03 9070 6116.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <dl>
+        <div><dd>13</dd><dt>Specialists</dt></div>
+        <div><dd>07</dd><dt>Clinic locations</dt></div>
+        <div><dd>06</dd><dt>Areas of cardiac care</dt></div>
+        <div><dd>24<small>hrs</small></dd><dt>Callback on online requests</dt></div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="statement">
+    <div class="wrap row">
+      <p id="statement">A comprehensive cardiology practice that puts prevention and lifestyle first, with advanced diagnostics and treatment when you need them.</p>
+      <div class="side">
+        <p>Our experienced team treats a wide range of cardiovascular conditions. Care is personalised to support your long-term wellbeing, using current, evidence-based methods and modern facilities.</p>
+        <a class="btn btn--ghost" href="https://totalcardiovascularcare.com.au/about/" target="_blank" rel="noopener" style="justify-self:start">About the practice</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="care" id="care">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Six areas of care, one practice</h2>
+        <p class="lede">From a first consultation and ECG to valve intervention, your care stays with the same team.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Areas of care" id="careTabs"></div>
+      <div class="care-panel" id="carePanel" role="tabpanel"></div>
+    </div>
+  </section>
+
+  <section id="doctors">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Meet our doctors</h2>
+        <p class="lede">Cardiologists and physicians with focused expertise. Every doctor has their own profile page.</p>
+      </div>
+      <div class="doctor-tools">
+        <div class="chips" id="docFilters" aria-label="Filter doctors"></div>
+        <div class="rail-ctrl">
+          <button type="button" data-rail="-1" aria-label="Previous doctors"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
+          <button type="button" data-rail="1" aria-label="Next doctors"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+        </div>
+      </div>
+      <div class="rail" id="docRail"></div>
+    </div>
+  </section>
+
+  <section id="locations" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Find a clinic near you</h2>
+        <p class="lede">Seven locations from Highett to Inverloch, so specialist care is close to home.</p>
+      </div>
+      <div class="locs">
+        <ul class="loc-list" id="locList"></ul>
+        <figure class="netmap" style="margin:0">
+          <div id="netmapHome"></div>
+          <figcaption><span>Clinic network · positions to scale</span><span>Port Phillip &amp; Western Port</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="referrers" id="referrers">
+    <div class="wrap">
+      <div class="ref-band">
+        <h2>For referring doctors</h2>
+        <div class="copy">
+          <p>We accept referrals from practitioners locally, across Australia and internationally, and work with referring clinicians to meet their requirements and those of their patients.</p>
+          <p style="color:var(--muted)">To arrange a referral, contact our main rooms in Frankston on <span class="mono" style="color:var(--ink)">03 9070 6116</span>.</p>
+          <div class="actions">
+            <a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a>
+            <a class="btn btn--ghost" href="locations/frankston.html">Main rooms details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Take control of your heart health today</h2>
+      </div>
+      <div class="ways">
+        <div class="way">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <h3>Book online</h3>
+          <p>Request an appointment in a few minutes. Our team will contact you within 24 hours to confirm a time.</p>
+          <a class="btn" style="justify-self:start" href="https://totalcardiovascularcare.com.au/appointment/" target="_blank" rel="noopener">Request an appointment</a>
+        </div>
+        <div class="way">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <h3>Call us</h3>
+          <a class="big" href="tel:0390706116">03 9070 6116</a>
+          <p>For urgent appointments, please call to speak with our team directly.</p>
+        </div>
+        <div class="way">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <h3>Visit us</h3>
+          <p>Main rooms at 11 Hastings Road, Frankston, plus six more clinics across the region.</p>
+          <a href="#locations">See all locations &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="about">
+        <a class="logo" href="index.html"><img src="assets/img/tcc-logo.webp" alt="Total Cardiovascular Care" width="132" height="58"></a>
+        <p>A comprehensive cardiology practice dedicated to helping patients achieve optimal heart health.</p>
+        <a class="btn" style="justify-self:start" href="https://totalcardiovascularcare.com.au/appointment/" target="_blank" rel="noopener">Request an appointment</a>
+      </div>
+      <div><h4>Care</h4><ul id="footCare"></ul></div>
+      <div><h4>Practice</h4><ul>
+        <li><a href="#doctors">Doctors</a></li><li><a href="#locations">Locations</a></li><li><a href="https://totalcardiovascularcare.com.au/our-team/" target="_blank" rel="noopener">Our team</a></li><li><a href="https://totalcardiovascularcare.com.au/faqs/" target="_blank" rel="noopener">FAQs</a></li><li><a href="#referrers">Referring doctors</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul>
+        <li>11 Hastings Road<br>Frankston VIC 3199</li>
+        <li><a href="tel:0390706116" class="mono">03 9070 6116</a></li>
+        <li style="overflow-wrap:anywhere"><a href="mailto:reception@totalcardiovascularcare.com.au">reception@totalcardiovascularcare.com.au</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span class="emerg">In an emergency, call <b>000</b></span>
+      <span>&copy; Total Cardiovascular Care · <a href="https://totalcardiovascularcare.com.au/privacy-policy/" target="_blank" rel="noopener">Privacy</a> · <a href="https://totalcardiovascularcare.com.au/website-disclaimer/" target="_blank" rel="noopener">Disclaimer</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
