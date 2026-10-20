@@ -93,10 +93,49 @@ if(PAGE==='home'){
  const FILTERS=[['all','All doctors'],['interventional','Interventional & structural'],['imaging','Imaging'],['hf','Heart failure'],['rhythm','Rhythm'],['paeds','Paediatric & fetal'],['physician','Physicians']];
  const fBox=$('docFilters'),rail=$('docRail');
  fBox.innerHTML=FILTERS.map(([k,l],i)=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
- const renderRail=f=>{const list=DOCS.filter(d=>f==='all'||groupsOf(d).includes(f));rail.innerHTML=list.map(docCard).join('');rail.scrollLeft=0;$('docCount').textContent=list.length+(list.length===1?' doctor':' doctors');};
+ /* Doctor carousel: infinite loop (list rendered 3x, index kept in the middle copy),
+    dwell then glide one card; pauses on hover/focus, pause button, swipe, reduced motion = paused */
+ const view=$('docViewport'),pauseBtn=$('docPause'),ctrlBtns=[...document.querySelectorAll('[data-rail]')];
+ const DWELL=3500,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let n=0,idx=0,loop=false,timer=null,userPaused=reduce,hold=false,busy=false;
+ const step=()=>{const c=rail.children[0],c2=rail.children[1];return c&&c2?c2.offsetLeft-c.offsetLeft:0};
+ const place=(anim)=>{rail.classList.toggle('no-anim',!anim);rail.style.transform=`translate3d(${-idx*step()}px,0,0)`;if(!anim)void rail.offsetWidth;};
+ function renderRail(f){
+  const list=DOCS.filter(d=>f==='all'||groupsOf(d).includes(f));n=list.length;
+  $('docCount').textContent=n+(n===1?' doctor':' doctors');
+  rail.innerHTML=list.map(docCard).join('');idx=0;place(false);
+  loop=n>1&&rail.scrollWidth>view.clientWidth+8;
+  if(loop){
+   const real=rail.innerHTML,clone=list.map(docCard).join('').replace(/<a class="doc"/g,'<a class="doc" aria-hidden="true" tabindex="-1"');
+   rail.innerHTML=clone+real+clone;idx=n;place(false);
+  }
+  ctrlBtns.forEach(b=>b.disabled=!loop);pauseBtn.disabled=!loop;
+  schedule();
+ }
+ function go(dir){
+  if(!loop||busy)return;busy=true;idx+=dir;place(true);
+ }
+ rail.addEventListener('transitionend',e=>{
+  if(e.target!==rail)return;busy=false;
+  if(idx>=2*n){idx-=n;place(false)}else if(idx<n){idx+=n;place(false)}
+ });
+ function schedule(){clearTimeout(timer);if(loop&&!userPaused&&!hold&&!document.hidden)timer=setTimeout(()=>{go(1);schedule()},DWELL);}
+ function setPaused(p){userPaused=p;pauseBtn.setAttribute('aria-pressed',p);pauseBtn.setAttribute('aria-label',p?'Play doctor carousel':'Pause doctor carousel');schedule();}
+ pauseBtn.addEventListener('click',()=>setPaused(!userPaused));
+ ctrlBtns.forEach(b=>b.addEventListener('click',()=>{go(+b.dataset.rail);schedule()}));
+ view.addEventListener('mouseenter',()=>{hold=true;schedule()});
+ view.addEventListener('mouseleave',()=>{hold=false;schedule()});
+ view.addEventListener('focusin',()=>{hold=true;schedule()});
+ view.addEventListener('focusout',()=>{hold=false;schedule()});
+ document.addEventListener('visibilitychange',schedule);
+ let sx=null,swiped=false;
+ view.addEventListener('pointerdown',e=>{sx=e.clientX;swiped=false});
+ view.addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;sx=null;if(Math.abs(dx)>40){swiped=true;go(dx<0?1:-1);schedule()}});
+ view.addEventListener('click',e=>{if(swiped){e.preventDefault();swiped=false}},true);
+ view.addEventListener('dragstart',e=>e.preventDefault());
+ addEventListener('resize',()=>place(false));
  fBox.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;fBox.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));renderRail(b.dataset.f)});
- document.querySelectorAll('[data-rail]').forEach(b=>b.addEventListener('click',()=>rail.scrollBy({left:+b.dataset.rail*(rail.clientWidth*.8),behavior:'smooth'})));
- renderRail('all');
+ setPaused(userPaused);renderRail('all');
 
  $('locList').innerHTML=LOCS.map(locItem).join('');
  $('netmapHome').innerHTML=netmap('frankston');

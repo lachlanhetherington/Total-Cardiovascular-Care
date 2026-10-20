@@ -65,11 +65,12 @@
         <div class="chips" id="docFilters" aria-label="Filter doctors"></div>
         <div class="rail-ctrl" style="align-items:center;gap:14px">
           <span class="doctors-count" id="docCount" aria-live="polite"></span>
-          <button type="button" data-rail="-1" aria-label="Previous doctors"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
-          <button type="button" data-rail="1" aria-label="Next doctors"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+          <button type="button" class="dc-pause" id="docPause" aria-pressed="false" aria-label="Pause doctor carousel"><svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg></button>
+          <button type="button" data-rail="-1" aria-label="Previous doctor"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button>
+          <button type="button" data-rail="1" aria-label="Next doctor"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
         </div>
       </div>
-      <div class="rail rail--bleed" id="docRail"></div>
+      <div class="dc-viewport" id="docViewport" role="region" aria-roledescription="carousel" aria-label="Our doctors"><div class="dc-track" id="docRail"></div></div>
     </div>
   </section>
 
