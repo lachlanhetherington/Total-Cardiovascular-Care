@@ -96,6 +96,103 @@ def assemble(body, home, kind=""):
     return body if kind == "contact" else body + contact
 
 
+AREAS = [
+    # key, slug, name, blurb, hero image
+    ("general", "general-cardiology", "General cardiology", "Consultations and everyday diagnostics to assess symptoms, monitor your heart and plan treatment.", "hero-echo"),
+    ("interventional", "interventional-cardiology", "Interventional cardiology", "Catheter-based procedures to image and open narrowed coronary arteries.", "interventional"),
+    ("hf", "heart-failure", "Heart failure", "Long-term management of heart failure, including device therapy and remote pressure monitoring.", "tcc_banner_10"),
+    ("imaging", "cardiac-imaging", "Cardiac imaging", "Detailed pictures of your heart's structure and function to guide diagnosis.", "cardiac-imaging2-1"),
+    ("rhythm", "rhythm-management", "Rhythm management", "Diagnosis and treatment of heart rhythm disorders, from monitoring to ablation.", "hero-scan"),
+    ("structural", "structural-heart", "Structural heart", "Minimally invasive treatment of heart valve and structural problems.", "hero-team"),
+]
+GUIDE = {"Coronary Intervention (Stents)": "coronary-angioplasty.html"}
+
+
+def slugify(t):
+    import re
+    return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+
+
+def render_blocks(blocks):
+    out, ul = [], []
+    def flush():
+        if ul:
+            out.append("<ul>" + "".join(f"<li>{html.escape(x)}</li>" for x in ul) + "</ul>")
+            ul.clear()
+    for kind, text in blocks:
+        if kind == "li":
+            ul.append(text)
+            continue
+        flush()
+        # short title-case lines without closing punctuation are sub-headings on the source site
+        looks_head = kind == "p" and len(text.split()) <= 7 and text[:1].isupper() and not text.rstrip().endswith((".", "!", ";", ",", ":"))
+        out.append(f"<h4>{html.escape(text)}</h4>" if kind == "h" or looks_head else f"<p>{html.escape(text)}</p>")
+    flush()
+    return "\n".join(out)
+
+
+def intro_of(blocks, limit=210):
+    for kind, text in blocks:
+        if kind == "p" and len(text) > 40:
+            cut = text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0] + "…"
+            return cut
+    return ""
+
+
+def area_body(key, slug, name, blurb, img, procs):
+    words = sum(len(t.split()) for p in procs for _, t in p["blocks"])
+    jump = "".join(f'<a href="#{slugify(p["title"])}">{html.escape(p["title"])}</a>' for p in procs)
+    items = []
+    for i, p in enumerate(procs, 1):
+        pid = slugify(p["title"])
+        intro = intro_of(p["blocks"])
+        guide = GUIDE.get(p["title"])
+        if p["blocks"]:
+            body = render_blocks(p["blocks"])
+        else:
+            body = '<p>Ask our team about this service. Call <a class="tel" href="tel:0390706116">03 9070 6116</a> or request an appointment online.</p>'
+        guide_link = f'<a class="btn btn--ghost btn--sm" href="{{R}}services/{guide}">Read the full patient guide &rarr;</a>' if guide else ""
+        items.append(f"""      <details class="pacc" id="{pid}"{' open' if i == 1 else ''}>
+        <summary><span class="pacc-n">{i:02d}</span><span class="pacc-t"><b>{html.escape(p["title"])}</b>{f'<small>{html.escape(intro)}</small>' if intro else ''}</span><span class="pacc-x" aria-hidden="true"></span></summary>
+        <div class="pacc-body prose-s">{body}
+          <div class="pacc-actions"><a class="btn btn--sm" href="{APPT}" target="_blank" rel="noopener">Request an appointment</a>{guide_link}</div>
+        </div>
+      </details>""")
+    return f"""<div class="wrap">
+  <div class="band page-hero">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{R}}index.html">Home</a>/<a href="{{R}}services.html">Services</a>/<span aria-current="page">{html.escape(name)}</span></nav>
+    <div class="ph-grid">
+      <div class="ph-text">
+        <span class="eyebrow">Area of care</span>
+        <h1>{html.escape(name)}</h1>
+        <p class="lede">{html.escape(blurb)}</p>
+        <div class="actions"><a class="btn" href="{APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="#area-team">Our specialists</a></div>
+      </div>
+      <figure class="ph-media"><img src="{{R}}assets/img/{img}.webp" alt="{html.escape(name)} at Total Cardiovascular Care" width="1800" height="1200" fetchpriority="high"></figure>
+    </div>
+    <nav class="jump" aria-label="Procedures in {html.escape(name)}">{jump}</nav>
+  </div>
+  <dl class="dr-facts area-facts">
+    <div><dt>Procedures &amp; tests</dt><dd>{len(procs):02d}</dd></div>
+    <div><dt>Specialists</dt><dd id="areaCount">&nbsp;</dd></div>
+    <div><dt>Clinics</dt><dd>07</dd></div>
+    <div><dt>Bookings</dt><dd><a class="tel" href="tel:0390706116">03 9070 6116</a></dd></div>
+  </dl>
+  <div class="split" id="procedures">
+    <div class="pacc-intro"><h2>Procedures &amp; tests</h2><p class="lede">Select a procedure to read what it involves, how to prepare and what to expect.</p></div>
+    <div class="pacc-list">
+{chr(10).join(items)}
+    </div>
+  </div>
+  <div class="band-ink band-ink--inline" id="area-team"><div class="doctor-tools"><h2>Specialists in {html.escape(name.lower())}</h2><a href="{{R}}doctors.html">All doctors &rarr;</a></div><div class="doc-grid" id="areaRail"></div></div>
+  <div class="split split--full">
+    <div class="doctor-tools"><h2>Other areas of care</h2><a href="{{R}}services.html">All services &rarr;</a></div>
+    <div class="area-grid" id="areaOthers"></div>
+  </div>
+</div>
+"""
+
+
 def page(path, title, desc, kind, body, slug=""):
     depth = len(Path(path).parts) - 1
     r = "../" * depth
@@ -153,6 +250,16 @@ def build():
     ]
     for k, title, desc in INDEX:
         built.append(page(f"{k}.html", title, desc, k, (SRC / "pages" / f"{k}.html").read_text(encoding="utf-8")))
+    procedures = json.loads((SRC / "procedures.json").read_text(encoding="utf-8"))
+    for key, slug, name, blurb, img in AREAS:
+        built.append(page(
+            f"services/{slug}.html",
+            f"{name} | Total Cardiovascular Care",
+            blurb,
+            "area",
+            area_body(key, slug, name, blurb, img, procedures[key]),
+            key,
+        ))
     for d in DOCS:
         built.append(page(
             f"doctors/{d['s']}.html",

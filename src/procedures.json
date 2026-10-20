@@ -1,0 +1,3645 @@
+{
+ "general": [
+  {
+   "title": "Cardiology consultation",
+   "blocks": [
+    [
+     "p",
+     "For patients with heart problems, the initial cardiology consultation and subsequent reviews are essential parts of a diagnostic and medical treatment process. Not only do consultations play an important role in the diagnosis and treatment of a heart condition, they are also crucial in educating the patient on lifestyle changes required to prevent the condition from worsening or to hasten the recovery process."
+    ],
+    [
+     "p",
+     "Lifestyle changes typically include eating the right diet, avoiding certain activities, and maintaining a healthy weight. Cardiology consultations also aid in the early detection of health conditions that would likely lead to heart problems. Not every patient who schedules a consultation actually has a heart condition; some consult a cardiologist as a preventive measure."
+    ],
+    [
+     "p",
+     "When you see us for a cardiology consultation, you may be seen by a cardiac nurse or undergo tests like an ECG. It is helpful if you bring a list of your current medications and/or other medical conditions. You will need a referral to see one of our cardiologists."
+    ]
+   ]
+  },
+  {
+   "title": "ECG (electrocardiogram)",
+   "blocks": [
+    [
+     "p",
+     "To find out how well your heart is working, you may need to have an electrocardiogram (ECG). An ECG is a simple and painless test that measures the electrical activity of your heart. Before an ECG, you may have your hair shaved or skin cleaned so the electrodes stick on your body properly. During an ECG, leads are attached to electrodes – sticky dots – that are placed on your arms, legs and chest."
+    ],
+    [
+     "p",
+     "The leads connect to a machine, which takes the reading. The results of your ECG will be interpreted by a trained doctor or nurse."
+    ]
+   ]
+  },
+  {
+   "title": "Holter Monitoring",
+   "blocks": [
+    [
+     "p",
+     "A Holter monitor is a small, wearable device that keeps track of your heart rhythm. It is a noninvasive test that uses electrodes taped to your chest to check your heart’s rhythm. Your doctor may want you to wear a Holter monitor for one to seven days. During that time, the device records all of your heartbeats."
+    ],
+    [
+     "p",
+     "Your doctor uses information captured on the Holter monitor to figure out if you have a heart rhythm problem. If standard Holter monitoring doesn’t capture your irregular heartbeat, your doctor may suggest an implantable loop recorder."
+    ]
+   ]
+  },
+  {
+   "title": "Blood Pressure Monitoring",
+   "blocks": [
+    [
+     "p",
+     "Ambulatory blood pressure (ABP) monitoring involves measuring blood pressure (BP) at regular intervals (usually every hour) over a 24 hour period while patients undergo normal daily activities, including sleep. The portable monitor is worn on a belt connected to a standard cuff on the upper arm. Your cardiologist will interpret the results and inform you of its findings."
+    ]
+   ]
+  },
+  {
+   "title": "Direct Cardioversion",
+   "blocks": [
+    [
+     "h",
+     "What is it?"
+    ],
+    [
+     "p",
+     "A “DCR” is performed by a cardiologist under sedation administered by an anaesthetist. Once in a gown, we will apply DCR pads to your chest and back. The anaesthetist will then put you to sleep. Once asleep, an electric current (occasionally multiple times) is delivered to your chest to attempt to “revert” your heart back to normal rhythm."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "Do not have anything to eat or drink (other than a sip of water for medications) for at least 6 hours prior to the test."
+    ],
+    [
+     "p",
+     "Please take all regular medications (including blood thinners) including the morning of the test with a small sip of water."
+    ],
+    [
+     "p",
+     "You will need someone to pick you up after the test and to be with you for the rest of that day / evening."
+    ],
+    [
+     "p",
+     "Please continue your blood thinner after the procedure."
+    ],
+    [
+     "h",
+     "How Long Does it Take?"
+    ],
+    [
+     "p",
+     "Total time in the hospital is in the order of 2–3 hours which includes preparation time and recovery time. The “DCR” itself usually takes about 10 minutes."
+    ],
+    [
+     "h",
+     "Why do we do it?"
+    ],
+    [
+     "p",
+     "A “DCR” is performed to attempt to restore your heart to a normal rhythm. It is most commonly performed in an arranged fashion to treat atrial fibrillation or atrial flutter. You may have also heard of the procedure being performed for other more dangerous heart rhythm disturbances in the context of an emergency."
+    ],
+    [
+     "h",
+     "Potential Complications"
+    ],
+    [
+     "p",
+     "Stroke ~0.5–1% risk. This risk is minimised by taking an effective blood thinner – either warfarin, apixaban, rivaroxaban or dabigatran for at least a month prior to the procedure. Alternatively, a transesophageal echo or “TOE” may be performed prior to the test to ensure there are no pre-existing clots prior to the “DCR.”"
+    ],
+    [
+     "p",
+     "Failure of the procedure – unfortunately we cannot successfully revert everyone back to normal rhythm. Occasionally repeat procedures are performed following a change in medication."
+    ],
+    [
+     "p",
+     "Pain at the site of the pads after the procedure – usually settles over 48 hours."
+    ],
+    [
+     "p",
+     "Allergy to the anaesthetic agent."
+    ]
+   ]
+  }
+ ],
+ "interventional": [
+  {
+   "title": "Coronary Angiogram",
+   "blocks": [
+    [
+     "p",
+     "A coronary angiogram is a procedure that uses X-ray imaging to see your heart’s blood vessels. The test is generally done to see if there’s a restriction in blood flow going to the heart."
+    ],
+    [
+     "p",
+     "Coronary angiograms are part of a general group of procedures known as heart (cardiac) catheterizations. Cardiac catheterization procedures can both diagnose and treat heart and blood vessel conditions. A coronary angiogram, which can help diagnose heart conditions, is the most common type of cardiac catheterization procedure."
+    ],
+    [
+     "p",
+     "During a coronary angiogram, a type of dye that’s visible by an X-ray machine is injected into the blood vessels of your heart. The X-ray machine rapidly takes a series of images (angiograms), offering a look at your blood vessels. If necessary, your doctor can open clogged heart arteries (angioplasty) during your coronary angiogram."
+    ],
+    [
+     "p",
+     "Why is it done? Your doctor may recommend that you have a coronary angiogram if you have:"
+    ],
+    [
+     "p",
+     "Symptoms of coronary artery disease, such as chest pain (angina)"
+    ],
+    [
+     "p",
+     "Pain in your chest, jaw, neck or arm that can’t be explained by other tests"
+    ],
+    [
+     "p",
+     "New or increasing chest pain (unstable angina)"
+    ],
+    [
+     "p",
+     "A heart defect you were born with (congenital heart disease)"
+    ],
+    [
+     "p",
+     "Abnormal results on a noninvasive heart stress test"
+    ],
+    [
+     "p",
+     "Other blood vessel problems or a chest injury"
+    ],
+    [
+     "p",
+     "A heart valve problem that requires surgery"
+    ],
+    [
+     "p",
+     "Because there’s a small risk of complications, angiograms aren’t usually done until after noninvasive heart tests have been performed, such as an electrocardiogram, an echocardiogram or a stress test."
+    ],
+    [
+     "p",
+     "Risks As with most procedures done on your heart and blood vessels, a coronary angiogram has some risks, such as radiation exposure from the X-rays used. Major complications are rare, though. Potential risks and complications include:"
+    ],
+    [
+     "p",
+     "Heart attack"
+    ],
+    [
+     "p",
+     "Stroke"
+    ],
+    [
+     "p",
+     "Injury to the catheterized artery"
+    ],
+    [
+     "p",
+     "Irregular heart rhythms (arrhythmias)"
+    ],
+    [
+     "p",
+     "Allergic reactions to the dye or medications used during the procedure"
+    ],
+    [
+     "p",
+     "Kidney damage"
+    ],
+    [
+     "p",
+     "Excessive bleeding"
+    ],
+    [
+     "p",
+     "Infection"
+    ],
+    [
+     "p",
+     "How you prepare In some cases, coronary angiograms are performed on an emergency basis. More commonly, though, they’re scheduled in advance, giving you time to prepare."
+    ],
+    [
+     "p",
+     "Angiograms are performed in the catheterization (cath) lab of a hospital. Your health care team will give you specific instructions and talk to you about any medications you take. General guidelines include:"
+    ],
+    [
+     "p",
+     "Don’t eat or drink anything after midnight before your angiogram."
+    ],
+    [
+     "p",
+     "Take all your medications to the hospital with you in their original bottles. Ask your doctor about whether or not to take your usual morning medications."
+    ],
+    [
+     "p",
+     "If you have diabetes, ask your doctor if you should take insulin or other oral medications before your angiogram."
+    ],
+    [
+     "p",
+     "If you are on blood-thinning medication, this sometimes need to be stopped beforehand. Ask your doctor about your blood thinners."
+    ],
+    [
+     "p",
+     "What you can expect? Before the Procedure"
+    ],
+    [
+     "p",
+     "Before your angiogram procedure starts, your health care team will review your medical history, including allergies and medications you take. You’ll also empty your bladder and change into a hospital gown. You may have to remove contact lenses, eyeglasses, jewelry and hairpins."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "For the procedure, you lie on your back on an X-ray table. X-ray cameras may move over and around your head and chest to take pictures from many angles."
+    ],
+    [
+     "p",
+     "An IV line is inserted into a vein in your arm. You may be given a sedative through the IV to help you relax, as well as other medications and fluids. You’ll be very sleepy and may drift off to sleep during the procedure, but you’ll still be able to be easily awakened to follow any instructions."
+    ],
+    [
+     "p",
+     "Electrodes on your chest monitor your heart throughout the procedure. A blood pressure cuff tracks your blood pressure and another device, a pulse oximeter, measures the amount of oxygen in your blood."
+    ],
+    [
+     "p",
+     "A small amount of hair may be shaved from your groin or arm where a flexible tube (catheter) will be inserted. The area is washed and disinfected and then numbed with an injection of local anesthetic."
+    ],
+    [
+     "p",
+     "Coronary Angiogram"
+    ],
+    [
+     "p",
+     "A small incision is made at the entry site, and a short plastic tube (sheath) is inserted into your artery. The catheter is inserted through the sheath into your blood vessel and carefully threaded to your heart or coronary arteries."
+    ],
+    [
+     "p",
+     "Threading the catheter shouldn’t cause pain, and you shouldn’t feel it moving through your body. Tell your health care team if you have any discomfort."
+    ],
+    [
+     "p",
+     "Dye (contrast material) is injected through the catheter. When this happens, you may have a brief sensation of flushing or warmth. But again, tell your health care team if you feel pain or discomfort."
+    ],
+    [
+     "p",
+     "The dye is easy to see on X-ray images. As it moves through your blood vessels, your doctor can observe its flow and identify any blockages or constricted areas. Depending on what your doctor discovers during your angiogram, you may have additional catheter procedures at the same time, such as a balloon angioplasty or a stent placement to open up a narrowed artery. Sometimes, follow-up procedures are scheduled later the same day or the day after, depending on your clinical need."
+    ],
+    [
+     "p",
+     "Having an angiogram takes about one hour, although it may be longer, especially if combined with other cardiac catheterization procedures. Preparation and post-procedure care can add more time."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "When the angiogram is over, the catheter is removed from your arm or groin and the incision is closed with manual pressure, a clamp or a small plug."
+    ],
+    [
+     "p",
+     "You’ll be taken to a recovery area for observation and monitoring. When your condition is stable, you return to your own room, where you’re monitored regularly."
+    ],
+    [
+     "p",
+     "You’ll need to lie flat for several hours to avoid bleeding if the catheter was inserted in the groin. During this time, pressure may be applied to the incision to prevent bleeding and promote healing."
+    ],
+    [
+     "p",
+     "You may be able to go home the same day, or you may have to remain in the hospital overnight. Drink plenty of fluids to help flush the dye from your body. If you’re feeling up to it, have something to eat."
+    ],
+    [
+     "p",
+     "Ask your health care team when to resume taking medications, bathing or showering, working, and doing other normal activities. Avoid strenuous activities and heavy lifting for several days."
+    ],
+    [
+     "p",
+     "Your puncture site is likely to remain tender for a while. It may be slightly bruised and have a small bump."
+    ],
+    [
+     "p",
+     "Call your doctor’s office if:"
+    ],
+    [
+     "p",
+     "You notice bleeding, new bruising or swelling at the catheter site"
+    ],
+    [
+     "p",
+     "You develop increasing pain or discomfort at the catheter site"
+    ],
+    [
+     "p",
+     "You have signs of infection, such as redness, drainage or fever"
+    ],
+    [
+     "p",
+     "There’s a change in temperature or color of the leg or arm that was used for the procedure"
+    ],
+    [
+     "p",
+     "Weakness or numbness in the leg or arm where the catheter was inserted"
+    ],
+    [
+     "p",
+     "You develop chest pain or shortness of breath"
+    ],
+    [
+     "p",
+     "If the catheter site is actively bleeding and doesn’t stop after you’ve applied pressure to the site, contact 000 or emergency medical services. If the catheter site suddenly begins to swell, contact 000 or emergency medical services."
+    ],
+    [
+     "p",
+     "Results An angiogram can show doctors what’s wrong with your blood vessels. It can:"
+    ],
+    [
+     "p",
+     "Show how many of your coronary arteries are blocked or narrowed by fatty plaques (atherosclerosis)"
+    ],
+    [
+     "p",
+     "Pinpoint where blockages are located in your blood vessels"
+    ],
+    [
+     "p",
+     "Show how much blood flow is blocked through your blood vessels"
+    ],
+    [
+     "p",
+     "Check the results of previous coronary bypass surgery"
+    ],
+    [
+     "p",
+     "Check the blood flow through your heart and blood vessels"
+    ],
+    [
+     "p",
+     "Knowing this information can help your doctor determine what treatment is best for you and how much danger your heart condition poses to your health. Based on your results, your doctor may decide, for instance, that you would benefit from having coronary angioplasty or stenting to help clear clogged arteries. It’s also possible that angioplasty or stenting could be done during your angiogram to avoid needing another procedure."
+    ]
+   ]
+  },
+  {
+   "title": "Coronary Intervention (Stents)",
+   "blocks": [
+    [
+     "h",
+     "Overview"
+    ],
+    [
+     "p",
+     "Coronary angioplasty, also called percutaneous coronary intervention, is a procedure used to open clogged heart arteries. Angioplasty involves temporarily inserting and inflating a tiny balloon where your artery is clogged to help widen the artery."
+    ],
+    [
+     "p",
+     "Angioplasty is often combined with the permanent placement of a small wire mesh tube called a stent to help prop the artery open and decrease its chance of narrowing again. Some stents are coated with medication to help keep your artery open (drug-eluting stents), while others are not (bare-metal stents)."
+    ],
+    [
+     "p",
+     "Angioplasty can improve symptoms of blocked arteries, such as chest pain and shortness of breath. Angioplasty can also be used during a heart attack to quickly open a blocked artery and reduce the amount of damage to your heart."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "Development of Atherosclerosis"
+    ],
+    [
+     "p",
+     "Angioplasty is used to treat a type of heart disease known as atherosclerosis. Atherosclerosis is the slow buildup of fatty plaques in your heart’s blood vessels. Your doctor might suggest angioplasty as a treatment option when medications or lifestyle changes aren’t enough to improve your heart health, or if you have a heart attack, worsening chest pain (angina) or other symptoms."
+    ],
+    [
+     "p",
+     "Angioplasty isn’t for everyone. If the main artery that brings blood to the left side of your heart is narrow, if your heart muscle is weak or if you have multiple diseased blood vessels, then coronary artery bypass surgery may be a better option than angioplasty. In coronary artery bypass surgery, the blocked part of your artery is bypassed using a blood vessel from another part of your body."
+    ],
+    [
+     "p",
+     "If you have diabetes and multiple blockages, your doctor may suggest coronary artery bypass surgery. The decision of angioplasty versus bypass surgery will depend on the extent of your heart disease and overall medical condition."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "Although angioplasty is a less invasive way to open clogged arteries than bypass surgery is, the procedure still carries some risks."
+    ],
+    [
+     "p",
+     "The most common angioplasty risks include:"
+    ],
+    [
+     "li",
+     "Re-narrowing of your artery (restenosis). With angioplasty alone — without stent placement — restenosis happens in about 30 percent of cases. Stents were developed to reduce restenosis. Bare-metal stents reduce the chance of restenosis to about 15 percent, and the use of drug-eluting stents reduces the risk to less than 10 percent."
+    ],
+    [
+     "li",
+     "Blood clots. Blood clots can form within stents even after the procedure. These clots can close the artery, causing a heart attack. It’s important to take aspirin, clopidogrel (Plavix), prasugrel (Effient), ticagrelor (Brilinta) or another medication that helps reduce the risk of blood clots exactly as prescribed to decrease the chance of clots forming in your stent."
+    ],
+    [
+     "li",
+     "Talk to your doctor about how long you’ll need to take these medications. Never discontinue these medications without discussing it with your doctor."
+    ],
+    [
+     "li",
+     "Bleeding. You may have bleeding in your leg or arm where a catheter was inserted. Usually this simply results in a bruise, but sometimes serious bleeding occurs and may require a blood transfusion or surgical procedures."
+    ],
+    [
+     "p",
+     "Other rare risks of angioplasty include:"
+    ],
+    [
+     "li",
+     "Heart attack. Though rare, you may have a heart attack during the procedure."
+    ],
+    [
+     "li",
+     "Coronary artery damage. Your coronary artery may be torn or ruptured (dissected) during the procedure. These complications may require emergency bypass surgery."
+    ],
+    [
+     "li",
+     "Kidney problems. The dye used during angioplasty and stent placement can cause kidney damage, especially in people who already have kidney problems. If you’re at increased risk, your doctor may take steps to try to protect your kidneys, such as limiting the amount of contrast dye and making sure that you’re well-hydrated during the procedure."
+    ],
+    [
+     "li",
+     "Stroke. During angioplasty, a stroke can occur if plaques break loose when the catheters are being threaded through the aorta. Blood clots also can form in catheters and travel to the brain if they break loose. A stroke is an extremely rare complication of coronary angioplasty, and blood thinners are used during the procedure to reduce the risk."
+    ],
+    [
+     "li",
+     "Abnormal heart rhythms. During the procedure, the heart may beat too quickly or too slowly. These heart rhythm problems are usually short-lived, but sometimes medications or a temporary pacemaker is needed."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "Before a scheduled angioplasty, your doctor will review your medical history and do a physical exam. You’ll also have an imaging test called a coronary angiogram to see if your blockages can be treated with angioplasty. A coronary angiogram helps doctors determine if the arteries to your heart are narrowed or blocked."
+    ],
+    [
+     "p",
+     "In a coronary angiogram, liquid dye is injected into the arteries of your heart through a catheter — a long, thin tube that’s fed through an artery from your groin, arm or wrist to arteries in your heart. As the dye fills your arteries, they become visible on X-ray and video, so your doctor can see where your arteries are blocked. If your doctor finds a blockage during your coronary angiogram, it’s possible he or she may decide to perform angioplasty and stenting immediately after the angiogram while your heart is still catheterized."
+    ],
+    [
+     "p",
+     "You’ll receive instructions about eating or drinking before angioplasty. Usually, you’ll need to stop eating or drinking six to eight hours before the procedure is scheduled. Your preparation may be different if you’re already staying at the hospital before your procedure."
+    ],
+    [
+     "p",
+     "Whether the angioplasty is pre-scheduled or done as an emergency, you’ll likely have some routine tests first, including a chest X-ray, electrocardiogram and blood tests."
+    ],
+    [
+     "p",
+     "The night before your procedure, you should:"
+    ],
+    [
+     "li",
+     "Follow your doctor’s instructions about adjusting your current medications before angioplasty. Your doctor may instruct you to stop taking certain medications before angioplasty, such as certain diabetes medications."
+    ],
+    [
+     "li",
+     "Gather all of your medications to take to the hospital with you, including nitroglycerin, if you take it."
+    ],
+    [
+     "li",
+     "Take approved medications with only small sips of water."
+    ],
+    [
+     "li",
+     "Arrange for transportation home. Angioplasty usually requires an overnight hospital stay, and you won’t be able to drive yourself home the next day."
+    ],
+    [
+     "h",
+     "What you Can Expect"
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "Your body isn’t cut open except for a very small incision in the skin over a blood vessel in the leg, arm or wrist through which a small, thin tube (catheter) is threaded and the procedure performed. Angioplasty can take up to several hours, depending on the difficulty and number of blockages and whether any complications arise."
+    ],
+    [
+     "p",
+     "Angioplasty is performed by a heart specialist (cardiologist) and a team of specialized cardiovascular nurses and technicians in a special operating room called a cardiac catheterization laboratory. This room is often called the cath lab."
+    ],
+    [
+     "p",
+     "Angioplasty is commonly performed through an artery in your groin (femoral artery)or an artery in your arm or wrist area (radial artery). Before the procedure, the area is prepared with an antiseptic solution and a sterile sheet is placed over your body."
+    ],
+    [
+     "p",
+     "A local anesthetic is injected to numb the area where the catheter will be inserted. Small electrode pads are placed on your chest to monitor your heart during the procedure."
+    ],
+    [
+     "p",
+     "General anesthesia isn’t needed. You’ll be sedated but awake during the procedure. You’ll receive fluids, medications to relax you and blood-thinning medications (anticoagulants) through an IV catheter. Then, the procedure begins:"
+    ],
+    [
+     "li",
+     "After numbing the incision area, a small needle is used to access an artery in your leg or arm. A small cut is made in the skin."
+    ],
+    [
+     "li",
+     "Your doctor then threads a thin guide wire followed by a catheter into the artery until it reaches the blockage in your heart."
+    ],
+    [
+     "li",
+     "You might feel pressure in the area where the catheter is inserted, but you shouldn’t feel sharp pain. Tell your doctor if you do. You also won’t feel the catheter in your body."
+    ],
+    [
+     "li",
+     "A small amount of dye is injected through the catheter. This helps your doctor look at the blockage on X-ray images called angiograms."
+    ],
+    [
+     "li",
+     "A small balloon at the end of the catheter is inflated, widening the blocked artery. After the artery is stretched, the balloon is deflated and removed. Your doctor might inflate and deflate the balloon several times before it’s removed, stretching the artery a bit more each time."
+    ],
+    [
+     "p",
+     "If you have several blockages, the procedure may be repeated at each blockage. Because the balloon temporarily blocks blood flow to part of your heart, it’s not uncommon to experience chest pain while it’s inflated."
+    ],
+    [
+     "p",
+     "Stent Placement"
+    ],
+    [
+     "p",
+     "Most people who have angioplasty also have a stent placed in their blocked artery during the same procedure. The stent is usually inserted in the artery after it’s widened by the inflated balloon."
+    ],
+    [
+     "p",
+     "The stent supports the walls of your artery to help prevent it from re-narrowing after the angioplasty. The stent looks like a tiny coil of wire mesh."
+    ],
+    [
+     "p",
+     "Coronary Artery Stent"
+    ],
+    [
+     "p",
+     "Here’s what happens:"
+    ],
+    [
+     "li",
+     "The stent, which is collapsed around a balloon at the tip of the catheter, is guided through the artery to the blockage."
+    ],
+    [
+     "li",
+     "At the blockage, the balloon is inflated and the spring-like stent expands and locks into place inside the artery."
+    ],
+    [
+     "li",
+     "The stent stays in the artery permanently to hold it open and improve blood flow to your heart. In some cases, more than one stent may be needed to open a blockage."
+    ],
+    [
+     "li",
+     "Once the stent is in place, the balloon catheter is removed and more images (angiograms) are taken to see how well blood flows through your newly widened artery."
+    ],
+    [
+     "li",
+     "Finally, the guide catheter is removed, and the procedure is completed."
+    ],
+    [
+     "p",
+     "After your stent placement, you may need prolonged treatment with medications, such as aspirin or clopidogrel (Plavix) to reduce the chance of blood clots forming on the stent."
+    ],
+    [
+     "h",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "If you had a non emergency procedure, you’ll probably remain hospitalized one day while your heart is monitored and your medications are adjusted. You generally should be able to return to work or your normal routine the week after angioplasty. If you needed angioplasty and stenting during a heart attack, your hospital stay and recovery period will likely be longer."
+    ],
+    [
+     "p",
+     "When you return home, drink plenty of fluids to help flush your body of the contrast dye. Avoid strenuous exercise and lifting heavy objects for at least a day afterward. Ask your doctor or nurse about other restrictions in activity."
+    ],
+    [
+     "p",
+     "Call your doctor’s office or hospital staff immediately if:"
+    ],
+    [
+     "li",
+     "The site where your catheter was inserted starts bleeding or swelling"
+    ],
+    [
+     "li",
+     "You develop pain or discomfort at the site where your catheter was inserted"
+    ],
+    [
+     "li",
+     "You have signs of infection, such as redness, swelling, drainage or fever"
+    ],
+    [
+     "li",
+     "There’s a change in temperature or color of the leg or arm that was used for the procedure"
+    ],
+    [
+     "li",
+     "You feel faint or weak"
+    ],
+    [
+     "li",
+     "You develop chest pain or shortness of breath"
+    ],
+    [
+     "p",
+     "Blood Thinners"
+    ],
+    [
+     "p",
+     "It’s important that you closely follow your doctor’s recommendations about your treatment with blood-thinning medications — aspirin and clopidogrel or similar medications."
+    ],
+    [
+     "p",
+     "Most people who have undergone angioplasty with or without stent placement will need to take aspirin indefinitely. Those who have had stent placement will need a blood-thinning medication such as clopidogrel for a year or longer in some cases. If you have any questions or if you need non cardiac surgery, talk to your cardiologist before stopping any of these medications."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "Coronary angioplasty greatly increases blood flow through the previously narrowed or blocked coronary artery. Your chest pain generally should decrease, and you may be better able to exercise."
+    ],
+    [
+     "p",
+     "Having angioplasty and stenting doesn’t mean your heart disease goes away. You’ll need to continue healthy lifestyle habits and take medications as prescribed by your doctor."
+    ],
+    [
+     "p",
+     "If your symptoms return, such as chest pain or shortness of breath, or if other symptoms similar to those you had before your procedure recur, contact your doctor. If you have chest pain at rest or pain that doesn’t respond to nitroglycerin, call 000 or emergency medical help."
+    ],
+    [
+     "p",
+     "To keep your heart healthy after angioplasty, you should:"
+    ],
+    [
+     "li",
+     "Quit smoking"
+    ],
+    [
+     "li",
+     "Lower your cholesterol levels"
+    ],
+    [
+     "li",
+     "Maintain a healthy weight"
+    ],
+    [
+     "li",
+     "Control other conditions, such as diabetes and high blood pressure"
+    ],
+    [
+     "li",
+     "Get regular exercise"
+    ],
+    [
+     "p",
+     "Successful angioplasty also means you might not have to undergo a surgical procedure called coronary artery bypass surgery. In a bypass, an artery or a vein is removed from a different part of your body and sewn to the surface of your heart to take over for the blocked coronary artery. This surgery requires an incision in the chest, and recovery from bypass surgery is usually longer and more uncomfortable."
+    ]
+   ]
+  }
+ ],
+ "hf": [
+  {
+   "title": "Heart Failure Consultation",
+   "blocks": []
+  },
+  {
+   "title": "Biventricular Defibrillator",
+   "blocks": [
+    [
+     "p",
+     "An implantable cardioverter-defibrillator (ICD) is placed in your chest to reduce your risk of dying if the lower chambers of your heart (ventricles) go into a dangerous rhythm and stop beating effectively (cardiac arrest)."
+    ],
+    [
+     "p",
+     "You might need an ICD if you have a dangerously fast heartbeat (ventricular tachycardia) or a chaotic heartbeat that keeps your heart from supplying enough blood to the rest of your body (ventricular fibrillation)."
+    ],
+    [
+     "p",
+     "ICDs detect and stop abnormal heartbeats (arrhythmias). The device continuously monitors your heartbeat and delivers electrical pulses to restore a normal heart rhythm when necessary."
+    ],
+    [
+     "p",
+     "An ICD differs from a pacemaker — another implantable device used to help control abnormal heart rhythms."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "You’ve likely seen TV shows in which hospital workers “shock” an unconscious person out of cardiac arrest with electrified paddles. An ICD does the same thing only internally and automatically when it detects an abnormal heart rhythm."
+    ],
+    [
+     "p",
+     "An ICD is surgically placed under your skin, usually below your left collarbone. One or more flexible, insulated wires (leads) run from the ICD through your veins to your heart."
+    ],
+    [
+     "p",
+     "Because the ICD constantly monitors for abnormal heart rhythms and instantly tries to correct them, it helps treat cardiac arrest, even when you are far from the nearest hospital."
+    ],
+    [
+     "p",
+     "How an ICD works"
+    ],
+    [
+     "p",
+     "When you have a rapid heartbeat, the wires from your heart to the device transmit signals to the ICD, which sends electrical pulses to regulate your heartbeat. Depending on the problem with your heartbeat, your ICD could be programmed for the following therapies:"
+    ],
+    [
+     "li",
+     "Low-energy pacing therapy. You may feel nothing or a painless fluttering in your chest when your ICD responds to mild disruptions in your heartbeat."
+    ],
+    [
+     "li",
+     "Defibrillation therapy. This is the strongest form of electrical therapy used to restore a normal heartbeat. During this therapy, it may feel as if you’re being kicked in the chest, and it might knock you off your feet."
+    ],
+    [
+     "li",
+     "The pain from this therapy usually lasts only a second. There should be no discomfort after the shock ends."
+    ],
+    [
+     "p",
+     "An ICD can also be programmed to perform other functions, which include:"
+    ],
+    [
+     "li",
+     "Antitachycardia. If you have an unusually fast heart rate, the ICD delivers painless, low-energy impulses that pace or stimulate the heart to beat normally. This can prevent the need for cardioversion or defibrillation."
+    ],
+    [
+     "li",
+     "Pacemaker. Most modern ICDs can also function as a pacemaker, delivering low-energy impulses that stimulate the heart to beat normally."
+    ],
+    [
+     "li",
+     "Recording heart activity. The ICD records information about variations in your heart’s electrical activity and rhythm. This information helps your doctor evaluate your heart rhythm problem and, if necessary, reprogram your ICD."
+    ],
+    [
+     "h",
+     "Subcutaneous ICD"
+    ],
+    [
+     "p",
+     "Subcutaneous Implantable Cardioverter-Defibrillator (S-ICD)"
+    ],
+    [
+     "p",
+     "A subcutaneous ICD (S-ICD), a newer type of ICD, is available at Total Cardiovascular Care. An S-ICD is implanted under the skin at the side of the chest below the armpit. It’s attached to an electrode that runs along your breastbone. You may be a candidate for this device if you have structural defects in your heart that prevent attaching wires to the heart your blood vessels, or if you have other reasons for wanting to avoid traditional ICDs."
+    ],
+    [
+     "p",
+     "Implanting a subcutaneous ICD is less invasive than an ICD that attaches to the heart, but the device is larger in size than an ICD."
+    ],
+    [
+     "p",
+     "Who needs an ICD?"
+    ],
+    [
+     "p",
+     "You’re a candidate for an ICD if you’ve had sustained ventricular tachycardia, survived a cardiac arrest, or fainted from a ventricular arrhythmia. You might also benefit from an ICD if you have:"
+    ],
+    [
+     "li",
+     "A history of coronary artery disease and heart attack that has weakened your heart."
+    ],
+    [
+     "li",
+     "A heart condition that involves abnormal heart muscle, such as enlarged (dilated cardiomyopathy) or thickened (hypertrophic cardiomyopathy) heart muscle."
+    ],
+    [
+     "li",
+     "An inherited heart defect that makes your heart beat abnormally. These include long QT syndrome, which can cause ventricular fibrillation and death even in young people with no signs or symptoms of heart problems."
+    ],
+    [
+     "li",
+     "Having other rare conditions such as Brugada syndrome and arrhythmogenic right ventricular dysplasia also may mean you need an ICD."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "Risks associated with ICD implantation are uncommon but may include:"
+    ],
+    [
+     "li",
+     "Infection at the implant site"
+    ],
+    [
+     "li",
+     "Allergic reaction to the medications used during the procedure"
+    ],
+    [
+     "li",
+     "Swelling, bleeding or bruising where your ICD was implanted"
+    ],
+    [
+     "li",
+     "Damage to the vein where your ICD leads are placed"
+    ],
+    [
+     "li",
+     "Bleeding around your heart, which can be life-threatening"
+    ],
+    [
+     "li",
+     "Blood leaking through the heart valve where the ICD lead is placed"
+    ],
+    [
+     "li",
+     "Collapsed lung (pneumothorax)"
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "To determine whether you need an ICD, your doctor might perform a variety of diagnostic tests, which may include:"
+    ],
+    [
+     "li",
+     "Electrocardiography (ECG). In this non-invasive test, sensor pads with wires attached (electrodes) are placed on your chest and sometimes limbs to measure your heart’s electrical impulses. Your heart’s beating pattern can offer clues to the type of irregular heartbeat you have."
+    ],
+    [
+     "li",
+     "Echocardiography. This non-invasive test uses harmless sound waves that allow your doctor to see your heart without making an incision. During the procedure, a small, plastic instrument called a transducer is placed on your chest. It collects reflected sound waves (echoes) from your heart and transmits them to a machine that uses the sound wave patterns to compose images of your beating heart on a monitor. These images show how well your heart is functioning, and recorded images allow your doctor to measure the size and thickness of your heart muscle."
+    ],
+    [
+     "li",
+     "Holter Monitoring. Also known as an ambulatory electrocardiogram monitor, a Holter monitor records your heart rhythm for 24 hours. Wires from electrodes on your chest go to a battery-operated recording device carried in your pocket or worn on a belt or shoulder strap. While wearing the monitor, you’ll keep a diary of your activities and symptoms. Your doctor will compare the diary with the electrical recordings and try to figure out the cause of your symptoms."
+    ],
+    [
+     "li",
+     "Electrophysiology study (EPS). Electrodes are guided through blood vessels to your heart and used to test the function of your heart’s electrical system. This can identify whether you have or might develop heart rhythm problems."
+    ],
+    [
+     "p",
+     "It’s likely you’ll be asked not to eat or drink for at least six hours before your surgery. Talk to your doctor about the medications you take and whether you should continue to take them before your procedure to implant an ICD."
+    ],
+    [
+     "h",
+     "What Can You Expect?"
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "Implantable Cardioverter Defibrillator"
+    ],
+    [
+     "p",
+     "Usually, the procedure to implant an ICD can be performed with numbing medication and a sedative that relaxes you but allows you to remain aware of your surroundings. In some cases, general anaesthesia, which puts you to sleep, may be used."
+    ],
+    [
+     "p",
+     "The procedure usually takes a few hours. During surgery, one or more flexible, insulated wires (leads) are inserted into veins near your collarbone and guided, with the help of X-ray images, to your heart. The ends of the leads are secured to your heart, while the other ends are attached to the generator, which is usually implanted under the skin beneath your collarbone."
+    ],
+    [
+     "p",
+     "Occasionally, once the ICD is in place, your doctor will test it and program it for your heart rhythm problem. Testing the ICD might require speeding up your heart and then shocking it back into normal rhythm. We usually reserve this test for patients with subcutaneous ICDs."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "You’ll stay in the hospital one or two days, and the ICD might be tested once more before you’re discharged. Additional testing of your ICD usually doesn’t require surgery."
+    ],
+    [
+     "p",
+     "Treating Pain After Your Procedure"
+    ],
+    [
+     "p",
+     "After surgery, you may have some pain in the incision area, which can remain swollen and tender for a few days or weeks. Your doctor might prescribe pain medication. As your pain lessens, you can take pain relievers, such as paracetamol."
+    ],
+    [
+     "p",
+     "When you’re released from the hospital, you’ll need to arrange for a ride home because you won’t be able to drive for at least 2 weeks."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "ICDs have become standard treatment for anyone who has survived cardiac arrest, and they’re increasingly used in people at high risk of sudden cardiac arrest. An ICD lowers your risk of sudden death from cardiac arrest more than medication alone."
+    ],
+    [
+     "p",
+     "Although the electrical shocks can be unsettling, there is evidence that the ICD is effectively treating your heart rhythm problem and protecting you from sudden death. Talk to your doctor about how to best care for your ICD."
+    ],
+    [
+     "p",
+     "After the procedure, you’ll need to take some precautions to avoid injuries and make sure your ICD works properly."
+    ],
+    [
+     "p",
+     "Short-term precautions"
+    ],
+    [
+     "p",
+     "You’ll likely be able to return to normal activities such as exercise, work and sex soon after you recover from surgery. Follow your doctor’s instructions. For four weeks after surgery, your doctor might ask you to refrain from:"
+    ],
+    [
+     "li",
+     "Vigorous above-the-shoulder activities or exercises, including golf, tennis, swimming, bicycling, bowling or vacuuming"
+    ],
+    [
+     "li",
+     "Lifting anything weighing more than 2.5kg"
+    ],
+    [
+     "li",
+     "Playing contact sports"
+    ],
+    [
+     "li",
+     "Strenuous exercise programs"
+    ],
+    [
+     "p",
+     "Long-Term Precautions"
+    ],
+    [
+     "p",
+     "Problems with your ICD due to electrical interference are rare. Still, take precautions with the following:"
+    ],
+    [
+     "li",
+     "Mobile phones and other mobile devices. It’s safe to talk on a mobile phone, but avoid placing your mobile phone within about 15 centimeters of your ICD implantation site when the phone is turned on. Although unlikely, your ICD could mistake a mobile phone’s signal for a heartbeat and slow your heartbeat, causing symptoms such as sudden fatigue."
+    ],
+    [
+     "li",
+     "Security systems. After surgery, you’ll receive a card that says you have an ICD. Show your card to airport personnel because the ICD may set off airport security alarms.Also, hand-held metal detectors often contain a magnet that can interfere with your ICD. Limit scanning with a hand-held detector to less than 30 seconds over the site of your ICD or make a request for a manual search."
+    ],
+    [
+     "li",
+     "Medical equipment. Let doctors, medical technicians and dentists you see know you have an ICD. Some procedures, such as magnetic resonance imaging (MRI), magnetic resonance angiography (MRA), and radiofrequency or microwave ablation are not recommended if you have an ICD."
+    ],
+    [
+     "li",
+     "Power generators. Stand at least 0.6 meters from welding equipment, high-voltage transformers or motor-generator systems. If you work around such equipment, your doctor can arrange a test in your workplace to see if the equipment affects your ICD."
+    ],
+    [
+     "li",
+     "MP3 player headphones. Although the player itself poses little risk, the headphones may be a problem. Most contain a magnetic substance and can interfere with your ICD. Keep your headphones at least 15 centimeters from your ICD."
+    ],
+    [
+     "li",
+     "Magnets. These might affect your ICD, so it’s a good idea to keep magnets at least 15 centimeters from your ICD site."
+    ],
+    [
+     "p",
+     "Devices that pose little or no risk to your ICD include microwave ovens, televisions and remote controls, AM/FM radios, toasters, electric blankets, electric shavers and electric drills, computers, scanners, printers, and GPS devices."
+    ],
+    [
+     "p",
+     "Driving Restrictions"
+    ],
+    [
+     "p",
+     "If you have an ICD to treat ventricular arrhythmia, driving a vehicle presents a challenge. The combination of arrhythmia and shocks from your ICD can cause fainting, which would be dangerous while you’re driving."
+    ],
+    [
+     "p",
+     "The Austroads Fitness to Drive guidelines advise avoiding driving for two weeks after ICD placement, but talk to your doctor for specific recommendations. The guidelines discourage driving during the first six months after your procedure if your ICD was implanted due to a previous cardiac arrest or ventricular arrhythmia."
+    ],
+    [
+     "p",
+     "If you have no shocks during this period, you’ll likely be able to drive again. But if you then have a shock, with or without fainting, tell your doctor and follow his or her recommendations. In most cases, you’ll need to stop driving until you’ve been shock-free for another six months."
+    ],
+    [
+     "p",
+     "If you have an ICD but have no history of life-threatening arrhythmias, you can usually resume driving within two weeks after your procedure if you’ve had no shocks. Discuss your situation with your doctor."
+    ],
+    [
+     "p",
+     "You usually can’t get a commercial driver’s license if you have an ICD."
+    ],
+    [
+     "p",
+     "Battery Life"
+    ],
+    [
+     "p",
+     "The lithium battery in your ICD can last up to seven years. The battery will be checked during regular check-ups, which should occur every three to six months. When the battery is nearly out of power, your old shock generator is replaced with a new one during a minor outpatient procedure."
+    ],
+    [
+     "p",
+     "ICDs and End-of-Life Issues"
+    ],
+    [
+     "p",
+     "If you have an ICD and become terminally ill, your ICD could deliver unnecessary shocks. It’s easy to turn off your ICD, and turning it off may prevent unnecessary suffering."
+    ],
+    [
+     "p",
+     "Talk to your doctor about your wishes. Also talk to family members or another person designated to make medical decisions for you about what you’d like to do in end-of-life care situations."
+    ]
+   ]
+  },
+  {
+   "title": "Pacemaker",
+   "blocks": [
+    [
+     "p",
+     "A pacemaker is a small device with two parts — a generator and wires (leads, or electrodes) — that’s placed under the skin in your chest to help control your heartbeat."
+    ],
+    [
+     "p",
+     "People may need a pacemaker for a variety of reasons — mostly due to one of a group of conditions called arrhythmias, in which the heart’s rhythm is abnormal."
+    ],
+    [
+     "p",
+     "Normal aging of the heart may disrupt your heart rate, making it beat too slowly. Heart muscle damage resulting from a heart attack is another common cause of disruptions of your heartbeat."
+    ],
+    [
+     "p",
+     "Some medications can affect your heart rate as well. For some, genetic conditions cause an abnormal heart rate. Regardless of the underlying cause of an abnormal heart rate, a pacemaker may fix it."
+    ],
+    [
+     "p",
+     "A pacemaker can often be implanted in your chest with a minor surgery. You may need to take some precautions in your daily life after your pacemaker is installed."
+    ],
+    [
+     "h",
+     "Types of Pacemaker"
+    ],
+    [
+     "p",
+     "Cardiac Resynchronization Therapy"
+    ],
+    [
+     "p",
+     "Pacemakers are implanted to help control your heartbeat. They can be implanted temporarily to treat a slow heartbeat after a heart attack, surgery or overdose of medication."
+    ],
+    [
+     "p",
+     "Pacemakers can also be implanted permanently to correct a slow heartbeat (bradycardia) or, in some cases, to help treat heart failure."
+    ],
+    [
+     "p",
+     "Smaller pacemakers about the size of a pill have been developed and are currently undergoing clinical trials. This new, leadless device can be implanted directly into the heart, where it emits an electrical impulse to control the heartbeat. Because a lead isn’t required, this device can minimize the risk of infection and speed recovery time."
+    ],
+    [
+     "p",
+     "How Your Heart Beats"
+    ],
+    [
+     "p",
+     "To understand how a pacemaker works, it helps to know how your heart beats."
+    ],
+    [
+     "p",
+     "The heart is a muscular, fist-sized pump with four chambers, two on the left side and two on the right. The upper chambers are the right and left atria. The lower chambers are the right and left ventricles."
+    ],
+    [
+     "p",
+     "For your heart to function properly, the heart’s chambers must work in a coordinated fashion. Your heart must also beat at an appropriate rate — normally from 60 to 100 beats a minute in resting adults. If your heart beats too slowly or too rapidly, not enough blood flows through your body, leading to fatigue, fainting, shortness of breath, confusion, and other signs and symptoms."
+    ],
+    [
+     "p",
+     "Your heart’s electrical system controls the chambers’ pumping action. A normal heartbeat begins in your right atrium, in the sinus node. This cluster of cells — your natural pacemaker — acts like a spark plug, generating regular electrical impulses that travel through specialized muscle fibres."
+    ],
+    [
+     "p",
+     "When an electrical impulse reaches both the right and left atria, they contract and squeeze blood into the ventricles. After a split-second delay to allow the ventricles to fill, the impulse reaches the ventricles, making them contract and pump blood to the rest of your body."
+    ],
+    [
+     "p",
+     "What a Pacemaker Does"
+    ],
+    [
+     "p",
+     "An implanted electronic pacemaker mimics the action of your natural pacemaker. An implanted pacemaker consists of two parts:"
+    ],
+    [
+     "li",
+     "The pulse generator. This small metal container houses a battery and the electrical circuitry that regulates the rate of electrical pulses sent to your heart."
+    ],
+    [
+     "li",
+     "Leads (electrodes). One to three flexible, insulated wires are each placed in a chamber, or chambers, of your heart and deliver the electrical pulses to adjust your heart rate."
+    ],
+    [
+     "p",
+     "Pacemakers monitor your heartbeat and, if it’s too slow, the pacemaker will speed up your heart rate by sending electrical signals to your heart. In addition, most pacemakers have sensors that detect body motion or breathing rate, which signals the pacemaker to increase your heart rate during exercise to meet your body’s increased need for blood and oxygen."
+    ],
+    [
+     "p",
+     "Single Chamber Pacemaker"
+    ],
+    [
+     "p",
+     "This type of pacemaker usually carries electrical impulses from the pulse generator to the right ventricle of your heart."
+    ],
+    [
+     "p",
+     "Dual Chamber Pacemaker"
+    ],
+    [
+     "p",
+     "A dual chamber pacemaker carries electrical impulses from the pulse generator to both the right ventricle and the right atrium of your heart. The impulses help control the timing of contractions between the two chambers."
+    ],
+    [
+     "p",
+     "Biventricular Pacemaker"
+    ],
+    [
+     "p",
+     "A biventricular pacemaker is a treatment option for people with heart failure whose hearts’ electrical systems have been damaged. Unlike a regular pacemaker, a biventricular pacemaker stimulates both of the lower chambers of the heart (the right and left ventricles) to make the heart beat more efficiently."
+    ],
+    [
+     "p",
+     "A biventricular pacemaker paces both ventricles so that all or most of the ventricular muscle pumps together. This allows your heart to pump blood more effectively. Because this treatment resets the ventricles’ pumping mechanism, it’s also referred to as cardiac resynchronization therapy (CRT)."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "Complications from having surgery to implant your pacemaker are uncommon, but could include:"
+    ],
+    [
+     "li",
+     "Infection where the pacemaker was implanted"
+    ],
+    [
+     "li",
+     "Allergic reaction to the dye or anaesthesia used during your procedure"
+    ],
+    [
+     "li",
+     "Swelling, bruising or bleeding at the generator site, especially if you are taking blood thinners"
+    ],
+    [
+     "li",
+     "Damage to your blood vessels or nerves near the pacemaker"
+    ],
+    [
+     "li",
+     "Collapsed lung"
+    ],
+    [
+     "p",
+     "Life-threatening complications of pacemaker implantation are rare."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "Before your doctor decides if you need a pacemaker, you’ll have several tests done to find out the cause of your irregular heartbeat. These could include:"
+    ],
+    [
+     "li",
+     "Electrocardiogram. In this non-invasive test, sensor pads with wires attached, called electrodes, are placed on your chest and sometimes your limbs to measure your heart’s electrical impulses. Your heart’s beating pattern can offer clues to the type of irregular heartbeat you have."
+    ],
+    [
+     "li",
+     "Holter monitoring. Also known as an ambulatory monitor, a Holter monitor records your heart rhythms for an entire 24-hour period. Wires from electrodes on your chest go to a battery-operated recording device. While you’re wearing the monitor, you’ll keep a diary of your activities and symptoms. Your doctor will compare the diary with the electrical recordings to try to figure out the cause of your symptoms."
+    ],
+    [
+     "li",
+     "Echocardiogram. This non-invasive test uses harmless sound waves that allow your doctor to see your heart without making an incision. During the procedure, a small instrument called a transducer is placed on your chest. It collects reflected sound waves (echoes) from your heart and transmits them to a machine that uses the sound wave patterns to compose images of your beating heart on a monitor. These images show how well your heart is functioning, and recorded pictures allow your doctor to measure the size and thickness of your heart muscle."
+    ],
+    [
+     "li",
+     "Stress test. Some heart problems occur only during exercise. For a stress test, an electrocardiogram is taken before and immediately after walking on a treadmill or riding a stationary bike. In some cases, an echocardiogram or nuclear imaging may be done."
+    ],
+    [
+     "h",
+     "What to Expect"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Surgery to implant the pacemaker is usually performed while you’re awake and typically takes a few hours. Before the procedure, you are taken to a special room (called a preparation room or holding area) to start an intravenous (IV) line."
+    ],
+    [
+     "p",
+     "Most pacemaker implantations are done using local anaesthesia to numb the area of any incisions. You may receive additional IV medication to help you relax. The implantation is done in a room with special X-ray equipment. Your chest is cleaned with an antibacterial soap, and an IV line is placed in your arm on the same side as the pacemaker."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "During surgery, one or more flexible, insulated wires (leads, or electrodes) are inserted into a major vein under or near your collarbone and guided to your heart with the help of X-ray images. One end of each wire is secured to the appropriate position in your heart, while the other end is attached to the pulse generator, which is usually implanted under the skin beneath your collarbone."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "You’ll usually stay in the hospital for one day after having a pacemaker implanted. Before you leave, your pacemaker is programmed to fit your particular pacing needs. A return visit is often scheduled to make sure your pacemaker’s settings are correct."
+    ],
+    [
+     "p",
+     "After that, most pacemakers can be checked remotely using wireless technology. Using your mobile phone or radiofrequency signals, your pacemaker transmits and receives information between you and your doctor’s office, where your doctor can access the data — including your heart rate and rhythm, how your pacemaker is functioning, and remaining battery life."
+    ],
+    [
+     "p",
+     "Remote transmissions can be made at scheduled intervals or at unscheduled times if your pacemaker sends an alert, or you can send a transmission if you have a concern. Remote technology means fewer trips to the doctor’s office, but you’ll still need to be seen by your doctor in person for scheduled check-ups."
+    ],
+    [
+     "p",
+     "After your procedure to implant your pacemaker, your doctor may recommend that you avoid vigorous exercise, heavy lifting or lifting your arms above your shoulders for about six weeks. You may have some aches and pains near the area where your pacemaker was implanted. These pains can be relieved with over-the-counter medicines, such as paracetamol, but talk to your doctor before taking any pain relievers."
+    ],
+    [
+     "p",
+     "Special Precautions"
+    ],
+    [
+     "p",
+     "It’s unlikely that your pacemaker would stop working properly because of electrical interference. Still, you’ll need to take a few precautions:"
+    ],
+    [
+     "li",
+     "Mobile phones. It’s safe to talk on a mobile phone, but avoid placing your mobile phone directly over your pacemaker implantation site when the phone is turned on. Although unlikely, your pacemaker could misinterpret the mobile phone signal as a heartbeat and withhold pacing, producing symptoms, such as sudden fatigue."
+    ],
+    [
+     "li",
+     "Security systems. Passing through an airport metal detector won’t interfere with your pacemaker, although the metal in it may sound the alarm. But avoid lingering near or leaning against a metal-detection system. If security personnel insist on using a hand-held metal detector, ask them not to hold the device near your pacemaker any longer than necessary or ask for an alternative form of personal search. To avoid potential problems, carry an ID card stating that you have a pacemaker."
+    ],
+    [
+     "li",
+     "Medical equipment. If a doctor is considering any medical procedure that involves intensive exposure to electromagnetic energy, tell him or her that you have a pacemaker. Such procedures include magnetic resonance imaging, therapeutic radiation for cancer treatment and shock wave lithotripsy, which uses shock waves to break up large kidney stones or gallstones. If you’re having surgery, a procedure to control bleeding (electrocautery) also can interfere with pacemaker function."
+    ],
+    [
+     "li",
+     "Power-generating equipment. Stand at least 2 feet (60 centimeters) from welding equipment, high-voltage transformers or motor-generator systems. If you work around such equipment, your doctor can arrange a test in your workplace to determine whether it affects your pacemaker."
+    ],
+    [
+     "li",
+     "Devices that are unlikely to interfere with your pacemaker include microwave ovens, televisions and remote controls, radios, toasters, electric blankets, electric shavers, and electric drills."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "Once your pacemaker is implanted, the battery should last five to 15 years, which is the average battery life. When a pacemaker’s battery wears out, the pacemaker’s pulse generator is replaced. The leads of your pacemaker can be left in place — though they may need to be replaced eventually — and the procedure to change your pacemaker’s battery is often quicker and requires less recovery time than the procedure to first implant your pacemaker."
+    ],
+    [
+     "p",
+     "Pacemakers are a standard treatment for many conditions affecting your heart’s electrical system. By preventing a slow heart rate, pacemakers can treat symptoms, such as fatigue, lightheadedness and fainting. Because most of today’s pacemakers automatically adjust your heart rate to match your level of physical activity, they can allow you to resume a more active lifestyle."
+    ],
+    [
+     "p",
+     "Pacemakers and End-of-Life Issues"
+    ],
+    [
+     "p",
+     "If you have a pacemaker and become terminally ill with a condition unrelated to your heart, such as cancer, it’s possible that your pacemaker could prolong the process of dying. Doctors and researchers have varied opinions on turning off a pacemaker in end-of-life situations."
+    ],
+    [
+     "p",
+     "Talk to your doctor if you have a pacemaker and are concerned about turning it off. You may also want to talk to family members or another person designated to make medical decisions for you about what you’d like to do in end-of-life care situations."
+    ]
+   ]
+  },
+  {
+   "title": "CardioMEMS",
+   "blocks": [
+    [
+     "p",
+     "Patients with heart failure are faced with many life-challenging problems. With progression of symptoms, many patients require hospitalization. To help reduce the chance of hospitalizations, cardiologists at Total Cardiovascular Care are using advanced monitoring technology, including the CardioMEMS™ Heart Failure Monitoring System to allow patients to gain control of their heart failure care. We are currently the first and only centre in Australia that commercially implants this device."
+    ],
+    [
+     "h",
+     "What is heart failure?"
+    ],
+    [
+     "p",
+     "Heart failure is when the heart is still working, but it’s not pumping blood as well as it should, so the body isn’t getting the oxygen and nutrients it needs. When blood isn’t pumped out of the heart efficiently, fluid backs up into the lungs and other parts of the body, causing swelling and shortness of breath. It can be a dangerous situation for heart failure patients."
+    ],
+    [
+     "h",
+     "What are the symptoms of worsening heart failure?"
+    ],
+    [
+     "p",
+     "In the early stages, patients may not have any symptoms. But as the heart function worsens, people can have shortness of breath (at rest or with activity), bloating, swelling, weight gain and/or fatigue. If left untreated, many patients require hospitalization to help them get their symptoms under control."
+    ],
+    [
+     "h",
+     "What is CardioMEMS and how does it help?"
+    ],
+    [
+     "p",
+     "CardioMEMS is a TGA-approved heart failure monitoring device that has been proven to improve quality of life and reduce hospital admissions due to worsening heart failure. It lets us keep track of a patient’s heart function, so we can spot early signs that someone with heart failure is getting sicker and treat them without admitting them to the hospital."
+    ],
+    [
+     "h",
+     "How does CardioMEMS work?"
+    ],
+    [
+     "p",
+     "CardioMEMS is a small device, about the size of a paper clip, that is implanted via a catheter (a thin, flexible tube) and permanently resides in a blood vessel. CardioMEMS measures the pressure pushing back on the lungs from the heart to alert you and your doctor earlier that your heart failure may be getting worse."
+    ],
+    [
+     "p",
+     "Nearly automatically, the device transmits information on your fluid retention and heart pressure to us at TCC without the need for the patient to leave their home. Using a specialized pillow, the patient lies down on it for a few minutes each morning, after which the information is transmitted to us electronically. The pillow collects information from the implanted CardioMEMS device and sends it to us. We have a dedicated Heart Failure nurse (Kerry) who can then directly call you to adjust your medicines and other treatments, even before you become aware of a change in symptoms or weight."
+    ],
+    [
+     "h",
+     "How is the device inserted?"
+    ],
+    [
+     "p",
+     "The device is placed using a minimally invasive procedure using a catheter. We make a small nick in the groin and guide the catheter, which carries the CardioMEMS device, through the blood vessels and up to the pulmonary artery. Most people don’t need sedation, and there’s no big incision and no blood loss. People often go home the same day."
+    ],
+    [
+     "h",
+     "How does CardioMEMS improve quality of life?"
+    ],
+    [
+     "p",
+     "Heart failure symptoms like swelling or bloating, shortness of breath and fatigue can make a person less inclined to be active, to socialize or to just go about a normal, everyday life. The CardioMEMS device alerts us to very early signs of worsening disease, so we can make adjustments that help the patient feel well enough to enjoy an improved quality of life."
+    ]
+   ]
+  }
+ ],
+ "imaging": [
+  {
+   "title": "Echocardiogram",
+   "blocks": [
+    [
+     "p",
+     "Echo is a sophisticated ultrasound of the heart. We are required to access your chest for the test. If you have hair on your chest, we may need to shave some off to connect you to an ECG. We then connect the ECG to allow us to capture the pictures appropriately. An ultrasound probe (and gel on the skin) is then used to acquire ultrasound pictures of the heart."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "li",
+     "The cardiac sonographer may ask you questions about your cardiac condition."
+    ],
+    [
+     "li",
+     "Please bring your referral (if you were given one) to the test and give it to the cardiac sonographer."
+    ],
+    [
+     "li",
+     "We will need to access your chest to perform the heart ultrasound – please wear adequate clothing to allow us to do so."
+    ],
+    [
+     "li",
+     "Please do not apply any creams or moisturisers to the chest prior to the test."
+    ],
+    [
+     "h",
+     "How Long Does it Take?"
+    ],
+    [
+     "p",
+     "Anticipate a total of approximately 45 minutes including preparation time."
+    ],
+    [
+     "h",
+     "Why Do We Do It?"
+    ],
+    [
+     "p",
+     "At Total Cardiovascular Care, we have experienced cardiac sonographers, reporting cardiologists who are specialised in cardiac echo, and top-of-the-line equipment."
+    ],
+    [
+     "p",
+     "Echo is used to assess the heart muscle function, the valvular function and the pressures in the heart. We are also able to take various measurements of the heart structures and aorta."
+    ],
+    [
+     "h",
+     "Potential Complications"
+    ],
+    [
+     "p",
+     "None – besides an allergy to the ECG dots used as part of the test."
+    ]
+   ]
+  },
+  {
+   "title": "Stress Echocardiogram",
+   "blocks": [
+    [
+     "p",
+     "An exercise stress test using a sophisticated cardiac echo machine. We initially attached you to an ECG (we may need to shave hair off your chest to do so). We then take detailed ultrasound pictures of the heart before exercise. After the initial cardiac ultrasound, you will be asked to exercise on a treadmill which usually involves a maximum of walking quickly up a hill – the degree of exercise is graded to suit the person’s ability. Please note for ladies, that you will unfortunately not be able to wear a bra, we will make every effort to cover you with a gown provided. After the treadmill, we repeat a limited cardiac ultrasound to compare these images with those taken at rest. In our Bass Coast locations, we use a bike as the form of exercise instead of a treadmill."
+    ],
+    [
+     "p",
+     "We do not require you to be particularly fit – the test is designed to suit the individual’s needs."
+    ],
+    [
+     "p",
+     "After the test, the cardiologist will sit down with you to discuss the results and any additional follow up that is required."
+    ],
+    [
+     "p",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "• Please bring your referral (if you were given one) to the test and give it to a staff member."
+    ],
+    [
+     "p",
+     "• Adequate footwear for walking quickly on a treadmill"
+    ],
+    [
+     "p",
+     "• Although we will provide gowns to cover the chest while exercising – ideally wear shorts / exercise pants from the waist down."
+    ],
+    [
+     "p",
+     "• Be aware we will need access to your chest to perform the ECG component and to take the ultrasound pictures of the heart."
+    ],
+    [
+     "p",
+     "• Please do not apply any creams/moisturisers to the chest prior to the test."
+    ],
+    [
+     "p",
+     "How Long Does It Take?"
+    ],
+    [
+     "p",
+     "Anticipate a total of approximately 45 minutes including preparation time, the test itself and a follow up discussion afterwards about the result. The treadmill/exercise component usually only takes up to approximately 8 minutes."
+    ],
+    [
+     "p",
+     "Why Do We Do It?"
+    ],
+    [
+     "p",
+     "Stress echo is a sophisticated test. At Total Cardiovascular Care we have experienced cardiac sonographers, cardiologists who are specialised in stress echo testing and top of the line equipment."
+    ],
+    [
+     "p",
+     "The test is often utilised to assess for the cause of symptoms like chest pain, breathlessness and dizzy spells. The primary focus is to assess for severe heart (coronary) artery narrowings not by seeing them directly but by assessing the different areas of the heart muscle’s response to exercise. All areas of the heart muscle should increase their pumping function and if they don’t – this may suggest a severe narrowing in the heart artery supplying that particular section of the heart muscle. Besides the heart pumping function, stress echo can also assess for the heart valvular function as well as the pressures in the heart before and after exercise."
+    ],
+    [
+     "p",
+     "Pontential Complications"
+    ],
+    [
+     "p",
+     "The test itself carries no risk more than pushing yourself physically at home. The quoted rate of a major complication, including heart attack, is 1 in 10,000."
+    ]
+   ]
+  },
+  {
+   "title": "Dobutamine Stress Echocardiogram",
+   "blocks": [
+    [
+     "h",
+     "What is it?"
+    ],
+    [
+     "p",
+     "A dobutamine stress echo is a specialised heart ultrasound test. We first attach you to an ECG (shaving some chest hair if needed) and place a drip in your arm. Detailed ultrasound pictures of the heart are taken before giving dobutamine, a medication that makes your heart pump faster and stronger. Once your heart rate is fast enough, we repeat a limited ultrasound to compare the images."
+    ],
+    [
+     "p",
+     "This test is usually performed for patients who cannot exercise on a treadmill."
+    ],
+    [
+     "p",
+     "After the test, the cardiologist will review the results with you and discuss any necessary follow-up."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "li",
+     "Bring your referral (if provided) and give it to a staff member."
+    ],
+    [
+     "li",
+     "We will need access to your chest for the ECG and ultrasound."
+    ],
+    [
+     "li",
+     "Do not apply any creams or moisturisers to your chest before the test."
+    ],
+    [
+     "li",
+     "You may be asked to stop some medications before the test."
+    ],
+    [
+     "h",
+     "How Long Does it Take?"
+    ],
+    [
+     "p",
+     "Expect about 45 minutes in total, including preparation, the test itself, and discussion of results afterwards."
+    ],
+    [
+     "h",
+     "Why Do We Do It?"
+    ],
+    [
+     "p",
+     "At Total Cardiovascular Care, experienced sonographers and cardiologists use top-of-the-line equipment for stress echo testing."
+    ],
+    [
+     "p",
+     "The test helps assess:"
+    ],
+    [
+     "li",
+     "Causes of symptoms such as chest pain, breathlessness, and dizziness."
+    ],
+    [
+     "li",
+     "Severe heart (coronary) artery narrowings by observing the heart muscle’s response to stress."
+    ],
+    [
+     "li",
+     "Heart pumping function, valve function, and pressure changes before and after stress."
+    ],
+    [
+     "p",
+     "If parts of the heart muscle do not increase their pumping function under stress, this may suggest a significant narrowing in the supplying artery."
+    ],
+    [
+     "h",
+     "Potential Complications"
+    ],
+    [
+     "p",
+     "This is a very low-risk procedure, similar to a standard stress test."
+    ],
+    [
+     "li",
+     "Common (3 in 1,000): Chest pain (managed by stopping the test and giving medication)"
+    ],
+    [
+     "li",
+     "Fluid in the lungs (managed by stopping the test and giving medication)"
+    ],
+    [
+     "li",
+     "Abnormal heart rhythm (arrhythmia) – may require treatment or stop of the test"
+    ],
+    [
+     "li",
+     "Less common: Heart attack (~1 in 2,500 people)"
+    ],
+    [
+     "li",
+     "Death (~1 in 10,000 people)"
+    ],
+    [
+     "h",
+     "Important"
+    ],
+    [
+     "p",
+     "Please inform staff before the test if you have:"
+    ],
+    [
+     "li",
+     "A history of recent heart attack"
+    ],
+    [
+     "li",
+     "A tear in the aorta"
+    ],
+    [
+     "li",
+     "Recent fluid or clots in the lungs"
+    ],
+    [
+     "li",
+     "Severe valve disease"
+    ],
+    [
+     "li",
+     "Irregular heartbeat, palpitations, or increased chest pain"
+    ],
+    [
+     "p",
+     "You will also be asked to provide a list of your current medications."
+    ]
+   ]
+  },
+  {
+   "title": "CT Coronary Angiogram",
+   "blocks": [
+    [
+     "p",
+     "A computerized tomography (CT) coronary angiogram is an imaging test that looks at the arteries that supply blood to your heart. It may be used to diagnose the cause of chest pain or other symptoms."
+    ],
+    [
+     "p",
+     "A CT coronary angiogram uses a powerful X-ray machine to produce images of your heart and blood vessels. The test is noninvasive and doesn’t require recovery time. Coronary CT angiograms are increasingly used for people with a variety of heart conditions."
+    ],
+    [
+     "p",
+     "By contrast, a traditional (non-CT) coronary angiogram requires threading a catheter through your groin or arm to your heart or arteries. If you already have known coronary artery disease, your doctor may recommend the traditional procedure, as treatment can also be done at the same time."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "A coronary CT angiogram can check for various conditions, but is mainly used to detect narrowed or blocked arteries in your heart (coronary artery disease). If your test suggests heart disease, you and your doctor can discuss treatment options."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "li",
+     "You’ll be exposed to some radiation during the test. The amount depends on the type of CT machine, but we use a very fast scanner with minimal radiation exposure."
+    ],
+    [
+     "li",
+     "The risk of developing cancer from a CT angiogram is not known, but thought to be small."
+    ],
+    [
+     "li",
+     "You should not have this test if you are pregnant, due to potential harm to your unborn child."
+    ],
+    [
+     "li",
+     "Some people may have an allergic reaction to the dye used in the procedure. If you’re concerned, discuss this with your doctor."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "Food and Medication"
+    ],
+    [
+     "li",
+     "Don’t eat anything for about 4 hours before your test."
+    ],
+    [
+     "li",
+     "You may drink water, but avoid caffeinated drinks for 12 hours before, as they can increase heart rate and blur images."
+    ],
+    [
+     "li",
+     "If you are allergic to the contrast dye, your doctor may prescribe steroids 12 hours before the procedure to reduce the risk of reaction."
+    ],
+    [
+     "p",
+     "Clothing and Personal Items"
+    ],
+    [
+     "li",
+     "You’ll need to remove clothing above your waist, as well as jewelry and glasses."
+    ],
+    [
+     "li",
+     "You will change into a hospital gown."
+    ],
+    [
+     "h",
+     "What to Expect"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "li",
+     "You may be given a beta blocker to slow your heart rate for clearer images. Because of the fast scanner we use, medication may not be necessary."
+    ],
+    [
+     "li",
+     "You may also be given nitroglycerin to widen your arteries."
+    ],
+    [
+     "li",
+     "If you are allergic to contrast material, you may be given additional medication to lower the risk of reaction."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "li",
+     "A technician will insert an IV in your hand or arm to inject the contrast dye."
+    ],
+    [
+     "li",
+     "The actual scanning takes only 5–10 seconds, but the whole process may last up to an hour."
+    ],
+    [
+     "li",
+     "Electrodes will be placed on your chest to record your heart rate."
+    ],
+    [
+     "li",
+     "You’ll lie on a table that slides into a short tunnel-like machine. You will need to stay still and hold your breath briefly."
+    ],
+    [
+     "li",
+     "If you feel claustrophobic, ask your doctor in advance about medication to help you relax."
+    ],
+    [
+     "li",
+     "The technician operates the scanner from a separate room, but you’ll be able to communicate through an intercom."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "li",
+     "You can return to normal activities immediately."
+    ],
+    [
+     "li",
+     "You should be able to drive yourself home or to work."
+    ],
+    [
+     "li",
+     "Drink plenty of water to help flush the dye from your system."
+    ],
+    [
+     "li",
+     "Results are usually available soon after the test, and your cardiologist will discuss them with you."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "Your doctor will explain whether you have heart disease, your level of risk, and what steps or treatments may be needed to maintain your heart health."
+    ]
+   ]
+  },
+  {
+   "title": "Transoesophageal Echocardiogram",
+   "blocks": [
+    [
+     "p",
+     "Transoesophageal echo or “TOE” is a highly specialised heart ultrasound performed via a probe inserted into the stomach / oesophagus. The test is performed with an anaesthetist who will provide sedation – not a “general anaesthetic” but enough medication to make you sleepy and not remember the test itself."
+    ],
+    [
+     "p",
+     "How to Prepare"
+    ],
+    [
+     "li",
+     "Do not having anything to eat or drink (unless to take medication) for at least 6 hours prior to the test."
+    ],
+    [
+     "li",
+     "Please take all regular medications (including blood thinners) including the morning of the test with a small sip of water."
+    ],
+    [
+     "li",
+     "You will need someone to pick you up after the test and to be with you for the rest of that day / evening."
+    ],
+    [
+     "p",
+     "How Long Does It Take?"
+    ],
+    [
+     "p",
+     "Total time in the hospital is in the order of 2-3 hours which includes preparation time and recovery time. The “TOE” itself usually takes about 20 minutes, however, depends on the complexity of the study being performed."
+    ],
+    [
+     "p",
+     "Why Do We Do It?"
+    ],
+    [
+     "p",
+     "A “TOE” is performed only by cardiologists specialised in cardiac imaging. The benefit of a TOE as opposed to a standard cardiac echo performed via the chest wall is that the ultrasound does not have to penetrate the chest structures and lungs to see the heart – hence the detail of the image via TOE is greater. TOE is most commonly used to precisely image the heart valves and to look for clot in certain heart chambers."
+    ],
+    [
+     "p",
+     "Potential Complications"
+    ],
+    [
+     "p",
+     "Major complications including perforation of the oesophagus are extremely rare (in the order of 1:10,000). The most common issue is a sore throat which should settle over the next 48 hours. Occasionally people can experience side effects of the anaesthetic medications."
+    ]
+   ]
+  }
+ ],
+ "rhythm": [
+  {
+   "title": "Implantable Loop Recorder Insertion",
+   "blocks": [
+    [
+     "p",
+     "An implantable loop recorder is a type of heart-monitoring device that records your heart rhythm continuously for up to three years. It records the electrical signals of your heart and allows remote monitoring by way of a small device inserted just beneath the skin of the chest."
+    ],
+    [
+     "h",
+     "Why is it Done?"
+    ],
+    [
+     "p",
+     "An implantable loop recorder can help answer questions about your heart that other heart-monitoring devices don’t provide. It allows for long-term heart rhythm monitoring. It can capture information that a standard electrocardiogram (ECG) or Holter monitor misses because some heart rhythm abnormalities occur infrequently."
+    ],
+    [
+     "p",
+     "For example, if you have a standard ECG to help figure out why you’re having fainting spells, it will only record any related heart rhythm abnormalities during the few minutes of the monitoring period — usually about five minutes. Because an implantable loop recorder monitors your heart signals for a much longer time, it’s more likely to capture what your heart is doing during your next fainting spell. This information may help your doctor make a definite diagnosis and develop a treatment plan."
+    ],
+    [
+     "p",
+     "Implantable loop recorders are one of the newer heart-monitoring devices. Researchers have evaluated their safety and benefit over the last 10 years. Studies show that implantable loop recorders have a higher rate of diagnosis of heart rhythm problems than other monitoring devices."
+    ],
+    [
+     "p",
+     "Implantable loop recorders are also of value in people who had a stroke. Long-term heart monitoring uncover heart rhythm problems that caused the stroke better than 24-hour monitoring. Doctors used these results to guide treatment with blood-thinning drugs (anti-coagulation therapy) to prevent another stroke."
+    ],
+    [
+     "h",
+     "What Can You Expect?"
+    ],
+    [
+     "p",
+     "You will need to undergo a minor surgical procedure to place the implantable loop recorder. Risks of the procedure include infection or a reaction to the device that causes redness at the incision site."
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "You don’t need to do anything special to prepare for this procedure."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "The procedure to insert the heart monitor is usually done in a cath lab, with a local anaesthetic. Your doctor makes a tiny incision, inserts the device, which is smaller than a key or a thumb drive, and closes the incision. The device stays in place for up to three years."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "The procedure to insert an implantable loop recorder has some risk because it involves minor surgery. Your care team will advise you to watch your incision for signs of infection and, perhaps, to limit activities until the wound heals."
+    ],
+    [
+     "p",
+     "The device records the electrical impulses of your heart and transmits them automatically to your doctor by way of the internet and wireless technology. All you need to do is keep the transmission monitor your doctor gives you beside your bed. Transmissions occur while you’re asleep. You can also activate the data transmission process yourself. In addition, your doctor may ask you to keep a diary of your symptoms."
+    ],
+    [
+     "p",
+     "Your doctor will interpret the results of your test and call you if he or she has any concerns. You’ll likely need to see your doctor once or twice a year for routine check-ups while the device is in place."
+    ],
+    [
+     "p",
+     "An implantable loop recorder is invisible and doesn’t interfere with your daily activities. It has no patches or wires, and you don’t have to worry about getting the device wet while bathing or swimming. These devices are supposed to be safe for use during a medical imaging procedure called magnetic resonance imaging (MRI), but let your doctor know about your implant before you schedule such a test."
+    ],
+    [
+     "p",
+     "It’s also possible an implantable loop recorder might set off metal detectors, for example, at an airport. Your doctor can provide you with a device identification card to carry with you for such situations."
+    ]
+   ]
+  },
+  {
+   "title": "Pacemaker Insertion",
+   "blocks": [
+    [
+     "p",
+     "A pacemaker is a small device with two parts — a generator and wires (leads, or electrodes) — that’s placed under the skin in your chest to help control your heartbeat."
+    ],
+    [
+     "p",
+     "People may need a pacemaker for a variety of reasons — mostly due to one of a group of conditions called arrhythmias, in which the heart’s rhythm is abnormal."
+    ],
+    [
+     "p",
+     "Normal aging of the heart may disrupt your heart rate, making it beat too slowly. Heart muscle damage resulting from a heart attack is another common cause of disruptions of your heartbeat."
+    ],
+    [
+     "p",
+     "Some medications can affect your heart rate as well. For some, genetic conditions cause an abnormal heart rate. Regardless of the underlying cause of an abnormal heart rate, a pacemaker may fix it."
+    ],
+    [
+     "p",
+     "A pacemaker can often be implanted in your chest with a minor surgery. You may need to take some precautions in your daily life after your pacemaker is installed."
+    ],
+    [
+     "h",
+     "Types of Pacemaker"
+    ],
+    [
+     "p",
+     "Cardiac Resynchronization Therapy"
+    ],
+    [
+     "p",
+     "Pacemakers are implanted to help control your heartbeat. They can be implanted temporarily to treat a slow heartbeat after a heart attack, surgery or overdose of medication."
+    ],
+    [
+     "p",
+     "Pacemakers can also be implanted permanently to correct a slow heartbeat (bradycardia) or, in some cases, to help treat heart failure."
+    ],
+    [
+     "p",
+     "Smaller pacemakers about the size of a pill have been developed and are currently undergoing clinical trials. This new, leadless device can be implanted directly into the heart, where it emits an electrical impulse to control the heartbeat. Because a lead isn’t required, this device can minimize the risk of infection and speed recovery time."
+    ],
+    [
+     "p",
+     "How Your Heart Beats"
+    ],
+    [
+     "p",
+     "To understand how a pacemaker works, it helps to know how your heart beats."
+    ],
+    [
+     "p",
+     "The heart is a muscular, fist-sized pump with four chambers, two on the left side and two on the right. The upper chambers are the right and left atria. The lower chambers are the right and left ventricles."
+    ],
+    [
+     "p",
+     "For your heart to function properly, the heart’s chambers must work in a coordinated fashion. Your heart must also beat at an appropriate rate — normally from 60 to 100 beats a minute in resting adults. If your heart beats too slowly or too rapidly, not enough blood flows through your body, leading to fatigue, fainting, shortness of breath, confusion, and other signs and symptoms."
+    ],
+    [
+     "p",
+     "Your heart’s electrical system controls the chambers’ pumping action. A normal heartbeat begins in your right atrium, in the sinus node. This cluster of cells — your natural pacemaker — acts like a spark plug, generating regular electrical impulses that travel through specialized muscle fibres."
+    ],
+    [
+     "p",
+     "When an electrical impulse reaches both the right and left atria, they contract and squeeze blood into the ventricles. After a split-second delay to allow the ventricles to fill, the impulse reaches the ventricles, making them contract and pump blood to the rest of your body."
+    ],
+    [
+     "p",
+     "What a Pacemaker Does"
+    ],
+    [
+     "p",
+     "An implanted electronic pacemaker mimics the action of your natural pacemaker. An implanted pacemaker consists of two parts:"
+    ],
+    [
+     "li",
+     "The pulse generator. This small metal container houses a battery and the electrical circuitry that regulates the rate of electrical pulses sent to your heart."
+    ],
+    [
+     "li",
+     "Leads (electrodes). One to three flexible, insulated wires are each placed in a chamber, or chambers, of your heart and deliver the electrical pulses to adjust your heart rate."
+    ],
+    [
+     "p",
+     "Pacemakers monitor your heartbeat and, if it’s too slow, the pacemaker will speed up your heart rate by sending electrical signals to your heart. In addition, most pacemakers have sensors that detect body motion or breathing rate, which signals the pacemaker to increase your heart rate during exercise to meet your body’s increased need for blood and oxygen."
+    ],
+    [
+     "p",
+     "Single Chamber Pacemaker"
+    ],
+    [
+     "p",
+     "This type of pacemaker usually carries electrical impulses from the pulse generator to the right ventricle of your heart."
+    ],
+    [
+     "p",
+     "Dual Chamber Pacemaker"
+    ],
+    [
+     "p",
+     "A dual chamber pacemaker carries electrical impulses from the pulse generator to both the right ventricle and the right atrium of your heart. The impulses help control the timing of contractions between the two chambers."
+    ],
+    [
+     "p",
+     "Biventricular Pacemaker"
+    ],
+    [
+     "p",
+     "A biventricular pacemaker is a treatment option for people with heart failure whose hearts’ electrical systems have been damaged. Unlike a regular pacemaker, a biventricular pacemaker stimulates both of the lower chambers of the heart (the right and left ventricles) to make the heart beat more efficiently."
+    ],
+    [
+     "p",
+     "A biventricular pacemaker paces both ventricles so that all or most of the ventricular muscle pumps together. This allows your heart to pump blood more effectively. Because this treatment resets the ventricles’ pumping mechanism, it’s also referred to as cardiac resynchronization therapy (CRT)."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "Complications from having surgery to implant your pacemaker are uncommon, but could include:"
+    ],
+    [
+     "li",
+     "Infection where the pacemaker was implanted"
+    ],
+    [
+     "li",
+     "Allergic reaction to the dye or anaesthesia used during your procedure"
+    ],
+    [
+     "li",
+     "Swelling, bruising or bleeding at the generator site, especially if you are taking blood thinners"
+    ],
+    [
+     "li",
+     "Damage to your blood vessels or nerves near the pacemaker"
+    ],
+    [
+     "li",
+     "Collapsed lung"
+    ],
+    [
+     "p",
+     "Life-threatening complications of pacemaker implantation are rare."
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "Before your doctor decides if you need a pacemaker, you’ll have several tests done to find out the cause of your irregular heartbeat. These could include:"
+    ],
+    [
+     "li",
+     "Electrocardiogram. In this non-invasive test, sensor pads with wires attached, called electrodes, are placed on your chest and sometimes your limbs to measure your heart’s electrical impulses. Your heart’s beating pattern can offer clues to the type of irregular heartbeat you have."
+    ],
+    [
+     "li",
+     "Holter monitoring. Also known as an ambulatory monitor, a Holter monitor records your heart rhythms for an entire 24-hour period. Wires from electrodes on your chest go to a battery-operated recording device. While you’re wearing the monitor, you’ll keep a diary of your activities and symptoms. Your doctor will compare the diary with the electrical recordings to try to figure out the cause of your symptoms."
+    ],
+    [
+     "li",
+     "Echocardiogram. This non-invasive test uses harmless sound waves that allow your doctor to see your heart without making an incision. During the procedure, a small instrument called a transducer is placed on your chest. It collects reflected sound waves (echoes) from your heart and transmits them to a machine that uses the sound wave patterns to compose images of your beating heart on a monitor. These images show how well your heart is functioning, and recorded pictures allow your doctor to measure the size and thickness of your heart muscle."
+    ],
+    [
+     "li",
+     "Stress test. Some heart problems occur only during exercise. For a stress test, an electrocardiogram is taken before and immediately after walking on a treadmill or riding a stationary bike. In some cases, an echocardiogram or nuclear imaging may be done."
+    ],
+    [
+     "h",
+     "What to Expect"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Surgery to implant the pacemaker is usually performed while you’re awake and typically takes a few hours. Before the procedure, you are taken to a special room (called a preparation room or holding area) to start an intravenous (IV) line."
+    ],
+    [
+     "p",
+     "Most pacemaker implantations are done using local anaesthesia to numb the area of any incisions. You may receive additional IV medication to help you relax. The implantation is done in a room with special X-ray equipment. Your chest is cleaned with an antibacterial soap, and an IV line is placed in your arm on the same side as the pacemaker."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "During surgery, one or more flexible, insulated wires (leads, or electrodes) are inserted into a major vein under or near your collarbone and guided to your heart with the help of X-ray images. One end of each wire is secured to the appropriate position in your heart, while the other end is attached to the pulse generator, which is usually implanted under the skin beneath your collarbone."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "You’ll usually stay in the hospital for one day after having a pacemaker implanted. Before you leave, your pacemaker is programmed to fit your particular pacing needs. A return visit is often scheduled to make sure your pacemaker’s settings are correct."
+    ],
+    [
+     "p",
+     "After that, most pacemakers can be checked remotely using wireless technology. Using your mobile phone or radiofrequency signals, your pacemaker transmits and receives information between you and your doctor’s office, where your doctor can access the data — including your heart rate and rhythm, how your pacemaker is functioning, and remaining battery life."
+    ],
+    [
+     "p",
+     "Remote transmissions can be made at scheduled intervals or at unscheduled times if your pacemaker sends an alert, or you can send a transmission if you have a concern. Remote technology means fewer trips to the doctor’s office, but you’ll still need to be seen by your doctor in person for scheduled check-ups."
+    ],
+    [
+     "p",
+     "After your procedure to implant your pacemaker, your doctor may recommend that you avoid vigorous exercise, heavy lifting or lifting your arms above your shoulders for about six weeks. You may have some aches and pains near the area where your pacemaker was implanted. These pains can be relieved with over-the-counter medicines, such as paracetamol, but talk to your doctor before taking any pain relievers."
+    ],
+    [
+     "p",
+     "Special Precautions"
+    ],
+    [
+     "p",
+     "It’s unlikely that your pacemaker would stop working properly because of electrical interference. Still, you’ll need to take a few precautions:"
+    ],
+    [
+     "li",
+     "Mobile phones. It’s safe to talk on a mobile phone, but avoid placing your mobile phone directly over your pacemaker implantation site when the phone is turned on. Although unlikely, your pacemaker could misinterpret the mobile phone signal as a heartbeat and withhold pacing, producing symptoms, such as sudden fatigue."
+    ],
+    [
+     "li",
+     "Security systems. Passing through an airport metal detector won’t interfere with your pacemaker, although the metal in it may sound the alarm. But avoid lingering near or leaning against a metal-detection system. If security personnel insist on using a hand-held metal detector, ask them not to hold the device near your pacemaker any longer than necessary or ask for an alternative form of personal search. To avoid potential problems, carry an ID card stating that you have a pacemaker."
+    ],
+    [
+     "li",
+     "Medical equipment. If a doctor is considering any medical procedure that involves intensive exposure to electromagnetic energy, tell him or her that you have a pacemaker. Such procedures include magnetic resonance imaging, therapeutic radiation for cancer treatment and shock wave lithotripsy, which uses shock waves to break up large kidney stones or gallstones. If you’re having surgery, a procedure to control bleeding (electrocautery) also can interfere with pacemaker function."
+    ],
+    [
+     "li",
+     "Power-generating equipment. Stand at least 2 feet (60 centimeters) from welding equipment, high-voltage transformers or motor-generator systems. If you work around such equipment, your doctor can arrange a test in your workplace to determine whether it affects your pacemaker."
+    ],
+    [
+     "li",
+     "Devices that are unlikely to interfere with your pacemaker include microwave ovens, televisions and remote controls, radios, toasters, electric blankets, electric shavers, and electric drills."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "Once your pacemaker is implanted, the battery should last five to 15 years, which is the average battery life. When a pacemaker’s battery wears out, the pacemaker’s pulse generator is replaced. The leads of your pacemaker can be left in place — though they may need to be replaced eventually — and the procedure to change your pacemaker’s battery is often quicker and requires less recovery time than the procedure to first implant your pacemaker."
+    ],
+    [
+     "p",
+     "Pacemakers are a standard treatment for many conditions affecting your heart’s electrical system. By preventing a slow heart rate, pacemakers can treat symptoms, such as fatigue, lightheadedness and fainting. Because most of today’s pacemakers automatically adjust your heart rate to match your level of physical activity, they can allow you to resume a more active lifestyle."
+    ],
+    [
+     "p",
+     "Pacemakers and End-of-Life Issues"
+    ],
+    [
+     "p",
+     "If you have a pacemaker and become terminally ill with a condition unrelated to your heart, such as cancer, it’s possible that your pacemaker could prolong the process of dying. Doctors and researchers have varied opinions on turning off a pacemaker in end-of-life situations."
+    ],
+    [
+     "p",
+     "Talk to your doctor if you have a pacemaker and are concerned about turning it off. You may also want to talk to family members or another person designated to make medical decisions for you about what you’d like to do in end-of-life care situations."
+    ]
+   ]
+  },
+  {
+   "title": "Defibrillator Insertion",
+   "blocks": [
+    [
+     "p",
+     "An implantable cardioverter-defibrillator (ICD) is placed in your chest to reduce your risk of dying if the lower chambers of your heart (ventricles) go into a dangerous rhythm and stop beating effectively (cardiac arrest)."
+    ],
+    [
+     "p",
+     "You might need an ICD if you have a dangerously fast heartbeat (ventricular tachycardia) or a chaotic heartbeat that keeps your heart from supplying enough blood to the rest of your body (ventricular fibrillation)."
+    ],
+    [
+     "p",
+     "ICDs detect and stop abnormal heartbeats (arrhythmias). The device continuously monitors your heartbeat and delivers electrical pulses to restore a normal heart rhythm when necessary."
+    ],
+    [
+     "p",
+     "An ICD differs from a pacemaker — another implantable device used to help control abnormal heart rhythms."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "You’ve likely seen TV shows in which hospital workers “shock” an unconscious person out of cardiac arrest with electrified paddles. An ICD does the same thing only internally and automatically when it detects an abnormal heart rhythm."
+    ],
+    [
+     "p",
+     "An ICD is surgically placed under your skin, usually below your left collarbone. One or more flexible, insulated wires (leads) run from the ICD through your veins to your heart."
+    ],
+    [
+     "p",
+     "Because the ICD constantly monitors for abnormal heart rhythms and instantly tries to correct them, it helps treat cardiac arrest, even when you are far from the nearest hospital."
+    ],
+    [
+     "p",
+     "How an ICD works"
+    ],
+    [
+     "p",
+     "When you have a rapid heartbeat, the wires from your heart to the device transmit signals to the ICD, which sends electrical pulses to regulate your heartbeat. Depending on the problem with your heartbeat, your ICD could be programmed for the following therapies:"
+    ],
+    [
+     "li",
+     "Low-energy pacing therapy. You may feel nothing or a painless fluttering in your chest when your ICD responds to mild disruptions in your heartbeat."
+    ],
+    [
+     "li",
+     "Defibrillation therapy. This is the strongest form of electrical therapy used to restore a normal heartbeat. During this therapy, it may feel as if you’re being kicked in the chest, and it might knock you off your feet."
+    ],
+    [
+     "li",
+     "The pain from this therapy usually lasts only a second. There should be no discomfort after the shock ends."
+    ],
+    [
+     "p",
+     "An ICD can also be programmed to perform other functions, which include:"
+    ],
+    [
+     "li",
+     "Antitachycardia. If you have an unusually fast heart rate, the ICD delivers painless, low-energy impulses that pace or stimulate the heart to beat normally. This can prevent the need for cardioversion or defibrillation."
+    ],
+    [
+     "li",
+     "Pacemaker. Most modern ICDs can also function as a pacemaker, delivering low-energy impulses that stimulate the heart to beat normally."
+    ],
+    [
+     "li",
+     "Recording heart activity. The ICD records information about variations in your heart’s electrical activity and rhythm. This information helps your doctor evaluate your heart rhythm problem and, if necessary, reprogram your ICD."
+    ],
+    [
+     "h",
+     "Subcutaneous ICD"
+    ],
+    [
+     "p",
+     "Subcutaneous Implantable Cardioverter-Defibrillator (S-ICD)"
+    ],
+    [
+     "p",
+     "A subcutaneous ICD (S-ICD), a newer type of ICD, is available at Total Cardiovascular Care. An S-ICD is implanted under the skin at the side of the chest below the armpit. It’s attached to an electrode that runs along your breastbone. You may be a candidate for this device if you have structural defects in your heart that prevent attaching wires to the heart your blood vessels, or if you have other reasons for wanting to avoid traditional ICDs."
+    ],
+    [
+     "p",
+     "Implanting a subcutaneous ICD is less invasive than an ICD that attaches to the heart, but the device is larger in size than an ICD."
+    ],
+    [
+     "p",
+     "Who needs an ICD?"
+    ],
+    [
+     "p",
+     "You’re a candidate for an ICD if you’ve had sustained ventricular tachycardia, survived a cardiac arrest, or fainted from a ventricular arrhythmia. You might also benefit from an ICD if you have:"
+    ],
+    [
+     "li",
+     "A history of coronary artery disease and heart attack that has weakened your heart."
+    ],
+    [
+     "li",
+     "A heart condition that involves abnormal heart muscle, such as enlarged (dilated cardiomyopathy) or thickened (hypertrophic cardiomyopathy) heart muscle."
+    ],
+    [
+     "li",
+     "An inherited heart defect that makes your heart beat abnormally. These include long QT syndrome, which can cause ventricular fibrillation and death even in young people with no signs or symptoms of heart problems."
+    ],
+    [
+     "li",
+     "Having other rare conditions such as Brugada syndrome and arrhythmogenic right ventricular dysplasia also may mean you need an ICD."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "Risks associated with ICD implantation are uncommon but may include:"
+    ],
+    [
+     "li",
+     "Infection at the implant site"
+    ],
+    [
+     "li",
+     "Allergic reaction to the medications used during the procedure"
+    ],
+    [
+     "li",
+     "Swelling, bleeding or bruising where your ICD was implanted"
+    ],
+    [
+     "li",
+     "Damage to the vein where your ICD leads are placed"
+    ],
+    [
+     "li",
+     "Bleeding around your heart, which can be life-threatening"
+    ],
+    [
+     "li",
+     "Blood leaking through the heart valve where the ICD lead is placed"
+    ],
+    [
+     "li",
+     "Collapsed lung (pneumothorax)"
+    ],
+    [
+     "h",
+     "How to Prepare"
+    ],
+    [
+     "p",
+     "To determine whether you need an ICD, your doctor might perform a variety of diagnostic tests, which may include:"
+    ],
+    [
+     "li",
+     "Electrocardiography (ECG). In this non-invasive test, sensor pads with wires attached (electrodes) are placed on your chest and sometimes limbs to measure your heart’s electrical impulses. Your heart’s beating pattern can offer clues to the type of irregular heartbeat you have."
+    ],
+    [
+     "li",
+     "Echocardiography. This non-invasive test uses harmless sound waves that allow your doctor to see your heart without making an incision. During the procedure, a small, plastic instrument called a transducer is placed on your chest. It collects reflected sound waves (echoes) from your heart and transmits them to a machine that uses the sound wave patterns to compose images of your beating heart on a monitor. These images show how well your heart is functioning, and recorded images allow your doctor to measure the size and thickness of your heart muscle."
+    ],
+    [
+     "li",
+     "Holter Monitoring. Also known as an ambulatory electrocardiogram monitor, a Holter monitor records your heart rhythm for 24 hours. Wires from electrodes on your chest go to a battery-operated recording device carried in your pocket or worn on a belt or shoulder strap. While wearing the monitor, you’ll keep a diary of your activities and symptoms. Your doctor will compare the diary with the electrical recordings and try to figure out the cause of your symptoms."
+    ],
+    [
+     "li",
+     "Electrophysiology study (EPS). Electrodes are guided through blood vessels to your heart and used to test the function of your heart’s electrical system. This can identify whether you have or might develop heart rhythm problems."
+    ],
+    [
+     "p",
+     "It’s likely you’ll be asked not to eat or drink for at least six hours before your surgery. Talk to your doctor about the medications you take and whether you should continue to take them before your procedure to implant an ICD."
+    ],
+    [
+     "h",
+     "What Can You Expect?"
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "Implantable Cardioverter Defibrillator"
+    ],
+    [
+     "p",
+     "Usually, the procedure to implant an ICD can be performed with numbing medication and a sedative that relaxes you but allows you to remain aware of your surroundings. In some cases, general anaesthesia, which puts you to sleep, may be used."
+    ],
+    [
+     "p",
+     "The procedure usually takes a few hours. During surgery, one or more flexible, insulated wires (leads) are inserted into veins near your collarbone and guided, with the help of X-ray images, to your heart. The ends of the leads are secured to your heart, while the other ends are attached to the generator, which is usually implanted under the skin beneath your collarbone."
+    ],
+    [
+     "p",
+     "Occasionally, once the ICD is in place, your doctor will test it and program it for your heart rhythm problem. Testing the ICD might require speeding up your heart and then shocking it back into normal rhythm. We usually reserve this test for patients with subcutaneous ICDs."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "You’ll stay in the hospital one or two days, and the ICD might be tested once more before you’re discharged. Additional testing of your ICD usually doesn’t require surgery."
+    ],
+    [
+     "p",
+     "Treating Pain After Your Procedure"
+    ],
+    [
+     "p",
+     "After surgery, you may have some pain in the incision area, which can remain swollen and tender for a few days or weeks. Your doctor might prescribe pain medication. As your pain lessens, you can take pain relievers, such as paracetamol."
+    ],
+    [
+     "p",
+     "When you’re released from the hospital, you’ll need to arrange for a ride home because you won’t be able to drive for at least 2 weeks."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "ICDs have become standard treatment for anyone who has survived cardiac arrest, and they’re increasingly used in people at high risk of sudden cardiac arrest. An ICD lowers your risk of sudden death from cardiac arrest more than medication alone."
+    ],
+    [
+     "p",
+     "Although the electrical shocks can be unsettling, there is evidence that the ICD is effectively treating your heart rhythm problem and protecting you from sudden death. Talk to your doctor about how to best care for your ICD."
+    ],
+    [
+     "p",
+     "After the procedure, you’ll need to take some precautions to avoid injuries and make sure your ICD works properly."
+    ],
+    [
+     "p",
+     "Short-term precautions"
+    ],
+    [
+     "p",
+     "You’ll likely be able to return to normal activities such as exercise, work and sex soon after you recover from surgery. Follow your doctor’s instructions. For four weeks after surgery, your doctor might ask you to refrain from:"
+    ],
+    [
+     "li",
+     "Vigorous above-the-shoulder activities or exercises, including golf, tennis, swimming, bicycling, bowling or vacuuming"
+    ],
+    [
+     "li",
+     "Lifting anything weighing more than 2.5kg"
+    ],
+    [
+     "li",
+     "Playing contact sports"
+    ],
+    [
+     "li",
+     "Strenuous exercise programs"
+    ],
+    [
+     "p",
+     "Long-Term Precautions"
+    ],
+    [
+     "p",
+     "Problems with your ICD due to electrical interference are rare. Still, take precautions with the following:"
+    ],
+    [
+     "li",
+     "Mobile phones and other mobile devices. It’s safe to talk on a mobile phone, but avoid placing your mobile phone within about 15 centimeters of your ICD implantation site when the phone is turned on. Although unlikely, your ICD could mistake a mobile phone’s signal for a heartbeat and slow your heartbeat, causing symptoms such as sudden fatigue."
+    ],
+    [
+     "li",
+     "Security systems. After surgery, you’ll receive a card that says you have an ICD. Show your card to airport personnel because the ICD may set off airport security alarms.Also, hand-held metal detectors often contain a magnet that can interfere with your ICD. Limit scanning with a hand-held detector to less than 30 seconds over the site of your ICD or make a request for a manual search."
+    ],
+    [
+     "li",
+     "Medical equipment. Let doctors, medical technicians and dentists you see know you have an ICD. Some procedures, such as magnetic resonance imaging (MRI), magnetic resonance angiography (MRA), and radiofrequency or microwave ablation are not recommended if you have an ICD."
+    ],
+    [
+     "li",
+     "Power generators. Stand at least 0.6 meters from welding equipment, high-voltage transformers or motor-generator systems. If you work around such equipment, your doctor can arrange a test in your workplace to see if the equipment affects your ICD."
+    ],
+    [
+     "li",
+     "MP3 player headphones. Although the player itself poses little risk, the headphones may be a problem. Most contain a magnetic substance and can interfere with your ICD. Keep your headphones at least 15 centimeters from your ICD."
+    ],
+    [
+     "li",
+     "Magnets. These might affect your ICD, so it’s a good idea to keep magnets at least 15 centimeters from your ICD site."
+    ],
+    [
+     "p",
+     "Devices that pose little or no risk to your ICD include microwave ovens, televisions and remote controls, AM/FM radios, toasters, electric blankets, electric shavers and electric drills, computers, scanners, printers, and GPS devices."
+    ],
+    [
+     "p",
+     "Driving Restrictions"
+    ],
+    [
+     "p",
+     "If you have an ICD to treat ventricular arrhythmia, driving a vehicle presents a challenge. The combination of arrhythmia and shocks from your ICD can cause fainting, which would be dangerous while you’re driving."
+    ],
+    [
+     "p",
+     "The Austroads Fitness to Drive guidelines advise avoiding driving for two weeks after ICD placement, but talk to your doctor for specific recommendations. The guidelines discourage driving during the first six months after your procedure if your ICD was implanted due to a previous cardiac arrest or ventricular arrhythmia."
+    ],
+    [
+     "p",
+     "If you have no shocks during this period, you’ll likely be able to drive again. But if you then have a shock, with or without fainting, tell your doctor and follow his or her recommendations. In most cases, you’ll need to stop driving until you’ve been shock-free for another six months."
+    ],
+    [
+     "p",
+     "If you have an ICD but have no history of life-threatening arrhythmias, you can usually resume driving within two weeks after your procedure if you’ve had no shocks. Discuss your situation with your doctor."
+    ],
+    [
+     "p",
+     "You usually can’t get a commercial driver’s license if you have an ICD."
+    ],
+    [
+     "p",
+     "Battery Life"
+    ],
+    [
+     "p",
+     "The lithium battery in your ICD can last up to seven years. The battery will be checked during regular check-ups, which should occur every three to six months. When the battery is nearly out of power, your old shock generator is replaced with a new one during a minor outpatient procedure."
+    ],
+    [
+     "p",
+     "ICDs and End-of-Life Issues"
+    ],
+    [
+     "p",
+     "If you have an ICD and become terminally ill, your ICD could deliver unnecessary shocks. It’s easy to turn off your ICD, and turning it off may prevent unnecessary suffering."
+    ],
+    [
+     "p",
+     "Talk to your doctor about your wishes. Also talk to family members or another person designated to make medical decisions for you about what you’d like to do in end-of-life care situations."
+    ]
+   ]
+  },
+  {
+   "title": "Aftercare",
+   "blocks": []
+  },
+  {
+   "title": "EP studies and Ablation for SVT",
+   "blocks": [
+    [
+     "p",
+     "An electrophysiological study (often called EPS) is a procedure that examines the electrical function of the heart to determine the source and mechanism of abnormal heart rhythms (called arrhythmias). The heart is a muscle pump, and the function of this pump is controlled by electrical activity which spreads across the heart and causes it contract."
+    ],
+    [
+     "p",
+     "An EPS involves using X rays to position small plastic wires (called catheters) through the venous blood vessels (from the groin) into various chambers of the heart. These catheters are equipped with metallic tips and rings (called electrodes) which allow them to detect electrical activity in the heart muscle. By interpreting the pattern of electrical signals detected by the catheters, the mechanism of the arrhythmia can be determined and a treatment strategy) devised (usually with catheter ablation – see below)."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "Your doctor may recommend that you have an electrophysiological study if you have:"
+    ],
+    [
+     "li",
+     "Symptoms of racing heart (palpitations) and (usually) evidence of an abnormal fast rhythm captured on an electrical trace (electrocardiograph or ECG). Conditions which commonly indicate an electrophysiological study include: Supra-ventricular tachycardia (or SVT)"
+    ],
+    [
+     "li",
+     "Ventricular tachycardia (or VT)"
+    ],
+    [
+     "li",
+     "Abnormal findings on a resting ECG and the suspicion of arrhythmia"
+    ],
+    [
+     "li",
+     "Un-explained collapses or loss of consciousness and the suspicion of an arrhythmia"
+    ],
+    [
+     "p",
+     "Because there’s a small risk of complications, electrophysiological studies are usually only performed where there is a high suspicion of an arrhythmia that can be treated by ablation, or where the results will change your management."
+    ],
+    [
+     "h",
+     "Catheter Ablation"
+    ],
+    [
+     "p",
+     "Once the arrhythmia and its mechanism have been identified during the electrophysiological study, the culprit is usually an abnormal electrical connection, or a small area (or foci) of abnormal electrical activity. The treatment is to use a special type of catheter (called an ablation catheter) to deliver a small amount of targeted heat energy this area. This disrupts this pathway or focus (permanently) and can eliminate the cause of the arrhythmia. The vast majority of electrophysiological studies will involve an ablation of the arrhythmia source."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "As with most procedures done on your heart, an electrophysiological study entails some risk, such as radiation exposure from the X-rays used. Major complications are extremely rare, though. Potential risks and complications include:"
+    ],
+    [
+     "li",
+     "Injury to the groin artery or vein"
+    ],
+    [
+     "li",
+     "Excessive bleeding"
+    ],
+    [
+     "li",
+     "Stroke or heart attack"
+    ],
+    [
+     "li",
+     "Damage to the electrical wiring (conduction system) of the heart requiring the need for a pacemaker"
+    ],
+    [
+     "li",
+     "Injury to the heart requiring urgent treatment or heart surgery"
+    ],
+    [
+     "h",
+     "How you Prepare"
+    ],
+    [
+     "p",
+     "Most electrophysiological studies are elective or scheduled in advance, giving you time to prepare."
+    ],
+    [
+     "p",
+     "Electrophysiological studies are performed in the cardiac catheterization (cath) lab of a hospital. Your health care team will give you specific instructions and talk to you about any medications you take. General guidelines include:"
+    ],
+    [
+     "li",
+     "Usually, if you are on medications to suppress arrhythmias (called anti-arrhythmic medications), these need to be stopped at least 5-7 days prior to the procedure. Your doctor will advise you exactly which medication(s) to stop and when. This is necessary because during the EPS, the arrhythmia will usually need to be induced so its mechanism can be identified and the appropriate ablation performed."
+    ],
+    [
+     "li",
+     "Don’t eat or drink anything after midnight before your procedure."
+    ],
+    [
+     "li",
+     "Take all your medications to the hospital with you in their original bottles. Ask your doctor about whether or not to take your usual morning medications."
+    ],
+    [
+     "li",
+     "If you have diabetes, ask your doctor if you should take insulin or other oral medications before your procedure."
+    ],
+    [
+     "li",
+     "If you are on blood-thinning medication, these sometimes need to be stopped beforehand. Ask your doctor about your blood thinners."
+    ],
+    [
+     "h",
+     "What you can expect?"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Before your EPS procedure starts, your health care team will review your medical history, including allergies and medications you take. You’ll also empty your bladder and change into a hospital gown. You may have to remove contact lenses, eyeglasses, jewellery and hairpins."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "For the procedure, you lie flat on your back on an X-ray table. X-ray cameras may move over and around your head and chest during the procedure."
+    ],
+    [
+     "p",
+     "An IV line is inserted into a vein in your arm. You will be given a sedative through the IV to help you relax, as well as other medications and fluids. You’ll be very sleepy and may drift off to sleep during the procedure, but you’ll still be able to be easily awakened to follow any instructions."
+    ],
+    [
+     "p",
+     "Electrodes on your chest monitor your heart throughout the procedure. An EPS usually involves a number of additional stickers and patches placed on over the chest. A blood pressure cuff tracks your blood pressure and another device, a pulse oximeter, measures the amount of oxygen in your blood."
+    ],
+    [
+     "p",
+     "A small amount of hair may be shaved from your groin where a flexible tube (catheter) will be inserted under ultra-sound guidance, and on your chest where electrode stickers must attach. The area is washed and disinfected and then numbed with an injection of local anaesthetic."
+    ],
+    [
+     "p",
+     "A small incision is made at the entry site, and 2 or 3 short plastic tubes (sheath) are inserted into your groin vein. The catheter is inserted through the sheath into your blood vessel and carefully threaded to your heart. There are no pain sensation nerves in the blood vessels so this is not painful so threading the catheter shouldn’t cause pain, and you shouldn’t feel it moving through your body. Tell your health care team if you have any discomfort."
+    ],
+    [
+     "p",
+     "The catheters are positioned in the heart. The catheters can also be used to stimulate the heart at different rates and timings to both test the electrical function of the heart, and to see if the abnormal rhythm can be induced. You may feel these paced beats and they do not cause pain or discomfort. Inducing the arrhythmia during an EPS is safe and usually desirable as it allows the mechanism of the arrhythmia to be determined, and provides a clear endpoint for the procedure after ablation. They do not cause any harm to your heart. You will commonly feel your heart racing during this time, this is expected."
+    ],
+    [
+     "p",
+     "Often, to aid in inducing the arrhythmia, a medication called isoprenaline (a form of adrenaline) may be administered through the drip to stimulate the heart. This may cause a flushing sensation as well as sweating and palpitations. This is expected and is short-lived as the medication wears off very quickly. If you experience discomfort, please let the team know and we can we can make you more comfortable."
+    ],
+    [
+     "p",
+     "Occasionally an additional computer system called a ‘mapping system’ may be used to help treat more complex arrhythmias. This allows the catheters and the internal structure of the heart chambers to be visualised in 3D and real-time without the need for X-rays, so that the pattern of complex arrhythmias can be determined."
+    ],
+    [
+     "p",
+     "Usually ablation is required to treat the arrhythmia. This involves the delivery of a small amount of heat energy to the culprit electrical pathway. This usually occurs over a few minutes and occasionally may cause some mild chest discomfort. Additional analgesia will be given in anticipation of this."
+    ],
+    [
+     "p",
+     "Having an EPS, including catheter ablation takes between 60-120 minutes depending on how readily the arrhythmia can be induced and how much ablation is required. Preparation and post-procedure care can add more time."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "When the EPS is over, the catheters and plastic tubes are removed from your arm or groin and the incision is closed with manual pressure or occasionally a temporary stitch or an air-cushion clamp."
+    ],
+    [
+     "p",
+     "You’ll be taken to a recovery area for observation and monitoring. When your condition is stable, you return to your own room, where you’re monitored regularly."
+    ],
+    [
+     "p",
+     "You’ll need to lie flat for a few hours to avoid bleeding. During this time, pressure may be applied to the incision to prevent bleeding and promote healing."
+    ],
+    [
+     "p",
+     "You may be able to go home the same day, or you may have to remain in the hospital overnight. Drink plenty of fluids to help flush the dye from your body. If you’re feeling up to it, have something to eat."
+    ],
+    [
+     "p",
+     "Ask your health care team when to resume taking medications, bathing or showering, working, and doing other normal activities. Avoid strenuous activities and heavy lifting for several days."
+    ],
+    [
+     "p",
+     "Your puncture site is likely to remain tender for a while. It may be slightly bruised and have a small bump."
+    ],
+    [
+     "p",
+     "Call your doctor’s office if:"
+    ],
+    [
+     "p",
+     "· You notice bleeding, new bruising or swelling at the catheter site"
+    ],
+    [
+     "p",
+     "· You develop increasing pain or discomfort at the catheter site"
+    ],
+    [
+     "p",
+     "· Weakness or numbness in the leg or arm where the catheter was inserted"
+    ],
+    [
+     "p",
+     "· You develop chest pain or shortness of breath"
+    ],
+    [
+     "p",
+     "If the catheter site is actively bleeding and doesn’t stop after you’ve applied pressure to the site, contact 000 or emergency medical services. If the catheter site suddenly begins to swell, contact 000 or emergency medical services."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "An EPS can diagnose many common cardiac arrhythmias and the accompanying ablation can treat the vast majority of these. The success rates depend on the type of arrhythmia being treated. These conditions include."
+    ],
+    [
+     "li",
+     "The most common types of SVT (either AV nodal re-entry tachycarda (AVNRT) or atrio-ventricular re-entry tachycardia (AVRT)), have success rates after a single procedure of over 95% with no further need for ongoing anti-arrhythmic medications."
+    ],
+    [
+     "li",
+     "In the less common arrhythmia caused by an over active focus (focal atrial or ventricular tachycardia), success rates vary from 60-90% depending on the location of the culprit focus. Occasionally a second procedure may be needed."
+    ],
+    [
+     "li",
+     "Very rarely, an electrical pathway can be in an unsafe or dangerous location to ablate due to an undue risk of injury to cardiac structures (such as a coronary artery or the AV node). Your doctor will discuss alternative treatment options in this rare scenario."
+    ],
+    [
+     "li",
+     "In cases where an EPS is performed as a purely diagnostic tool, the results can help diagnose rare conditions or help determine if a pacemaker or defibrillator may benefit you."
+    ]
+   ]
+  },
+  {
+   "title": "Catheter Ablation for Atrial Fibrillation",
+   "blocks": [
+    [
+     "p",
+     "Atrial fibrillation (or AF) is a the most common electrical disorder of the heart. It causes the heart to beat fast and irregular. It can result in symptoms such as palpitations, shortness of breath and lethargy. It predisposes to stroke and, in some cases, may seriously affect the heart function."
+    ],
+    [
+     "p",
+     "The pulmonary veins, the veins which deliver blood back the heart from the lungs, are also the source of electrical activity that triggers AF in vast majority of cases. AF ablation is a minimally invasive heart procedure using catheters introduced from the groin (or femoral) vein into the heart. These catheters are used to deliver either heating (called radiofrequency or RF) or freezing energy (called cryoablation) around the outside of the pulmonary veins, so that this tissue is no longer able to conduct electrical impulses from the pulmonary veins to the rest of the heart. The veins therefore become ‘electrically isolated’ from the rest of the heart, and the electrical activity which previously triggered AF, is no longer able to do so. There is considerable evidence that AF ablation is more effective than medications in eliminating or reducing the frequency of AF."
+    ],
+    [
+     "h",
+     "Why is it Done?"
+    ],
+    [
+     "p",
+     "In some patients, medications (called anti-arrhythmic medication) can control symptoms of AF, however, in many patients, these medications are ineffective, poorly tolerated or long-term therapy is considered undesirable. For these patients, catheter ablation of AF is an effective treatment option. It can control or eliminate symptoms, and potentially avoid the need for long-term anti-arrhythmic medications. The decision to proceed with an AF ablation is a shared process between you and your doctor after a detailed discussion of the potential risks and expected benefits."
+    ],
+    [
+     "h",
+     "What Can You Expect?"
+    ],
+    [
+     "p",
+     "You will need to undergo a minor surgical procedure to place the implantable loop recorder. Risks of the procedure include infection or a reaction to the device that causes redness at the incision site."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "It is not uncommon to experience some minor bruising from the access site in the leg, and some mild irritation in the chest in the first few days following the procedure. This is anticipated."
+    ],
+    [
+     "p",
+     "Serious risks associated with AF ablation are rare. However, they are not zero and some can be serious. These can include:"
+    ],
+    [
+     "li",
+     "Injury to the groin blood vessel (1:200-400)"
+    ],
+    [
+     "li",
+     "Stroke or heart attack (1:400-800)"
+    ],
+    [
+     "li",
+     "Cardiac tamponade (build-up of fluid/blood around the heart) (1:500-1000)"
+    ],
+    [
+     "li",
+     "Injury to phrenic nerve (1:200)"
+    ],
+    [
+     "li",
+     "Complication requiring emergency surgery (1:500-1000)"
+    ],
+    [
+     "li",
+     "Atrio-oesophageal fistula (1:3000-4000) – developing abnormal connection between food pipe and heart."
+    ],
+    [
+     "p",
+     "The incidence of serious complications following AF ablation is low, but around 1-1.5%. For this reason, AF ablation is usually offered to those patients who have failed or are unable or unwilling to take anti-arrhythmic medication, rather than a first line treatment"
+    ],
+    [
+     "h",
+     "How you Prepare"
+    ],
+    [
+     "p",
+     "Almost all AF ablation are elective or scheduled in advance, giving you time to prepare."
+    ],
+    [
+     "p",
+     "AF ablations are performed in the cardiac catheterization (cath) lab of a hospital. Your health care team will give you specific instructions and talk to you about any medications you take. General guidelines include:"
+    ],
+    [
+     "li",
+     "Medications to suppress arrhythmias (called anti-arrhythmic medications), may need to be stopped at least 5-7 days prior to the procedure. Your doctor will advise you if this is needed and exactly which medication(s) to stop and when."
+    ],
+    [
+     "li",
+     "Don’t eat or drink anything after midnight before your procedure."
+    ],
+    [
+     "li",
+     "Take all your medications to the hospital with you in their original bottles. Ask your doctor about whether or not to take your usual morning medications."
+    ],
+    [
+     "li",
+     "If you have diabetes, ask your doctor if you should take insulin or other oral medications before your procedure."
+    ],
+    [
+     "li",
+     "Blood-thinning medication usually need to be continued. Your doctor will advise if these need to be withheld prior."
+    ],
+    [
+     "h",
+     "What you can expect?"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Before your procedure starts, your health care team will review your medical history, including allergies and medications you take. You’ll also empty your bladder and change into a hospital gown. You may have to remove contact lenses, eyeglasses, jewellery and hairpins."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "For the procedure, you lie flat on your back on an X-ray table. X-ray cameras may move over and around your head and chest during the procedure. AF ablation procedures usually require a general anaesthetic which an anaesthetist will administer. Whilst under anaesthesia, a special ultrasound probe is positioned in the food pipe (oesophagus) which provides high resolution, real-time images of the heart. This is important to make sure there are no blood clots in the heart, and to ensure the catheters are correctly guided to the left atrium."
+    ],
+    [
+     "p",
+     "Electrodes on your chest monitor your heart throughout the procedure. An EPS usually involves a number of additional stickers and patches placed on over the chest. A blood pressure cuff tracks your blood pressure and another device, a pulse oximeter, measures the amount of oxygen in your blood."
+    ],
+    [
+     "p",
+     "A small amount of hair may be shaved from your groin where a flexible tube (catheter) will be inserted, and on your chest where electrode sticker must attach. The area is washed and disinfected and then numbed with an injection of local anaesthetic."
+    ],
+    [
+     "p",
+     "A small incision is made at the entry site, and 3 to 4 short plastic tubes (sheath) are inserted into your groin vein under ultrasound guidance. Catheters is inserted through the sheath into your blood vessel and carefully threaded to your heart. These are used to perform the ablation. A specialised computer system allows us to create 3D real-time image of the heart chambers and the position of the catheters. This minimises the need for the use of X-rays. This is used to guide the delivery of a highly focussed heat energy (called radiofrequency ablation or RFA) around the pulmonary veins. This creates an “electrical buffer zone” around the veins effectively electrically isolating from the rest of the heart chamber. Thus, the abnormal electrical signals from these veins can no longer trigger atrial fibrillation. Patients who have more advanced forms of AF (such as long-standing or persistent AF), may have areas outside of the pulmonary veins that may require additional ablation."
+    ],
+    [
+     "p",
+     "Having an AF ablation takes between 2-3 hours (occasionally longer), including the time to administer and recover from the anaesthesia."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "When the EPS is over, the catheters and plastic tubes are removed from your arm or groin and the incision is closed with manual pressure or occasionally a temporary stitch or an air-cushion clamp."
+    ],
+    [
+     "p",
+     "You’ll be taken to a recovery area for observation and monitoring. When your condition is stable, you return to your own room, where you’re monitored regularly."
+    ],
+    [
+     "p",
+     "You’ll need to lie flat for a few hours to avoid bleeding. During this time, pressure may be applied to the incision to prevent bleeding and promote healing."
+    ],
+    [
+     "p",
+     "You will have to remain in the hospital overnight. If you’re feeling up to it, have something to eat."
+    ],
+    [
+     "p",
+     "Ask your health care team when to resume taking medications, bathing or showering, working, and doing other normal activities. Avoid strenuous activities and heavy lifting for several days. This is mostly to avoid bleeding from the vascular access site. It is important to continue you blood thinner (anticoagulation) medication for a minimum of 3 months after the procedure. This should not be stopped unless directed to do so by your specialist doctor. Your doctor will advise you if anticoagulation is needed in the long term after AF ablation."
+    ],
+    [
+     "p",
+     "Your puncture site is likely to remain tender for a while. It may be slightly bruised and have a small bump. It is not uncommon to feel palpitations within the first 3 months from the procedure. For this reason, antiarrhythmic medications may be continued for a period of time after the ablation (up to 3-6 months)"
+    ],
+    [
+     "p",
+     "Call your doctor’s office if:"
+    ],
+    [
+     "li",
+     "You notice bleeding, new bruising or swelling at the catheter site"
+    ],
+    [
+     "li",
+     "You develop increasing pain or discomfort at the catheter site"
+    ],
+    [
+     "li",
+     "Weakness or numbness in the leg or arm where the catheter was inserted"
+    ],
+    [
+     "li",
+     "You develop chest pain or shortness of breath"
+    ],
+    [
+     "li",
+     "You develop fever and/or swallowing difficulty"
+    ],
+    [
+     "li",
+     "Any other symptom of concern to you"
+    ],
+    [
+     "li",
+     "If you have recurrence of sustained palpitations"
+    ],
+    [
+     "p",
+     "If the catheter site is actively bleeding and doesn’t stop after you’ve applied pressure to the site, contact 000 or emergency medical services. If the catheter site suddenly begins to swell, contact 000 or emergency medical services."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "The success rates of AF ablation vary depending on the type of AF that you have."
+    ],
+    [
+     "li",
+     "Paroxsymal AF (the type that comes and goes by itself) has a success rate of around 70-90% (likelihood of being free of AF at 12 months)."
+    ],
+    [
+     "li",
+     "Persistent AF (the type that lasts for more than a week, or until cardioversion is performed) has a success rate of 50-80% (likelihood of being free of AF at 12 months)."
+    ],
+    [
+     "li",
+     "Most patients will be able to come off all anti-arrhythmic medications in the long term, or in some patients previously ineffective medications may become effective again in controlling AF after ablation."
+    ],
+    [
+     "li",
+     "Some patients may require a repeat procedure to re-isolate the veins in the case of recurrence of AF."
+    ]
+   ]
+  },
+  {
+   "title": "Catheter Ablation for Ventricular Tachycardia",
+   "blocks": [
+    [
+     "p",
+     "Catheter ablation for ventricular tachycardia (or VT) is a procedure aimed at eliminating or significantly reducing arrhythmias arising from the large chambers of the heart (the ventricles). There are broadly speaking two broad categories of VT ablation:"
+    ],
+    [
+     "li",
+     "VT ablation in the absence of known heart disease (ie hearts that are otherwise normal)"
+    ],
+    [
+     "li",
+     "VT ablation in the setting of known heart disease (such as ischaemic heart disease or dilated cardiomyopathy)"
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "VT ablation is performed to eliminate or significantly reduce the burden of ventricular tachycardia, and additionally to reduce the reliance upon anti-arrhythmic medications to control the arrhythmia. In patients with known heart disease, VT can be life-threatening and cause cardiac arrest (a failure of heart pumping leading to collapse) or can cause repeated shocks from implantable cardiac defibrillators (ICDs) which can cause significant discomfort to patients. In patients without structural heart disease, VT often causes dramatic palpitations which may also be associated with dizziness or collapse. Rarely in these patients, VT can also be life-threatening or precipitate a cardiac arrest."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "It is not uncommon to experience some minor bruising from the access site in the leg, and some mild irritation in the chest in the first few days following the procedure. This is anticipated."
+    ],
+    [
+     "p",
+     "Serious risks associated with VT ablation are not common however they are not zero and some can be serious. These can include:"
+    ],
+    [
+     "li",
+     "Injury to the groin blood vessel (1:200-400)"
+    ],
+    [
+     "li",
+     "Stroke or heart attack (1:200-400)"
+    ],
+    [
+     "li",
+     "Cardiac tamponade (build-up of fluid/blood around the heart) (1:200-500)"
+    ],
+    [
+     "li",
+     "Complication requiring emergency surgery (1:500-1000)"
+    ],
+    [
+     "li",
+     "Refractory cardiac arrest (1:500-1000)"
+    ],
+    [
+     "li",
+     "Death – (1:500-1000)"
+    ],
+    [
+     "p",
+     "The incidence of overall serious complications following VT ablation is low, but around 2-3%. For this reason, VT ablation is usually offered to those patients who have failed or unable to take anti-arrhythmic medication, rather than a first-line treatment."
+    ],
+    [
+     "h",
+     "How you prepare"
+    ],
+    [
+     "p",
+     "Most VT ablations are elective or scheduled in advance, giving you time to prepare. Occasionally they are done in an emergency setting."
+    ],
+    [
+     "p",
+     "VT ablations are performed in the cardiac catheterization (cath) lab of a hospital. Your health care team will give you specific instructions and talk to you about any medications you take. General guidelines include:"
+    ],
+    [
+     "li",
+     "Medications to suppress arrhythmias (called anti-arrhythmic medications), may need to be stopped at least 5-7 days prior to the procedure. Your doctor will advise you if this is needed and exactly which medication(s) to stop and when."
+    ],
+    [
+     "li",
+     "Don’t eat or drink anything after midnight before your procedure."
+    ],
+    [
+     "li",
+     "Take all your medications to the hospital with you in their original bottles. Ask your doctor about whether or not to take your usual morning medications."
+    ],
+    [
+     "li",
+     "If you have diabetes, ask your doctor if you should take insulin or other oral medications before your procedure."
+    ],
+    [
+     "li",
+     "Blood-thinning medication usually need to be continued. Your doctor will advise if these need to be withheld prior."
+    ],
+    [
+     "h",
+     "What you can expect?"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Before your procedure starts, your health care team will review your medical history, including allergies and medications you take. You’ll also empty your bladder and change into a hospital gown. You may have to remove contact lenses, eyeglasses, jewellery and hairpins."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "For the procedure, you lie flat on your back on an X-ray table. X-ray cameras may move over and around your head and chest during the procedure. VT ablation procedures usually require a general anaesthetic which an anaesthetist will administer. Whilst under anaesthesia, a special ultrasound probe is positioned in the food pipe (oesophagus) which provides high resolution, real-time images of the heart. This is important to make sure there are no blood clots in the heart, and to ensure the catheters are correctly guided to the left atrium."
+    ],
+    [
+     "p",
+     "Electrodes on your chest monitor your heart throughout the procedure. An EPS usually involves a number of additional stickers and patches placed on over the chest. A blood pressure cuff tracks your blood pressure and another device, a pulse oximeter, measures the amount of oxygen in your blood."
+    ],
+    [
+     "p",
+     "A small amount of hair may be shaved from your groin where a flexible tube (catheter) will be inserted, and on your chest where electrode sticker must attach. The area is washed and disinfected and then numbed with an injection of local anaesthetic."
+    ],
+    [
+     "p",
+     "A small incision is made at the entry site, and 3 to 4 short plastic tubes (sheath) are inserted into your groin vein under ultrasound guidance. Additional access to the adjacent artery is also often required. Catheters are inserted through the sheath into your blood vessel and carefully threaded to your heart. These are used to perform the ablation. A specialised computer system allows us to create 3D real-time image of the heart chambers and the position of the catheters. This minimises the need for the use of X-rays. This is used to guide the delivery of a highly focussed heat energy (called radiofrequency ablation or RFA) in the ventricle. The aim of the procedure is to target areas within the scar that may form electrical circuits that allow the VT to propagate. Additional ablation around sited thought critical to maintaining the VT is also performed."
+    ],
+    [
+     "p",
+     "Having an VT ablation takes between 2-4 hours (occasionally longer), including the time to administer and recover from the anaesthesia."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "When the EPS is over, the catheters and plastic tubes are removed from your arm or groin and the incision is closed with manual pressure or occasionally a temporary stitch or an air-cushion clamp."
+    ],
+    [
+     "p",
+     "You’ll be taken to a recovery area for observation and monitoring. When your condition is stable, you return to your own room, where you’re monitored regularly."
+    ],
+    [
+     "p",
+     "You’ll need to lie flat for a few hours to avoid bleeding. During this time, pressure may be applied to the incision to prevent bleeding and promote healing."
+    ],
+    [
+     "p",
+     "You will have to remain in the hospital overnight. If you’re feeling up to it, have something to eat."
+    ],
+    [
+     "p",
+     "Ask your health care team when to resume taking medications, bathing or showering, working, and doing other normal activities. Avoid strenuous activities and heavy lifting for several days. This is mostly to avoid bleeding from the vascular access site. It is important to continue you blood thinner (anticoagulation) medication for a minimum of 3 months after the procedure. This should not be stopped unless directed to do so by your specialist doctor. Your doctor will advise you if anticoagulation is needed in the long term after AF ablation."
+    ],
+    [
+     "p",
+     "Your puncture site is likely to remain tender for a while. It may be slightly bruised and have a small bump. It is not uncommon to feel palpitations within the first 3 months from the procedure. For this reason, antiarrhythmic medications may be continued for a period of time after the ablation (up to 3-6 months)"
+    ],
+    [
+     "p",
+     "Call your doctor’s office if:"
+    ],
+    [
+     "li",
+     "You notice bleeding, new bruising or swelling at the catheter site"
+    ],
+    [
+     "li",
+     "You develop increasing pain or discomfort at the catheter site"
+    ],
+    [
+     "li",
+     "Weakness or numbness in the leg or arm where the catheter was inserted"
+    ],
+    [
+     "li",
+     "You develop chest pain or shortness of breath"
+    ],
+    [
+     "li",
+     "Any other symptom of concern to you"
+    ],
+    [
+     "li",
+     "If you have recurrence of sustained palpitations, or collapse"
+    ],
+    [
+     "li",
+     "If your implantable cardiac defibrillator delivers a shock"
+    ],
+    [
+     "p",
+     "If the catheter site is actively bleeding and doesn’t stop after you’ve applied pressure to the site, contact 000 or emergency medical services. If the catheter site suddenly begins to swell, contact 000 or emergency medical services."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "The success rates of VT ablation vary depending on the type of VT that you have."
+    ],
+    [
+     "li",
+     "For VT in the absence of known heart disease success rates vary between 50-90% depending on the location of the source of the VT."
+    ],
+    [
+     "li",
+     "For VT in the setting of known heart disease, the success rates will vary depending on the severity of the heart disease, the underlying heart condition and the degree of heart failure."
+    ],
+    [
+     "li",
+     "Some patients may require a repeat procedure in the setting of recurrent VT."
+    ]
+   ]
+  },
+  {
+   "title": "AV Node Ablation",
+   "blocks": [
+    [
+     "p",
+     "Atrial fibrillation (or AF) is a the most common electrical disorder of the heart. It causes the heart to beat fast and irregular. It can result in symptoms such as palpitations, shortness of breath and lethargy. It predisposes to stroke and, in some cases, may seriously affect the heart function."
+    ],
+    [
+     "p",
+     "A well-established treatment for the palpitations and occasionally the supressed heart function associated with AF (and other fast rhythms originating from the atria or small chambers or the heart) is a strategy known as “pace and ablate”. In this strategy, a pacemaker is first implanted (if one is not already in place – see section on pacemaker implantation)."
+    ],
+    [
+     "p",
+     "Generally, following 4-6 weeks after implantation, the normal electrical connection between the atria and the ventricles (called the AV node) is ablated (or rendered non-conducting) by the delivery of heat energy known as radio-frequency energy. This means that the ventricular heart rate can no longer become fast or irregular due to the AF in the small chambers, and will be controlled by the pacemaker."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "An AV node ablation is a permanent fix for the palpitations and rapid heart rates associated with AF. The added benefit is that medications aimed at slowing the heart rate down, known as rate-controlling medications (such as beta blockers, digoxin, amiodarone etc.), can be ceased after an AVN ablation. Importantly, blood thinners are not ceased following an AVN ablation, as the small chambers will still continue to have AF. It’s just that the AF will no longer cause the heart to go fast."
+    ],
+    [
+     "p",
+     "The combination of these factors usually alleviates many of the symptoms and burden of the AF. It does however make your heart rhythm dependent upon the pacemaker following the procedure. This is usually not a problem for the vast majority of patients and usually does not cause any symptoms in and of itself. Nonetheless, because of this, AVN ablation is usually reserved for those patients who have tried and failed other strategies to control the AF (such as medications or catheter ablation), or those who are otherwise unsuitable for other treatments. Your doctor will discuss with you if this an appropriate treatment option for you."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "It is not uncommon to experience some minor bruising from the access site in the leg. This is anticipated especially as blood thinners are usually continued."
+    ],
+    [
+     "p",
+     "Serious risks associated with AVN ablation are very rare. However, they are not zero and some can be serious. These can include:"
+    ],
+    [
+     "li",
+     "Injury to the groin blood vessel (1:200-400)"
+    ],
+    [
+     "li",
+     "Complication requiring emergency surgery (1:500-1000)"
+    ],
+    [
+     "li",
+     "Damage to the existing pacemaker requiring intervention (1:500-1000)"
+    ],
+    [
+     "p",
+     "How you prepare"
+    ],
+    [
+     "p",
+     "Almost all AV node ablations are elective or scheduled in advance, giving you time to prepare."
+    ],
+    [
+     "p",
+     "AV node ablations are performed in the cardiac catheterization (cath) lab of a hospital. Your health care team will give you specific instructions and talk to you about any medications you take. General guidelines include:"
+    ],
+    [
+     "li",
+     "Don’t eat or drink anything after midnight before your procedure."
+    ],
+    [
+     "li",
+     "Take all your medications to the hospital with you in their original bottles. Ask your doctor about whether or not to take your usual morning medications."
+    ],
+    [
+     "li",
+     "If you have diabetes, ask your doctor if you should take insulin or other oral medications before your procedure."
+    ],
+    [
+     "li",
+     "Blood-thinning medication usually need to be continued. Your doctor will advise if these need to be withheld prior."
+    ],
+    [
+     "h",
+     "What you can expect?"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Before your procedure starts, your health care team will review your medical history, including allergies and medications you take. You’ll also empty your bladder and change into a hospital gown. You may have to remove contact lenses, eyeglasses, jewellery and hairpins."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "For the procedure, you lie flat on your back on an X-ray table. X-ray cameras may move over and around your head and chest during the procedure. AVN ablation procedures are generally performed under local anaesthetic with some sedation and analgesia through the drip. The pacemaker will be checked to ensure it is working appropriately."
+    ],
+    [
+     "p",
+     "Electrodes on your chest monitor your heart throughout the procedure. An EPS usually involves a number of additional stickers and patches placed on over the chest. A blood pressure cuff tracks your blood pressure and another device, a pulse oximeter, measures the amount of oxygen in your blood."
+    ],
+    [
+     "p",
+     "A small amount of hair may be shaved from your groin where a flexible tube (catheter) will be inserted, and on your chest where electrode sticker must attach. The area is washed and disinfected and then numbed with an injection of local anaesthetic."
+    ],
+    [
+     "p",
+     "A small incision is made at the entry site, and 1 or 2 short plastic tubes (sheath) are inserted into your groin vein under ultrasound guidance. Catheters is inserted through the sheath into your blood vessel and carefully threaded to your heart. These are used to perform the ablation to the AVN node. This process usually takes between 15-30 minutes."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "When the procedure is over, the catheters and plastic tubes are removed from your arm or groin and the incision is closed with manual pressure or occasionally a temporary stitch or an air-cushion clamp."
+    ],
+    [
+     "p",
+     "You’ll be taken to a recovery area for observation and monitoring. When your condition is stable, you return to your own room, where you’re monitored regularly."
+    ],
+    [
+     "p",
+     "You’ll need to lie flat for a few hours to avoid bleeding. During this time, pressure may be applied to the incision to prevent bleeding and promote healing."
+    ],
+    [
+     "p",
+     "You will usually have to remain in the hospital overnight. If you’re feeling up to it, have something to eat."
+    ],
+    [
+     "p",
+     "Some medications may be ceased following the procedure (rate controlling medications). The pacemaker settings may be altered slightly following the procedure to ensure its function is optimised."
+    ],
+    [
+     "p",
+     "Avoid strenuous activities and heavy lifting for several days. This is mostly to avoid bleeding from the vascular access site. It is important to continue you blood thinner (anticoagulation) medication and this should not be stopped unless directed to do so by your specialist doctor."
+    ],
+    [
+     "p",
+     "Your puncture site is likely to remain tender for a while. It may be slightly bruised and have a small bump."
+    ],
+    [
+     "p",
+     "Call your doctor’s office if:"
+    ],
+    [
+     "li",
+     "You notice bleeding, new bruising or swelling at the catheter site"
+    ],
+    [
+     "li",
+     "You develop increasing pain or discomfort at the catheter site"
+    ],
+    [
+     "li",
+     "Weakness or numbness in the leg or arm where the catheter was inserted"
+    ],
+    [
+     "li",
+     "If you develop dizziness, light headedness or collapse"
+    ],
+    [
+     "li",
+     "If you have recurrence of sustained palpitations"
+    ],
+    [
+     "li",
+     "Any other symptom of concern to you"
+    ],
+    [
+     "p",
+     "If the catheter site is actively bleeding and doesn’t stop after you’ve applied pressure to the site, contact 000 or emergency medical services. If the catheter site suddenly begins to swell, contact 000 or emergency medical services."
+    ],
+    [
+     "p",
+     "It is important to continue to have the pacemaker functions monitored regularly after the procedure as advised by your doctor. Often the pacemaker rate may be set to a faster rate for the first month following the ablation and then gradually reduced to baseline over several months. Following this routine pacemaker checks are usually performed 6-12 monthly."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "AV node ablation effectively eliminates fast heart rates caused by the AF and so is essentially 100% effective in treating palpitations associated with AF after a single procedure. This usually eliminates the need for any further ablation procedures and the need for ongoing rate controlling medications. It does not allow for the cessation of anticoagulation."
+    ]
+   ]
+  },
+  {
+   "title": "Atrial Flutter ablation",
+   "blocks": [
+    [
+     "p",
+     "Atrial flutter is an electrical disturbance of the heart (or arrhythmia) which can result in fast heart rates, palpitations and occasionally reduce the heart function resulting in heart failure. A well-established treatment atrial flutter is catheter ablation."
+    ],
+    [
+     "p",
+     "Atrial flutter is caused by an abnormal electrical circuit that usually exists around the valve on the right side of the heart (the tricuspid valve). The procedure is aimed at disrupting this electrical circuit by the delivery of some heat energy (in the form or radiofrequency energy) to part of the circuit, so impulses can no longer travel around this circuit. This effectively eliminates the atrial flutter. Typically, this ablation is performed along the floor of the right atrium (in an area known as the cavo-tricuspid isthmus), although occasionally, in patients having had previous surgery, ablation may be needed elsewhere."
+    ],
+    [
+     "h",
+     "Why is it done?"
+    ],
+    [
+     "p",
+     "Atrial flutter ablation is usually performed to eliminate the symptoms (or palpitations) and deleterious effect on the heart of the atrial flutter. The added benefit is that medications aimed at slowing the heart rate down, known as rate controlling medications (such as beta blockers, digoxin, amiodarone etc..), may be reduced or in some cases ceased following ablation. Importantly, blood thinners (if present) may not be ceased following ablation, as co-existing atrial fibrillation (or AF) is common. Your doctor will advise which medications are still required following the procedure. Frequently, atrial flutter ablation is often included in an ablation procedure for atrial fibrillation."
+    ],
+    [
+     "h",
+     "Risks"
+    ],
+    [
+     "p",
+     "It is not uncommon to experience some minor bruising from the access site in the leg. This is anticipated especially as blood thinners are usually continued."
+    ],
+    [
+     "p",
+     "Serious risks associated with atrial flutter ablation are very rare. However, they are not zero and some can be serious. These can include:"
+    ],
+    [
+     "li",
+     "Injury to the groin blood vessel (1:200-400)"
+    ],
+    [
+     "li",
+     "Complication requiring emergency surgery (1:500-1000)"
+    ],
+    [
+     "li",
+     "Stroke (1:500-1000)"
+    ],
+    [
+     "li",
+     "Damage to structures around the heart (1:1000)"
+    ],
+    [
+     "h",
+     "How you prepare"
+    ],
+    [
+     "p",
+     "Almost all Atrial Flutter ablations are elective or scheduled in advance, giving you time to prepare."
+    ],
+    [
+     "p",
+     "Atrial Flutter ablations are performed in the cardiac catheterization (cath) lab of a hospital. Your health care team will give you specific instructions and talk to you about any medications you take. General guidelines include:"
+    ],
+    [
+     "li",
+     "Don’t eat or drink anything after midnight before your procedure."
+    ],
+    [
+     "li",
+     "Take all your medications to the hospital with you in their original bottles. Ask your doctor about whether or not to take your usual morning medications."
+    ],
+    [
+     "li",
+     "It is important to continue your blood thinner or anticoagulation, uninterrupted for at least 4 weeks prior to the procedure."
+    ],
+    [
+     "li",
+     "If you have diabetes, ask your doctor if you should take insulin or other oral medications before your procedure."
+    ],
+    [
+     "li",
+     "Blood-thinning medication usually need to be continued. Your doctor will advise if these need to be withheld prior."
+    ],
+    [
+     "h",
+     "What you can expect?"
+    ],
+    [
+     "p",
+     "Before the Procedure"
+    ],
+    [
+     "p",
+     "Before your procedure starts, your health care team will review your medical history, including allergies and medications you take. You’ll also empty your bladder and change into a hospital gown. You may have to remove contact lenses, eyeglasses, jewellery and hairpins."
+    ],
+    [
+     "p",
+     "During the Procedure"
+    ],
+    [
+     "p",
+     "For the procedure, you lie flat on your back on an X-ray table. X-ray cameras may move over and around your head and chest during the procedure. Atrial Flutter ablation procedures are generally performed under local anaesthetic with some sedation and analgesia through the drip."
+    ],
+    [
+     "p",
+     "Electrodes on your chest monitor your heart throughout the procedure. An EPS usually involves a number of additional stickers and patches placed on over the chest. A blood pressure cuff tracks your blood pressure and another device, a pulse oximeter, measures the amount of oxygen in your blood."
+    ],
+    [
+     "p",
+     "A small amount of hair may be shaved from your groin where a flexible tube (catheter) will be inserted, and on your chest where electrode sticker must attach. The area is washed and disinfected and then numbed with an injection of local anaesthetic."
+    ],
+    [
+     "p",
+     "A small incision is made at the entry site, and 2 or 3 short plastic tubes (sheaths) are inserted into your groin vein under ultrasound guidance. Catheters is inserted through the sheath into your blood vessel and carefully threaded to your heart. These are used to perform the ablation. This process usually takes between 45-60 minutes."
+    ],
+    [
+     "p",
+     "Rarely, an ultrasound probe inserted via the food pipe under sedation (a transoesophageal echocardiogram or TOE) may be needed to ensure that there are no blood clots in the heart prior to the procedure."
+    ],
+    [
+     "p",
+     "After the Procedure"
+    ],
+    [
+     "p",
+     "When the procedure is over, the catheters and plastic tubes are removed from your arm or groin and the incision is closed with manual pressure or occasionally a temporary stitch or an air-cushion clamp."
+    ],
+    [
+     "p",
+     "You’ll be taken to a recovery area for observation and monitoring. When your condition is stable, you return to your own room, where you’re monitored regularly."
+    ],
+    [
+     "p",
+     "You’ll need to lie flat for a few hours to avoid bleeding. During this time, pressure may be applied to the incision to prevent bleeding and promote healing."
+    ],
+    [
+     "p",
+     "You will usually have to remain in the hospital overnight. If you’re feeling up to it, have something to eat."
+    ],
+    [
+     "p",
+     "Some medications may be ceased following the procedure (rate controlling medications)."
+    ],
+    [
+     "p",
+     "Avoid strenuous activities and heavy lifting for several days. This is mostly to avoid bleeding from the vascular access site. It is important to continue you blood thinner (anticoagulation) medication and this should not be stopped unless directed to do so by your specialist doctor."
+    ],
+    [
+     "p",
+     "Your puncture site is likely to remain tender for a while. It may be slightly bruised and have a small bump. Call your doctor’s office if:"
+    ],
+    [
+     "li",
+     "You notice bleeding, new bruising or swelling at the catheter site"
+    ],
+    [
+     "li",
+     "You develop increasing pain or discomfort at the catheter site"
+    ],
+    [
+     "li",
+     "Weakness or numbness in the leg or arm where the catheter was inserted"
+    ],
+    [
+     "li",
+     "If you develop dizziness, light headedness or collapse"
+    ],
+    [
+     "li",
+     "If you have recurrence of sustained palpitations"
+    ],
+    [
+     "li",
+     "Any other symptom of concern to you"
+    ],
+    [
+     "p",
+     "If the catheter site is actively bleeding and doesn’t stop after you’ve applied pressure to the site, contact 000 or emergency medical services. If the catheter site suddenly begins to swell, contact 000 or emergency medical services."
+    ],
+    [
+     "h",
+     "Results"
+    ],
+    [
+     "p",
+     "Atrial flutter ablation effectively eliminates fast heart rates caused by the atrial flutter in over 95% of cases."
+    ],
+    [
+     "p",
+     "In patients who have had previous cardiac surgery, the flutter may be in an unusual location and this may reduce the success rates slightly."
+    ],
+    [
+     "p",
+     "Atrial fibrillation often co-exists with atrial flutter and this needs to be monitored for and may require other treatment (such as medications or catheter ablation) at a later stage."
+    ]
+   ]
+  }
+ ],
+ "structural": [
+  {
+   "title": "Transcatheter Aortic Valve Implantation (TAVI)",
+   "blocks": [
+    [
+     "p",
+     "Tricuspid valve problems can cause blood to leak backwards in the heart. Using catheter-based techniques, the valve can be repaired or supported to work more effectively. This reduces strain on the heart and improves quality of life, especially in patients with advanced heart failure symptoms."
+    ]
+   ]
+  },
+  {
+   "title": "Left Atrial Appendage Closure",
+   "blocks": [
+    [
+     "p",
+     "This treatment is designed for patients with atrial fibrillation who are at higher risk of stroke. A small device is inserted to seal off the left atrial appendage, where blood clots often form. By closing this area, the risk of stroke can be reduced without the need for long-term blood-thinning medication."
+    ]
+   ]
+  },
+  {
+   "title": "Mitral Valve Intervention",
+   "blocks": [
+    [
+     "p",
+     "For patients with mitral valve disease (such as leaking or narrowing), minimally invasive procedures can repair or replace the valve without open surgery. Devices are delivered via catheter to improve how the valve opens and closes, helping to restore normal blood flow and reduce symptoms like tiredness and swelling."
+    ]
+   ]
+  },
+  {
+   "title": "Tricuspid Valve Intervention",
+   "blocks": [
+    [
+     "p",
+     "Tricuspid valve problems can cause blood to leak backwards in the heart. Using catheter-based techniques, the valve can be repaired or supported to work more effectively. This reduces strain on the heart and improves quality of life, especially in patients with advanced heart failure symptoms."
+    ]
+   ]
+  }
+ ]
+}

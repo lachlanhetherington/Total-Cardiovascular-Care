@@ -9,6 +9,7 @@ Static concept site for client review, hosted on Vercel. Light redesign of total
 | Doctors (all 13, filterable) | `/doctors` |
 | Doctor profile (one template) | `/doctors/justin-cole` etc. |
 | Services (6 areas of care) | `/services` |
+| Area of care (6, generated) | `/services/general-cardiology`, `/services/rhythm-management` etc. |
 | Service guide | `/services/coronary-angioplasty` |
 | Locations (map + 7 clinics) | `/locations` |
 | Location (one template) | `/locations/frankston` etc. |
@@ -19,7 +20,7 @@ Static concept site for client review, hosted on Vercel. Light redesign of total
 Every nav item opens a mega menu on desktop, built from the same data.
 
 ## Editing
-Source lives in `src/`. `data.json` holds doctors, clinics and support staff; `pages/` holds the index page bodies; `contact.html` is the shared contact section; `site.css` and `site.js` are shared; `home.html` and `service-coronary-angioplasty.html` are page bodies; `img/` holds images. Then rebuild:
+Source lives in `src/`. `data.json` holds doctors, clinics and support staff; `pages/` holds the index page bodies; `contact.html` is the shared contact section; `procedures.json` holds every procedure's content (from the live site) used to generate the area pages; `site.css` and `site.js` are shared; `home.html` and `service-coronary-angioplasty.html` are page bodies; `img/` holds images. Then rebuild:
 
 ```
 python build.py

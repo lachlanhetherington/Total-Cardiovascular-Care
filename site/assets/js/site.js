@@ -48,8 +48,8 @@ function docCard(d){return `<a class="doc" href="${docUrl(d.s)}" aria-label="${e
   <div class="ph"><img src="${IMG(d.img)}" alt="" loading="lazy" width="900" height="900"></div>
   <span class="go" aria-hidden="true">${arrow}</span>
   <div class="meta"><span class="role">${esc(d.t)}</span><h3>${esc(d.n)}</h3><span class="cred">${esc(d.c)}</span></div></a>`;}
-const areaCard=c=>`<article class="area-card"><a class="area-img" href="${ROOT+'services.html#area-'+c.k}" tabindex="-1" aria-hidden="true"><img src="${IMG(c.img)}" alt="" loading="lazy" width="1800" height="1200"></a>
-  <div class="area-body"><h3>${c.name}</h3><p>${c.blurb}</p><div class="svc-cloud">${c.items.map(it=>c.link&&c.link[it]?`<a href="${c.link[it]}">${it}</a>`:`<span>${it}</span>`).join('')}</div></div></article>`;
+const areaCard=c=>`<article class="area-card"><a class="area-img" href="${ROOT+'services/'+({general:'general-cardiology',interventional:'interventional-cardiology',hf:'heart-failure',imaging:'cardiac-imaging',rhythm:'rhythm-management',structural:'structural-heart'})[c.k]+'.html'}" tabindex="-1" aria-hidden="true"><img src="${IMG(c.img)}" alt="" loading="lazy" width="1800" height="1200"></a>
+  <div class="area-body"><h3><a class="area-link" href="${ROOT+'services/'+({general:'general-cardiology',interventional:'interventional-cardiology',hf:'heart-failure',imaging:'cardiac-imaging',rhythm:'rhythm-management',structural:'structural-heart'})[c.k]+'.html'}">${c.name}</a></h3><p>${c.blurb}</p><div class="svc-cloud">${c.items.map(it=>c.link&&c.link[it]?`<a href="${c.link[it]}">${it}</a>`:`<span>${it}</span>`).join('')}</div></div></article>`;
 const locItem=o=>`<li><a href="${locUrl(o.s)}" data-loc="${o.s}"><strong>${o.n}${o.main?'<span class="main">Main rooms</span>':''}</strong><span>${esc(o.main?o.a:o.v)}</span><span class="pc">${o.pc}<i>&rarr;</i></span></a></li>`;
 
 function netmap(active){
@@ -106,14 +106,16 @@ const ICON={
  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>',
  cap:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg>'
 };
-const areaUrl=c=>PG.services+'#area-'+c.k;
+const AREA_SLUG={general:'general-cardiology',interventional:'interventional-cardiology',hf:'heart-failure',imaging:'cardiac-imaging',rhythm:'rhythm-management',structural:'structural-heart'};
+const areaUrl=c=>ROOT+'services/'+AREA_SLUG[c.k]+'.html';
 const docsIn=k=>DOCS.filter(d=>k==='all'||groupsOf(d).includes(k));
 const avatars=(list,n=5)=>`<span class="avs">${list.slice(0,n).map(d=>`<img src="${IMG(d.img)}" alt="" loading="lazy" width="900" height="1200">`).join('')}${list.length>n?`<i>+${list.length-n}</i>`:''}</span>`;
-const tile=(href,ic,t,s,ext)=>`<a class="mm-tile" href="${href}"${ext?' target="_blank" rel="noopener"':''}><span class="ico-s">${ICON[ic]}</span><span><b>${t}</b><small>${s}</small></span></a>`;
+const tile=(href,ic,t,s,ext,lead)=>`<a class="mm-tile${lead?' mm-tile--lead':''}" href="${href}"${ext?' target="_blank" rel="noopener"':''}><span class="mm-tile-top"><span class="ico-s">${ICON[ic]}</span><svg class="mm-go" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></span><b>${t}</b><small>${s}</small></a>`;
+const strip=items=>`<div class="mm-strip">${items.map(([ic,t])=>`<span>${ICON[ic]}${t}</span>`).join('')}</div>`;
 const feature=(href,img,eb,t,s)=>`<a class="mega-feature" href="${href}"><img src="${IMG(img)}" alt="" loading="lazy" width="1800" height="1200"><span class="mf-body"><span class="mf-eb">${eb}</span><b>${t}</b><span>${s} &rarr;</span></span></a>`;
 
 /* ---------- Shared: footer care links ---------- */
-$('footCare').innerHTML=CARE.map(c=>`<li><a href="${ROOT}services.html#area-${c.k}">${c.name}</a></li>`).join('');
+$('footCare').innerHTML=CARE.map(c=>`<li><a href="${areaUrl(c)}">${c.name}</a></li>`).join('');
 
 /* ---------- Home ---------- */
 let showCare=()=>{};
@@ -128,7 +130,7 @@ if(PAGE==='home'){
    <div class="care-img"><img src="${IMG(c.img)}" alt="${clone?'':esc(c.name)+' at Total Cardiovascular Care'}" width="1800" height="1200" loading="lazy"><span class="tag glass">${c.name}</span></div>
    <div class="care-body"><h3>${c.name}</h3><p style="color:var(--muted)">${c.blurb}</p>
    <ul>${c.items.map(it=>c.link&&c.link[it]?`<li><a href="${c.link[it]}">${it}<span>Read guide &rarr;</span></a></li>`:`<li>${it}</li>`).join('')}</ul>
-   <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>${c.link?`<a class="btn btn--ghost" href="${SVC}">About angioplasty &amp; stents</a>`:''}</div></div></article>`;
+   <div class="actions"><a class="btn" href="${areaUrl(c)}">Explore ${c.name.toLowerCase()}</a><a class="btn btn--ghost" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a></div></div></article>`;
  cTrack.innerHTML=CARE.map(c=>slide(c,1)).join('')+CARE.map(c=>slide(c,0)).join('')+CARE.map(c=>slide(c,1)).join('');
  const cSlides=[...cTrack.children];
  const sizeSlides=()=>{const wr=cView.parentElement,cs=getComputedStyle(wr);cView.style.setProperty('--slideW',(wr.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight))+'px')};
@@ -363,13 +365,16 @@ const ctaTile=(eb,t,p,btns)=>{const el=document.createElement('div');el.classNam
    <div class="mm-locs">${LOCS.map(l=>`<a class="mm-loc" href="${locUrl(l.s)}"><span class="ico-s">${ICON.pin}</span><span><b>${l.n}${l.main?' <em>Main rooms</em>':''}</b><small>${esc(l.main?l.a:l.v)} · ${l.pc}</small></span></a>`).join('')}</div></div>
    ${feature(locUrl('frankston'),'frankston-location','Main rooms','Frankston','Mon–Fri, 9am–5pm')}`,
   referrers:`<div class="mega-main"><div class="mega-head"><b>For referring doctors</b><a href="${PG.referrers}">Referrer information &rarr;</a></div>
-   <div class="mm-tiles">${tile(PG.referrers+'#how','doc','How to refer','Three simple steps')}${tile('https://totalcardiovascularcare.com.au/contact/','cal','Referral form','Send a referral online',1)}${tile(PG.referrers+'#finder','search','Find a specialist','Doctors by discipline')}${tile('tel:0390706116','phone','Call main rooms','03 9070 6116')}</div></div>
+   <div class="mm-tiles">${tile(PG.referrers+'#how','doc','How to refer','Three steps from referral to appointment.',0,1)}${tile('https://totalcardiovascularcare.com.au/contact/','cal','Referral form','Send your referral to our team online.',1)}${tile(PG.referrers+'#finder','search','Find a specialist','Browse our doctors by discipline.')}${tile('tel:0390706116','phone','Call main rooms','03 9070 6116, Monday to Friday.')}</div>
+   ${strip([['pin','Main rooms: 11 Hastings Road, Frankston VIC 3199'],['mail','reception@totalcardiovascularcare.com.au']])}</div>
    ${feature(PG.referrers,'tcc_experts','Referrers','Working with referring clinicians','Locally, nationally and internationally')}`,
   about:`<div class="mega-main"><div class="mega-head"><b>About the practice</b><a href="${PG.about}">About us &rarr;</a></div>
-   <div class="mm-tiles">${tile(PG.about,'heart','Our practice','Prevention-first cardiology')}${tile(PG.about+'#team','team','Support team','Nurses and administration')}${tile(PG.doctors,'cap','Our doctors',DOCS.length+' specialists')}${tile('https://totalcardiovascularcare.com.au/faqs/','info','FAQs','Common questions',1)}</div></div>
+   <div class="mm-tiles">${tile(PG.about,'heart','Our practice','Prevention-first, personalised cardiology.',0,1)}${tile(PG.about+'#team','team','Support team','Meet our nurses and administration team.')}${tile(PG.doctors,'cap','Our doctors',DOCS.length+' cardiologists and physicians.')}${tile('https://totalcardiovascularcare.com.au/faqs/','info','FAQs','Answers to common patient questions.',1)}</div>
+   ${strip([['team',DOCS.length+' specialists'],['pin','7 clinics, Highett to Inverloch'],['pulse','6 areas of cardiac care']])}</div>
    ${feature(PG.about,'hero-consult','About us','Professional &amp; personal care','Our approach')}`,
   contact:`<div class="mega-main"><div class="mega-head"><b>Get in touch</b><a href="${PG.contact}">Contact page &rarr;</a></div>
-   <div class="mm-tiles">${tile(APPT,'cal','Book online','Reply within 24 hours',1)}${tile('tel:0390706116','phone','Call us','03 9070 6116')}${tile('mailto:reception@totalcardiovascularcare.com.au','mail','Email','General enquiries')}${tile(PG.contact+'#feedback','chat','Feedback','Tell us how we did')}</div></div>
+   <div class="mm-tiles">${tile(APPT,'cal','Book online','Request a time. We reply within 24 hours.',1,1)}${tile('tel:0390706116','phone','Call us','03 9070 6116 for urgent appointments.')}${tile('mailto:reception@totalcardiovascularcare.com.au','mail','Email','General enquiries to our reception team.')}${tile(PG.contact+'#feedback','chat','Feedback','Tell us how we did, good or bad.')}</div>
+   ${strip([['pin','Main rooms: 11 Hastings Road, Frankston'],['cal','Monday to Friday, 9:00 am – 5:00 pm']])}</div>
    ${feature(PG.locations,'tcc_banner_9','Visit us','Seven clinics near you','Find a clinic')}`
  };
  const head=document.querySelector('.site-head');
@@ -403,7 +408,7 @@ if(PAGE==='services'){
    <div class="svc-row-body"><span class="eyebrow">${String(i+1).padStart(2,'0')} / 06</span><h2>${c.name}</h2><p class="lede">${c.blurb}</p>
     <ul class="proc-list">${c.items.map(it=>c.link&&c.link[it]?`<li><a href="${c.link[it]}">${it}<span>Patient guide &rarr;</span></a></li>`:`<li>${it}</li>`).join('')}</ul>
     <div class="svc-team">${avatars(team)}<span>${team.length} specialist${team.length===1?'':'s'} in this area</span></div>
-    <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>${c.link?`<a class="btn btn--ghost" href="${SVC}">Angioplasty guide</a>`:`<a class="btn btn--ghost" href="${PG.doctors}${GK[c.k]?'#f-'+GK[c.k]:''}">See specialists</a>`}</div></div>
+    <div class="actions"><a class="btn btn--ink" href="${areaUrl(c)}">Explore ${c.name.toLowerCase()} ${arrow}</a><a class="btn btn--ghost" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a></div></div>
   </section>`;}).join('');
 }
 
@@ -431,6 +436,21 @@ if(PAGE==='referrers'){
 if(PAGE==='about'){
  $('staffGrid').innerHTML=STAFF.map(s=>`<article class="staff"><div class="staff-ph"><img src="${IMG(s.img)}" alt="Portrait of ${esc(s.n)}" loading="lazy" width="900" height="1200"></div><span class="eyebrow">${esc(s.r)}</span><h3>${esc(s.n)}</h3><p>${esc(s.b)}</p></article>`).join('');
  $('aboutRail').innerHTML=DOCS.map(docCard).join('');
+}
+
+/* ---------- Area of care pages ---------- */
+if(PAGE==='area'){
+ const c=CARE.find(x=>x.k===SLUG);
+ const GKA={general:null,interventional:'interventional',structural:'interventional',imaging:'imaging',hf:'hf',rhythm:'rhythm'};
+ const team=c.k==='general'?DOCS.filter(d=>/general cardiolog/i.test(d.d.join(' '))):docsIn(GKA[c.k]);
+ $('areaRail').innerHTML=team.map(docCard).join('');
+ fillRow($('areaRail'),ctaTile('Not sure who to see?','We will match you with the right specialist',`Request an appointment and our team will book you with a doctor experienced in ${c.name.toLowerCase()}.`,`<a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="${PG.doctors}">All doctors</a>`));
+ $('areaCount').textContent=String(team.length).padStart(2,'0');
+ $('areaOthers').innerHTML=CARE.filter(x=>x.k!==c.k).map(areaCard).join('');
+ fillRow($('areaOthers'),ctaTile('Not sure which service you need?','Start with a consultation','A cardiology consultation is the usual first step. Your specialist will recommend any tests or procedures you need.',`<a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a><a class="btn btn--ghost" href="${PG.services}">All services</a>`));
+ /* opening a procedure from the jump links or a #hash */
+ const openHash=()=>{const el=location.hash&&document.getElementById(location.hash.slice(1));if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView({block:'start'})}};
+ addEventListener('hashchange',openHash);openHash();
 }
 
 /* ---------- Shared behaviour ---------- */
