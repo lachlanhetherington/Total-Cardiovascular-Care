@@ -91,8 +91,25 @@ section{padding-block:clamp(72px,10vw,140px)}
 /* ---------- HOME ---------- */
 /* Full-bleed photo hero (wonderful.ai pattern): headline bottom-left, intro + actions bottom-right */
 .hero{position:relative;margin-top:-78px;min-height:clamp(600px,100svh,980px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);isolation:isolate}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;z-index:-2;transform-origin:62% 40%;animation:drift 26s ease-in-out infinite alternate}
-@keyframes drift{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.1) translate3d(-1.2%,-.8%,0)}}
+.hero-slides{position:absolute;inset:0;z-index:-2}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 40%);opacity:0;transition:opacity 1.6s ease;transform:scale(1.03)}
+.hero-bg.is-on{opacity:1}
+.hero-bg.is-on,.hero-bg.is-leaving{animation:drift 9.5s cubic-bezier(.25,.1,.25,1) forwards}
+@keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.11) translate3d(-1%,-.6%,0)}}
+.hero-ctrl{display:flex;align-items:center;gap:14px;margin-top:6px}
+.hero-pause{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.08);color:var(--white);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s,border-color .2s}
+.hero-pause:hover{background:rgba(255,255,255,.2);border-color:var(--white)}
+.hero-pause svg{width:13px;height:13px}
+.hero-pause .i-play,.hero-pause[aria-pressed="true"] .i-pause{display:none}
+.hero-pause[aria-pressed="true"] .i-play{display:block}
+.hero-dots{display:flex;gap:6px}
+.hero-dots button{width:34px;height:22px;border:0;padding:0;background:transparent;cursor:pointer;position:relative}
+.hero-dots button::before,.hero-dots button i{content:"";position:absolute;left:0;right:0;top:10px;height:2px;border-radius:2px;background:rgba(255,255,255,.35)}
+.hero-dots button i{background:var(--white);transform:scaleX(0);transform-origin:left}
+.hero-dots button[aria-current="true"] i{animation:progress var(--dur,7s) linear forwards}
+.hero-dots button.done i{transform:scaleX(1)}
+.hero.paused .hero-dots i,.hero.paused .hero-bg{animation-play-state:paused}
+@keyframes progress{to{transform:scaleX(1)}}
 .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(to right,rgba(0,5,34,.32) 0,rgba(0,5,34,0) 55%),linear-gradient(to bottom,rgba(0,5,34,.42) 0,rgba(0,5,34,0) 190px),linear-gradient(to top,rgba(0,5,34,.62) 0,rgba(0,5,34,.18) 42%,rgba(0,5,34,0) 64%)}
 .hero-inner{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:28px 64px;align-items:end;padding-block:120px clamp(40px,6vw,76px)}
 .hero h1{font-weight:300;font-size:clamp(42px,5.2vw,82px);line-height:.98;letter-spacing:-.045em;color:var(--white);text-shadow:0 2px 30px rgba(0,5,34,.18)}
@@ -104,7 +121,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 .hero h1,.hero-aside{animation:rise 1.1s .15s var(--ease) both}
 .hero-aside{animation-delay:.35s}
 @keyframes rise{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
-@media (max-width:860px){.hero-inner{grid-template-columns:1fr;padding-top:140px}.hero-aside{justify-self:start}.hero{min-height:clamp(620px,92svh,820px)}.hero-bg{object-position:62% 40%}}
+@media (max-width:860px){.hero-inner{grid-template-columns:1fr;padding-top:140px}.hero-aside{justify-self:start}.hero{min-height:clamp(620px,92svh,820px)}}
 .facts .ecg{margin:0 0 8px;height:46px}
 .ecg{display:block;width:100%;height:56px;margin-block:22px 0;overflow:visible}
 .ecg path{fill:none;stroke:var(--cyan);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1600;stroke-dashoffset:0;animation:draw 2.4s .2s var(--ease) both}
@@ -343,8 +360,9 @@ section{padding-block:clamp(72px,10vw,140px)}
 @media (max-width:600px){.info-grid{grid-template-columns:1fr}}
 
 @media (prefers-reduced-motion:reduce){
+  .hero-bg.is-on,.hero-bg.is-leaving{animation:none;transform:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   #statement .w{color:var(--ink)}
 }
 
-.hero .wrap.hero-inner{max-width:1640px}
+@media (min-width:1760px){.site-head .wrap,.hero .wrap.hero-inner{max-width:1640px}}

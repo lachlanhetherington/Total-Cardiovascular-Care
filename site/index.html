@@ -31,7 +31,13 @@
 </header>
 <main>
   <div class="hero">
-    <img class="hero-bg" src="assets/img/tcc_banner_11.webp" alt="A Total Cardiovascular Care cardiologist in conversation with a patient in a consulting room" width="2400" height="1600" fetchpriority="high">
+    <div class="hero-slides" aria-hidden="true">
+      <img class="hero-bg is-on" src="assets/img/hero-consult.webp" alt="" width="2400" height="1600" fetchpriority="high" style="--pos:50% 38%">
+      <img class="hero-bg" data-src="assets/img/hero-echo.webp" alt="" width="2400" height="1600" style="--pos:50% 30%">
+      <img class="hero-bg" data-src="assets/img/hero-cathlab.webp" alt="" width="2400" height="1600" style="--pos:50% 35%">
+      <img class="hero-bg" data-src="assets/img/hero-team.webp" alt="" width="2400" height="1600" style="--pos:50% 22%">
+      <img class="hero-bg" data-src="assets/img/hero-scan.webp" alt="" width="2400" height="1600" style="--pos:60% 40%">
+    </div>
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <h1>Professional &amp; personal<br>cardiovascular care</h1>
@@ -40,6 +46,13 @@
         <div class="actions">
           <a class="btn" href="https://totalcardiovascularcare.com.au/appointment/" target="_blank" rel="noopener">Request an appointment</a>
           <a class="btn btn--glass" href="#locations">Find a clinic</a>
+        </div>
+        <div class="hero-ctrl" id="heroCtrl">
+          <button class="hero-pause" type="button" id="heroPause" aria-label="Pause background slideshow" aria-pressed="false">
+            <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg>
+            <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg>
+          </button>
+          <div class="hero-dots" id="heroDots"></div>
         </div>
       </div>
     </div>
