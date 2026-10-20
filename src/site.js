@@ -135,8 +135,9 @@ if(PAGE==='home'){
  const cSlides=[...cTrack.children];
  const sizeSlides=()=>{const wr=cView.parentElement,cs=getComputedStyle(wr);cView.style.setProperty('--slideW',(wr.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight))+'px')};
  const cStep=()=>cSlides[1].offsetLeft-cSlides[0].offsetLeft;
- const cPlace=anim=>{cTrack.classList.toggle('no-anim',!anim);cTrack.style.transform=`translate3d(${-ci*cStep()}px,0,0)`;cSlides.forEach((el,j)=>el.classList.toggle('is-current',j===ci));if(!anim)void cTrack.offsetWidth;};
- const syncTabs=()=>{const k=((ci%N)+N)%N;const bs=tabs.querySelectorAll('button');bs.forEach((b,j)=>{b.setAttribute('aria-selected',j===k);b.classList.remove('run')});void tabs.offsetWidth;if(!cUserPaused&&!cHold)bs[k].classList.add('run');};
+ const cFit=()=>{cView.style.height=innerWidth<=900?cSlides[ci].offsetHeight+'px':''};
+ const cPlace=anim=>{cTrack.classList.toggle('no-anim',!anim);requestAnimationFrame(cFit);cTrack.style.transform=`translate3d(${-ci*cStep()}px,0,0)`;cSlides.forEach((el,j)=>el.classList.toggle('is-current',j===ci));if(!anim)void cTrack.offsetWidth;};
+ const syncTabs=()=>{const k=((ci%N)+N)%N;const bs=tabs.querySelectorAll('button');const ab=bs[k];if(ab&&tabs.scrollWidth>tabs.clientWidth)tabs.scrollTo({left:ab.offsetLeft-(tabs.clientWidth-ab.offsetWidth)/2,behavior:'smooth'});const cc=$('careCount');if(cc)cc.innerHTML=`<b>${String(k+1).padStart(2,'0')}</b> / ${String(N).padStart(2,'0')}`;bs.forEach((b,j)=>{b.setAttribute('aria-selected',j===k);b.classList.remove('run')});void tabs.offsetWidth;if(!cUserPaused&&!cHold)bs[k].classList.add('run');};
  function cGo(target,anim=true){if(cBusy&&anim)return;cBusy=anim;ci=target;cPlace(anim);syncTabs();cSchedule();}
  cTrack.addEventListener('transitionend',e=>{if(e.target!==cTrack)return;cBusy=false;if(ci>=2*N){ci-=N;cPlace(false)}else if(ci<N){ci+=N;cPlace(false)}});
  function cSchedule(){clearTimeout(cTimer);if(!cUserPaused&&!cHold&&!document.hidden)cTimer=setTimeout(()=>cGo(ci+1),C_DWELL);}
@@ -156,6 +157,7 @@ if(PAGE==='home'){
  cView.addEventListener('click',e=>{if(cSwiped){e.preventDefault();cSwiped=false}},true);
  cView.addEventListener('dragstart',e=>e.preventDefault());
  addEventListener('resize',()=>{sizeSlides();cPlace(false)});
+ cTrack.addEventListener('load',()=>cFit(),true);
  sizeSlides();cPlace(false);cSetPaused(cUserPaused);
 
  const FILTERS=[['all','All doctors'],['interventional','Interventional & structural'],['imaging','Imaging'],['hf','Heart failure'],['rhythm','Rhythm'],['paeds','Paediatric & fetal'],['physician','Physicians']];

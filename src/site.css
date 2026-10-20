@@ -966,3 +966,25 @@ html.menu-lock,html.menu-lock body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.m-sub,.m-drawer{transition:none}}
 .site-head.open{-webkit-backdrop-filter:none;backdrop-filter:none}
 .site-head .m-foot .btn{display:inline-flex}
+
+/* Services carousel: counter + touch layout */
+.care-count{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-right:6px;font-variant-numeric:tabular-nums}
+.care-count b{color:var(--ink);font-weight:500}
+@media (max-width:900px){
+  .care-bar{flex-direction:column;align-items:stretch;gap:14px}
+  .care-bar .tabs{width:auto;max-width:none;border-radius:var(--r-pill);-webkit-mask-image:linear-gradient(to right,#000 0,#000 82%,transparent);mask-image:linear-gradient(to right,#000 0,#000 82%,transparent);scroll-behavior:smooth}
+  .care-bar .rail-ctrl{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-left:0}
+  .care-count{margin-right:auto}
+  /* each slide takes its own height; the viewport animates to the current one */
+  .care-viewport{transition:height .6s var(--ease);overflow:hidden}
+  .care-track{align-items:flex-start}
+  .care-slide{grid-template-rows:auto auto;align-content:start;gap:12px;min-height:0}
+  .care-img{aspect-ratio:16/10}
+  .care-body{padding:24px 22px 26px;gap:16px}
+  .care-body .actions{margin-top:6px}
+}
+@media (max-width:700px){
+  .care-img{aspect-ratio:4/3}
+  .care-body h3{font-size:30px}
+}
+@media (max-width:900px){.care-bar{min-width:0}.care-bar .tabs{width:100%;min-width:0}}
