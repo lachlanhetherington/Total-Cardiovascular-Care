@@ -815,3 +815,100 @@ body[data-page="home"] .site-head:not(.scrolled):not(.open):not(.mega-on) .head-
 .mm-strip span{display:inline-flex;align-items:center;gap:8px}
 .mm-strip svg{width:16px;height:16px;color:var(--cyan-deep)}
 @media (max-width:1180px){.mm-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.mm-tile{min-height:0}}
+
+/* ================= Header action group ================= */
+.head-actions{display:flex;align-items:center;gap:8px}
+.head-actions .head-phone,.head-actions .head-cta{height:44px;padding:0 18px;font-size:14.5px;line-height:1;display:inline-flex;align-items:center;border-radius:var(--r-pill)}
+.head-actions .head-cta{font-weight:500}
+.head-call{display:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(0,5,34,.2);color:var(--ink);place-items:center;flex:none}
+.head-call svg{width:18px;height:18px}
+.nav-cta{display:none}
+.menu-btn{min-height:44px;padding:0 18px}
+body[data-page="home"] .site-head:not(.scrolled):not(.open):not(.mega-on) .head-call,
+body[data-page="home"] .site-head:not(.scrolled):not(.open):not(.mega-on) .menu-btn{color:var(--white);border-color:rgba(255,255,255,.6)}
+@media (max-width:1080px){.head-actions .head-phone{display:none}}
+@media (max-width:900px){
+  .site-head > .wrap{gap:12px}
+  .site-head .head-actions .btn{display:inline-flex}
+  .head-actions{margin-left:auto}
+  .head-actions .head-phone{display:inline-flex}
+  .menu-btn{margin-left:0}
+  .site-head.open .nav{gap:2px;max-height:calc(100dvh - 78px);overflow-y:auto}
+  .site-head.open .nav-cta{display:grid;gap:10px;padding-top:16px;margin-top:10px;border-top:1px solid var(--line)}
+  .site-head.open .nav-cta .btn{display:inline-flex;justify-content:center;height:48px}
+}
+@media (max-width:700px){
+  .head-actions{display:none}
+  .head-call{display:grid;margin-left:auto}
+}
+
+/* ================= Tablet: keep heroes side by side down to 700px ================= */
+@media (min-width:701px) and (max-width:860px){
+  .ph-grid,.lc-hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+  .dr-hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+  .svc-hero .top{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+  .ph-grid h1{font-size:clamp(38px,5.6vw,52px)}
+  .lc-photo{min-height:0;aspect-ratio:4/3;align-self:center}
+}
+
+/* ================= Phone ================= */
+@media (max-width:700px){
+  section{padding-block:clamp(56px,14vw,72px)}
+  .split{padding-block:clamp(40px,10vw,56px)}
+  .sec-head{margin-bottom:28px}
+  /* hero and page buttons: full width, centred */
+  .hero-aside .actions .btn,.ph-text .actions .btn,.dr-text .actions .btn,.lc-hero .actions .btn,.svc-hero .actions .btn,.guide-copy .actions .btn{flex:1 1 100%;justify-content:center}
+  .hero-aside,.guide-copy{justify-items:stretch}
+  /* doctor profile hero: portrait first, single column */
+  .dr-hero{grid-template-columns:1fr;gap:20px}
+  .dr-visual{order:-1;width:100%;max-width:360px;margin-inline:auto;padding:4px 0 0}
+  .dr-visual .dr-portrait{width:min(100%,300px)}
+  .dr-float--count{right:0;top:6%;padding:10px 14px}
+  .dr-float--count b{font-size:28px}
+  .dr-float--book{left:0;bottom:6%}
+  .dr-hero h1{font-size:clamp(40px,11vw,52px)}
+  /* facts strips: 2 x 2 instead of four tall rows */
+  .dr-facts{grid-template-columns:1fr 1fr}
+  .dr-facts div{padding:16px 18px;border-left:0!important;border-top:0!important}
+  .dr-facts div:nth-child(even){border-left:1px solid var(--line)!important}
+  .dr-facts div:nth-child(n+3){border-top:1px solid var(--line)!important}
+  .area-facts div:nth-child(-n+3) dd{font-size:26px}
+  /* jump links: one swipeable row */
+  .jump{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 85%,transparent);mask-image:linear-gradient(to right,#000 85%,transparent);padding-bottom:2px}
+  .jump::-webkit-scrollbar{display:none}
+  .jump a{flex:none;white-space:nowrap}
+  /* legible small type and 44px tap targets */
+  .doc .role,.doc .cred,.tagline,.mf-eb,.dr-facts dt,.facts dt{font-size:12px}
+  .chip,.tabs button,.jump a,.copy-btn,.mm-chips a{min-height:44px;display:inline-flex;align-items:center}
+  .copy-btn{padding:0 16px}
+  .sec-link,.way-link,.area-link,.loc-card-links a,.doctor-tools > a{display:inline-flex;align-items:center;min-height:44px}
+  .crumbs a{display:inline-flex;align-items:center;min-height:36px}
+  /* location contact panel email: break at the soft hyphen, not mid-word */
+  .lc-row b{font-size:15.5px;overflow-wrap:normal}
+  .lc-row{gap:14px;padding:18px 0}
+  /* home services carousel: content-height body */
+  .care-body{gap:16px}
+  .care-body .actions{margin-top:8px}
+  .care-body .actions .btn{flex:1 1 100%;justify-content:center}
+  /* procedure panels */
+  .pacc-t b{font-size:17.5px}
+  /* contact cards */
+  .take .way-row .btn{flex:1 1 100%;justify-content:center}
+}
+
+/* Tablets are touch devices too: same legibility and tap-target rules */
+@media (min-width:701px) and (max-width:1024px){
+  .doc .role,.doc .cred,.tagline,.mf-eb,.dr-facts dt,.facts dt{font-size:12px}
+  .chip,.tabs button,.jump a,.copy-btn,.mm-chips a{min-height:44px;display:inline-flex;align-items:center}
+  .copy-btn{padding:0 16px}
+  .sec-link,.way-link,.area-link,.loc-card-links a,.doctor-tools > a{display:inline-flex;align-items:center;min-height:44px}
+  .crumbs a{display:inline-flex;align-items:center;min-height:36px}
+  .rail-ctrl button{width:46px;height:46px}
+}
+
+/* Header divider as a shadow so the header is exactly 78px and the hero photo meets the top edge */
+.site-head{border-bottom:0;box-shadow:0 1px 0 transparent;transition:background .35s,box-shadow .3s}
+.site-head.scrolled{box-shadow:0 1px 0 var(--line)}
+.hero{margin-top:-79px}
+.menu-btn{align-items:center;justify-content:center;line-height:1}
+.crumbs{align-items:center}
