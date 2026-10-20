@@ -6,12 +6,20 @@ Static concept site for client review, hosted on Vercel. Light redesign of total
 | Page | Path |
 |---|---|
 | Home | `/` |
-| Doctor profile (13, one template) | `/doctors/justin-cole` etc. |
-| Service | `/services/coronary-angioplasty` |
-| Location (7, one template) | `/locations/frankston` etc. |
+| Doctors (all 13, filterable) | `/doctors` |
+| Doctor profile (one template) | `/doctors/justin-cole` etc. |
+| Services (6 areas of care) | `/services` |
+| Service guide | `/services/coronary-angioplasty` |
+| Locations (map + 7 clinics) | `/locations` |
+| Location (one template) | `/locations/frankston` etc. |
+| Referrers | `/referrers` |
+| About (approach + support team) | `/about` |
+| Contact | `/contact` |
+
+Every nav item opens a mega menu on desktop, built from the same data.
 
 ## Editing
-Source lives in `src/`. `data.json` holds doctors and clinics; `site.css` and `site.js` are shared; `home.html` and `service-coronary-angioplasty.html` are page bodies; `img/` holds images. Then rebuild:
+Source lives in `src/`. `data.json` holds doctors, clinics and support staff; `pages/` holds the index page bodies; `contact.html` is the shared contact section; `site.css` and `site.js` are shared; `home.html` and `service-coronary-angioplasty.html` are page bodies; `img/` holds images. Then rebuild:
 
 ```
 python build.py
