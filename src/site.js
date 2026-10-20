@@ -455,6 +455,23 @@ if(PAGE==='area'){
  addEventListener('hashchange',openHash);openHash();
 }
 
+/* ---------- Touch carousels for specialist rows (area pages + navy bands) ---------- */
+(function(){
+ const lists=[...document.querySelectorAll('#areaRail,.band-ink .rail')];
+ lists.forEach(list=>{
+  const n=list.querySelectorAll('.doc').length;if(!n)return;
+  const ctrl=document.createElement('div');ctrl.className='swipe-ctrl';
+  ctrl.innerHTML=`<span class="doctors-count">${n} ${n===1?'specialist':'specialists'}</span><button type="button" aria-label="Previous specialist"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 8H3M7 4 3 8l4 4"/></svg></button><button type="button" aria-label="Next specialist"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>`;
+  list.parentNode.insertBefore(ctrl,list);
+  const step=()=>{const c=list.children[0],c2=list.children[1];return c&&c2?c2.offsetLeft-c.offsetLeft:list.clientWidth*.8};
+  const [prev,next]=ctrl.querySelectorAll('button');
+  prev.addEventListener('click',()=>list.scrollBy({left:-step(),behavior:'smooth'}));
+  next.addEventListener('click',()=>list.scrollBy({left:step(),behavior:'smooth'}));
+  const sync=()=>{prev.disabled=list.scrollLeft<4;next.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-4};
+  list.addEventListener('scroll',()=>requestAnimationFrame(sync),{passive:true});addEventListener('resize',sync);sync();
+ });
+})();
+
 /* ---------- Shared behaviour ---------- */
 document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(!b)return;const t=b.dataset.copy,o=b.textContent;
  const sel=()=>{const v=b.parentElement.querySelector('.v');const r=document.createRange();r.selectNodeContents(v);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Ctrl+C';};

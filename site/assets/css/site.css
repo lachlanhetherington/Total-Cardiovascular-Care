@@ -1002,3 +1002,23 @@ html.menu-lock,html.menu-lock body{overflow:hidden}
   #doctors .dc-track .doc{flex-basis:min(78vw,320px)}
   #doctors .dc-track{gap:12px}
 }
+
+/* Specialist rows: swipe carousel with count + arrows on touch widths */
+.swipe-ctrl{display:none}
+@media (max-width:900px){
+  .swipe-ctrl{display:flex;align-items:center;gap:8px;margin:-6px 0 18px}
+  .swipe-ctrl .doctors-count{margin-right:auto;font-size:13px}
+  .swipe-ctrl button{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:transparent;border:1px solid var(--line);color:var(--ink);transition:opacity .2s,border-color .2s}
+  .swipe-ctrl button svg{width:18px;height:18px}
+  .swipe-ctrl button:disabled{opacity:.3;cursor:default}
+  .band-ink .swipe-ctrl button{border-color:rgba(255,255,255,.3);color:var(--white)}
+  .band-ink .swipe-ctrl .doctors-count{color:#AEB9CB}
+  .band-ink .rail{scroll-snap-type:x mandatory}
+}
+@media (max-width:700px){
+  #areaRail{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(78vw,320px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:calc(50% - 50vw);padding-right:16px}
+  #areaRail::-webkit-scrollbar{display:none}
+  #areaRail > *{scroll-snap-align:start}
+  #areaRail .row-cta{grid-column:auto!important;flex-direction:column;align-items:flex-start;justify-content:flex-end}
+  .band-ink .rail{grid-auto-columns:min(78vw,320px);gap:12px;margin-right:calc(50% - 50vw);padding-right:16px}
+}
