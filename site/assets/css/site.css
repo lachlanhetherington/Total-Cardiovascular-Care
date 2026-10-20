@@ -11,6 +11,7 @@
   --cyan:#00A7E9;       /* brand primary */
   --cyan-deep:#0072A3;  /* cyan for text on light grounds (AA) */
   --white:#FFFFFF;
+  --tint:#E8F3FA;       /* section band: soft brand blue */
   --f-display:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;
   --f-body:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;
   --f-mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
@@ -137,7 +138,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 @media (max-width:900px){.statement .row{grid-template-columns:1fr}}
 
 /* Care areas tabs (wonderful "industries" switcher) */
-.care{background:var(--sky)}
+.care{}
 .tabs{display:flex;gap:4px;padding:5px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-pill);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none;margin-inline:auto;margin-bottom:28px}
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{border:0;background:transparent;padding:10px 16px;border-radius:var(--r-pill);font:400 14px var(--f-body);color:var(--muted);cursor:pointer;white-space:nowrap;transition:background .3s var(--ease),color .3s}
@@ -252,7 +253,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 @media (max-width:900px){.locs{grid-template-columns:1fr}.netmap{position:static}}
 
 /* Referrers */
-.referrers{padding-block:0}
+.referrers{padding-block:0 clamp(72px,10vw,140px)}
 .ref-band{background:var(--sky-2);border-radius:var(--r-plate);overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:stretch}
 .ref-img{margin:0;position:relative;min-height:380px}
 .ref-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
@@ -272,7 +273,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 @media (max-width:900px){.ways{grid-template-columns:1fr}.way+.way{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 
 /* Footer */
-.site-foot{background:var(--ink);color:#B9C3D2;padding-block:clamp(64px,8vw,104px) 32px;margin-top:clamp(24px,4vw,56px)}
+.site-foot{background:var(--ink);color:#B9C3D2;padding-block:clamp(64px,8vw,104px) 32px;margin-top:0}
 .site-foot a{color:#DCE5F0}
 .site-foot a:hover{color:var(--cyan)}
 .foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px}
@@ -431,3 +432,29 @@ section{padding-block:clamp(72px,10vw,140px)}
 .tel:hover{color:var(--cyan-deep)}
 body[data-page="home"] .site-head:not(.scrolled):not(.open) .head-phone{border-color:rgba(255,255,255,.75)}
 body[data-page="home"] .site-head:not(.scrolled):not(.open) .head-phone:hover{background:rgba(255,255,255,.16);border-color:var(--white);color:var(--white)}
+
+/* ---------- Section rhythm ---------- */
+.tone-white{background:var(--white)}
+.tone-tint{background:var(--tint)}
+.facts.tone-white{padding-bottom:0}
+/* the one dark band: doctors */
+.tone-ink{background:var(--ink);color:#C9D3E0}
+.tone-ink .sec-head h2{color:var(--white)}
+.tone-ink .lede{color:#AEB9CB}
+.tone-ink .chips{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}
+.tone-ink .chip{color:#C9D3E0}
+.tone-ink .chip:hover:not([aria-pressed="true"]){background:rgba(255,255,255,.08);color:var(--white)}
+.tone-ink .chip[aria-pressed="true"]{background:var(--white);color:var(--ink)}
+.tone-ink .doctors-count{color:#8F9BB0}
+.tone-ink .rail-ctrl button{background:transparent;border-color:rgba(255,255,255,.3);color:var(--white)}
+.tone-ink .rail-ctrl button:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+.tone-ink .doc{box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.tone-ink :focus-visible{outline-color:var(--cyan)}
+/* full-bleed tinted band inside a .wrap (inner pages) */
+.band{position:relative;background:var(--tint);box-shadow:0 0 0 100vmax var(--tint);clip-path:inset(0 -100vmax)}
+.split.band{border-top:0;padding-block:clamp(56px,7vw,96px)}
+.split.band + .split{border-top:0}
+.band--cards{padding-block:clamp(40px,5vw,64px)}
+.band--cards + .split{border-top:0}
+.svc-hero.band{padding-bottom:0}
+.svc-hero.band .quick{border-bottom:0}

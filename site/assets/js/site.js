@@ -235,7 +235,7 @@ if(PAGE==='doctor'){
  ${care.length?`<div class="split"><h2>Areas of care</h2>
   <div style="display:grid;gap:26px">${care.map(c=>`<div style="display:grid;gap:12px"><span class="eyebrow">${c.name}</span><div class="svc-cloud">${c.items.map(it=>c.link&&c.link[it]?`<a href="${c.link[it]}">${it}</a>`:`<span>${it}</span>`).join('')}</div></div>`).join('')}</div></div>`:''}
  <div class="split"><h2>Qualifications</h2><dl class="gloss">${gl.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl></div>
- <div class="split" id="d-referral"><h2>Booking an appointment</h2>
+ <div class="split band" id="d-referral"><h2>Booking an appointment</h2>
   <ol class="steps">
    <li><b>Get a referral</b><p>Ask your GP or specialist for a referral addressed to ${esc(d.n)}.</p></li>
    <li><b>Send your request</b><p>Complete the online request form, or call <a class="tel" href="tel:0390706116">03 9070 6116</a>.</p></li>
@@ -272,16 +272,16 @@ if(PAGE==='location'){
   <figure class="lc-photo" style="margin:0"><img src="${IMG(l.img)}" alt="Street view of the ${esc(l.n)} clinic at ${esc(l.a)}" width="1200" height="1200">
    ${l.main?`<span class="status glass ${isOpen?'open':''}"><i></i>${isOpen?'Open now · until 5:00 pm':'Closed now · opens 9:00 am weekdays'}</span>`:''}</figure>
  </div>
- <div class="info-grid">
+ <div class="band band--cards"><div class="info-grid">
   <div class="info"><h3>Phone</h3><div class="v">03 9070 6116</div><p>${l.main?'Call ahead before visiting. Appointments are required.':'All bookings for this clinic go through our main rooms.'}</p><button class="copy-btn" type="button" data-copy="03 9070 6116">Copy number</button></div>
   <div class="info"><h3>Email</h3><div class="v">reception@totalcardiovascular&shy;care.com.au</div><p>For general enquiries. Please call for urgent appointments.</p><button class="copy-btn" type="button" data-copy="reception@totalcardiovascularcare.com.au">Copy email</button></div>
   <div class="info"><h3>Opening hours</h3>${l.main?`<table class="hours"><tbody>${HOURS_FRANKSTON.map((h,i)=>`<tr class="${h[1]==='Closed'?'closed':''} ${i===today?'today':''}"><td>${h[0]}</td><td>${h[1]}</td></tr>`).join('')}</tbody></table><p class="src">Hours may change on public holidays.</p>`:`<div class="v">Session days vary</div><p>Our specialists consult here on set days. Call 03 9070 6116 to find the next available appointment.</p>`}</div>
- </div>
+ </div></div>
  ${l.main?`<div class="split" style="margin-top:clamp(48px,6vw,80px)"><h2>Referrals</h2><div style="display:grid;gap:16px"><p class="lede">The Frankston main rooms coordinate referrals for every Total Cardiovascular Care clinic. We accept referrals from practitioners locally, across Australia and internationally.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn--ink" href="https://totalcardiovascularcare.com.au/contact/" target="_blank" rel="noopener">Referral form</a></div></div></div>`:''}
  <div class="split" style="grid-template-columns:1fr;${l.main?'':'margin-top:clamp(48px,6vw,80px)'}"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Our clinic network</h2>
   <div class="locs"><figure class="netmap" style="margin:0">${netmap(l.s)}<figcaption><span>${l.n} highlighted</span><span>Select a pin to view a clinic</span></figcaption></figure>
   <ul class="loc-list">${others.map(locItem).join('')}</ul></div></div>
- <div class="split" style="grid-template-columns:1fr"><div class="doctor-tools" style="margin:0"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Specialists across our network</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${DOCS.slice(0,8).map(docCard).join('')}</div></div>`;
+ <div class="split band" style="grid-template-columns:1fr"><div class="doctor-tools" style="margin:0"><h2 style="font-weight:300;font-size:clamp(28px,3vw,40px)">Specialists across our network</h2><a href="${home('doctors')}">All doctors &rarr;</a></div><div class="rail">${DOCS.slice(0,8).map(docCard).join('')}</div></div>`;
  linkMap($('locationRoot'));
 }
 
