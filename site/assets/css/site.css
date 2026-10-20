@@ -158,7 +158,7 @@ section{padding-block:clamp(72px,10vw,140px)}
 .care-slide img{-webkit-user-drag:none}
 .care-img{border-radius:var(--r-plate);overflow:hidden;position:relative;background:var(--sky-2);min-height:320px}
 .care-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s,transform 1.2s var(--ease)}
-.care-img .tag{position:absolute;left:20px;top:20px;border-radius:var(--r-pill);padding:7px 14px;font-family:var(--f-mono);font-size:12px;color:var(--ink)}
+.care-img .tag{position:absolute;left:20px;top:20px;border-radius:var(--r-pill);padding:9px 16px;font-size:14px;font-weight:500;color:var(--ink);line-height:1}
 .care-body{background:var(--white);border-radius:var(--r-plate);padding:clamp(26px,3.4vw,44px);display:flex;flex-direction:column;gap:22px;border:1px solid var(--line)}
 .care-body h3{font-weight:300;font-size:clamp(30px,3vw,42px);line-height:1.05}
 .care-body ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}

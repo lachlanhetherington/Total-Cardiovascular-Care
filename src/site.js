@@ -99,7 +99,7 @@ if(PAGE==='home'){
  tabs.innerHTML=CARE.map((c,i)=>`<button role="tab" type="button" id="tab-${c.k}" aria-selected="${i===0}" aria-controls="careView" data-i="${i}"><span>${c.name}</span><i aria-hidden="true"></i></button>`).join('');
  tabs.style.setProperty('--dur',C_DWELL+'ms');
  const slide=(c,clone)=>`<article class="care-slide"${clone?' aria-hidden="true" inert':''}>
-   <div class="care-img"><img src="${IMG(c.img)}" alt="${clone?'':esc(c.name)+' at Total Cardiovascular Care'}" width="1800" height="1200" loading="lazy"><span class="tag glass">${String(c.items.length).padStart(2,'0')} services</span></div>
+   <div class="care-img"><img src="${IMG(c.img)}" alt="${clone?'':esc(c.name)+' at Total Cardiovascular Care'}" width="1800" height="1200" loading="lazy"><span class="tag glass">${c.name}</span></div>
    <div class="care-body"><h3>${c.name}</h3><p style="color:var(--muted)">${c.blurb}</p>
    <ul>${c.items.map(it=>c.link&&c.link[it]?`<li><a href="${c.link[it]}">${it}<span>Read guide &rarr;</span></a></li>`:`<li>${it}</li>`).join('')}</ul>
    <div class="actions"><a class="btn" href="${APPT}" target="_blank" rel="noopener">Request an appointment</a>${c.link?`<a class="btn btn--ghost" href="${SVC}">About angioplasty &amp; stents</a>`:''}</div></div></article>`;
