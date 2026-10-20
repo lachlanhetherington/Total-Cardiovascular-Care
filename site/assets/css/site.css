@@ -96,25 +96,11 @@ section{padding-block:clamp(72px,10vw,140px)}
 .hero-bg.is-on{opacity:1}
 .hero-bg.is-on,.hero-bg.is-leaving{animation:drift 9.5s cubic-bezier(.25,.1,.25,1) forwards}
 @keyframes drift{from{transform:scale(1.03)}to{transform:scale(1.11) translate3d(-1%,-.6%,0)}}
-.hero-ctrl{display:flex;align-items:center;gap:14px;margin-top:6px}
-.hero-pause{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.08);color:var(--white);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s,border-color .2s}
-.hero-pause:hover{background:rgba(255,255,255,.2);border-color:var(--white)}
-.hero-pause svg{width:13px;height:13px}
-.hero-pause .i-play,.hero-pause[aria-pressed="true"] .i-pause{display:none}
-.hero-pause[aria-pressed="true"] .i-play{display:block}
-.hero-dots{display:flex;gap:6px}
-.hero-dots button{width:34px;height:22px;border:0;padding:0;background:transparent;cursor:pointer;position:relative}
-.hero-dots button::before,.hero-dots button i{content:"";position:absolute;left:0;right:0;top:10px;height:2px;border-radius:2px;background:rgba(255,255,255,.35)}
-.hero-dots button i{background:var(--white);transform:scaleX(0);transform-origin:left}
-.hero-dots button[aria-current="true"] i{animation:progress var(--dur,7s) linear forwards}
-.hero-dots button.done i{transform:scaleX(1)}
-.hero.paused .hero-dots i,.hero.paused .hero-bg{animation-play-state:paused}
-@keyframes progress{to{transform:scaleX(1)}}
 .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(to right,rgba(0,5,34,.32) 0,rgba(0,5,34,0) 55%),linear-gradient(to bottom,rgba(0,5,34,.42) 0,rgba(0,5,34,0) 190px),linear-gradient(to top,rgba(0,5,34,.62) 0,rgba(0,5,34,.18) 42%,rgba(0,5,34,0) 64%)}
 .hero-inner{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:28px 64px;align-items:end;padding-block:120px clamp(40px,6vw,76px)}
-.hero h1{font-weight:300;font-size:clamp(42px,5.2vw,82px);line-height:.98;letter-spacing:-.045em;color:var(--white);text-shadow:0 2px 30px rgba(0,5,34,.18)}
-.hero-aside{display:grid;gap:22px;justify-items:start;max-width:440px;justify-self:end}
-.hero-aside p{color:var(--white);font-size:clamp(17px,1.5vw,21px);line-height:1.4;letter-spacing:-.005em}
+.hero h1{font-weight:300;font-size:clamp(42px,5.2vw,82px);line-height:.92;letter-spacing:-.052em;color:var(--white);text-shadow:0 2px 30px rgba(0,5,34,.18)}
+.hero-aside{display:grid;gap:20px;justify-items:start;max-width:380px;justify-self:end;padding-bottom:.35em}
+.hero-aside p{color:var(--white);font-size:clamp(16px,1.3vw,19px);line-height:1.32;letter-spacing:-.01em;font-weight:400}
 .hero-aside .actions{display:flex;flex-wrap:wrap;gap:10px}
 .btn--glass{--bg:rgba(255,255,255,.08);--fg:var(--white);border-color:rgba(255,255,255,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .btn--glass:hover{--bg:rgba(255,255,255,.18);border-color:var(--white)}
