@@ -93,7 +93,7 @@ $('footCare').innerHTML=CARE.map((c,i)=>`<li><a href="${home('care-'+i)}" data-c
 let showCare=()=>{};
 if(PAGE==='home'){
  /* Areas of care: infinite carousel (slides rendered 3x, index kept in middle copy), synced tabs */
- const tabs=$('careTabs'),cView=$('careView'),cTrack=$('careTrack'),cPause=$('carePause'),N=CARE.length;
+ const tabs=$('careTabs'),cView=$('careView'),cTrack=$('careTrack'),N=CARE.length;
  const C_DWELL=6000,cReduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
  let ci=N,cTimer=null,cUserPaused=cReduce,cHold=false,cBusy=false;
  tabs.innerHTML=CARE.map((c,i)=>`<button role="tab" type="button" id="tab-${c.k}" aria-selected="${i===0}" aria-controls="careView" data-i="${i}"><span>${c.name}</span><i aria-hidden="true"></i></button>`).join('');
@@ -113,12 +113,11 @@ if(PAGE==='home'){
  cTrack.addEventListener('transitionend',e=>{if(e.target!==cTrack)return;cBusy=false;if(ci>=2*N){ci-=N;cPlace(false)}else if(ci<N){ci+=N;cPlace(false)}});
  function cSchedule(){clearTimeout(cTimer);if(!cUserPaused&&!cHold&&!document.hidden)cTimer=setTimeout(()=>cGo(ci+1),C_DWELL);}
  const cSetHold=h=>{cHold=h;syncTabs();cSchedule()};
- function cSetPaused(p){cUserPaused=p;cPause.setAttribute('aria-pressed',p);cPause.setAttribute('aria-label',p?'Play services carousel':'Pause services carousel');syncTabs();cSchedule();}
+ function cSetPaused(p){cUserPaused=p;syncTabs();cSchedule();}
  showCare=i=>{const cur=((ci%N)+N)%N;const t=ci+(i-cur);cGo(t,t!==ci);};
  tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)showCare(+b.dataset.i)});
  tabs.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const bs=[...tabs.querySelectorAll('button')];let i=bs.findIndex(b=>b.getAttribute('aria-selected')==='true');i=(i+(e.key==='ArrowRight'?1:-1)+N)%N;showCare(i);bs[i].focus()});
  document.querySelectorAll('[data-care-step]').forEach(b=>b.addEventListener('click',()=>cGo(ci+ +b.dataset.careStep)));
- cPause.addEventListener('click',()=>cSetPaused(!cUserPaused));
  const careSec=$('care');
  careSec.addEventListener('mouseenter',()=>cSetHold(true));careSec.addEventListener('mouseleave',()=>cSetHold(false));
  cView.addEventListener('focusin',()=>cSetHold(true));cView.addEventListener('focusout',()=>cSetHold(false));
@@ -136,7 +135,7 @@ if(PAGE==='home'){
  fBox.innerHTML=FILTERS.map(([k,l],i)=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join('');
  /* Doctor carousel: infinite loop (list rendered 3x, index kept in the middle copy),
     dwell then glide one card; pauses on hover/focus, pause button, swipe, reduced motion = paused */
- const view=$('docViewport'),pauseBtn=$('docPause'),ctrlBtns=[...document.querySelectorAll('[data-rail]')];
+ const view=$('docViewport'),ctrlBtns=[...document.querySelectorAll('[data-rail]')];
  const DWELL=3500,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
  let n=0,idx=0,loop=false,timer=null,userPaused=reduce,hold=false,busy=false;
  const step=()=>{const c=rail.children[0],c2=rail.children[1];return c&&c2?c2.offsetLeft-c.offsetLeft:0};
@@ -150,7 +149,7 @@ if(PAGE==='home'){
    const real=rail.innerHTML,clone=list.map(docCard).join('').replace(/<a class="doc"/g,'<a class="doc" aria-hidden="true" tabindex="-1"');
    rail.innerHTML=clone+real+clone;idx=n;place(false);
   }
-  ctrlBtns.forEach(b=>b.disabled=!loop);pauseBtn.disabled=!loop;
+  ctrlBtns.forEach(b=>b.disabled=!loop);
   schedule();
  }
  function go(dir){
@@ -161,8 +160,7 @@ if(PAGE==='home'){
   if(idx>=2*n){idx-=n;place(false)}else if(idx<n){idx+=n;place(false)}
  });
  function schedule(){clearTimeout(timer);if(loop&&!userPaused&&!hold&&!document.hidden)timer=setTimeout(()=>{go(1);schedule()},DWELL);}
- function setPaused(p){userPaused=p;pauseBtn.setAttribute('aria-pressed',p);pauseBtn.setAttribute('aria-label',p?'Play doctor carousel':'Pause doctor carousel');schedule();}
- pauseBtn.addEventListener('click',()=>setPaused(!userPaused));
+ function setPaused(p){userPaused=p;schedule();}
  ctrlBtns.forEach(b=>b.addEventListener('click',()=>{go(+b.dataset.rail);schedule()}));
  view.addEventListener('mouseenter',()=>{hold=true;schedule()});
  view.addEventListener('mouseleave',()=>{hold=false;schedule()});
