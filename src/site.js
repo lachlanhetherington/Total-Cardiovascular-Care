@@ -587,3 +587,32 @@ addEventListener('resize',()=>{if(innerWidth>900&&head.classList.contains('open'
 const onScroll=()=>head.classList.toggle('scrolled',scrollY>10);
 addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
+
+/* ---------- Scroll reveal (progressive: content is visible unless this runs) ---------- */
+(function(){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+ const TXT=['.sec-head','.split > h2','.doctor-tools','.pacc-intro','.msg-intro','.guide-copy','.statement .side','.ref-band .copy','.ph-text','.dr-text','.lc-hero > div:first-child','.svc-hero .top','.ap-head','.svc-row-body','.prose > section','.chart','.f-done'];
+ const ITEMS=['.facts dl > div','.doc-grid > *','.area-grid > *','.loc-grid > *','.finder > *','.staff-grid > *','.way','.steps li','.disc-cards li','.qual-cards > div','.approach li','.pacc','.loc-list li','.proc li','.info','.mm-none','.pair-card','.ap-side > *','.dr-facts','.lc-panel','.quick','.jump','.chips','.tabs','.ways','.ap-form','.msg-form'];
+ const BLOCKS=['.dc-viewport','.care-viewport','.rail','#areaRail','.netmap','.ref-band','.side-cta','.take-img'];
+ const IMGS=['.ph-media','.side-img','.ref-img','.svc-row-img','.guide-img','.dr-portrait','.lc-photo','.take-img'];
+ const skip=e=>e.closest('.mega,.m-drawer,.hero,.mega-in')||e.closest('.dc-track,.care-track,.rail');
+ const SEL=[...TXT,...ITEMS,...BLOCKS,...IMGS].join(',');
+ const els=[...document.querySelectorAll(SEL)].filter(e=>!skip(e)||e.matches('.rail,#areaRail'));
+ const uniq=els.filter(e=>!els.some(o=>o!==e&&o.contains(e)&&!o.matches(IMGS.join(','))&&o.matches(TXT.join(','))));
+ document.documentElement.classList.add('rv-on');
+ const isImg=e=>e.matches(IMGS.join(','));
+ const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const t=en.target;t.classList.add('in');io.unobserve(t);setTimeout(()=>{t.classList.remove('rv','rv-img','in');t.style.removeProperty('--rv-d')},1900+(parseInt(t.style.getPropertyValue('--rv-d'))||0));if(t.matches('.facts dl > div'))countUp(t)}),{rootMargin:'0px 0px -6% 0px',threshold:.06});
+ uniq.forEach(el=>{
+  el.classList.add(isImg(el)?'rv-img':'rv');
+  const sib=[...el.parentElement.children].filter(c=>uniq.includes(c));
+  el.style.setProperty('--rv-d',Math.min(sib.indexOf(el),7)*75+'ms');
+  io.observe(el);
+ });
+ /* heartbeat line draws when it scrolls into view */
+ document.querySelectorAll('.facts .ecg').forEach(svg=>{svg.classList.add('ecg-wait');new IntersectionObserver((es,o)=>es.forEach(en=>{if(en.isIntersecting){svg.classList.remove('ecg-wait');o.disconnect()}}),{threshold:.4}).observe(svg)});
+ /* stat numbers count up, keeping leading zeros and units */
+ function countUp(box){const dd=box.querySelector('dd');if(!dd)return;const node=[...dd.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!node)return;
+  const raw=node.textContent.trim(),to=parseInt(raw,10),pad=raw.length,t0=performance.now(),D=1100;
+  const tick=now=>{const p=Math.min(1,(now-t0)/D),v=Math.round(to*(1-Math.pow(1-p,3)));node.textContent=String(v).padStart(pad,'0');if(p<1)requestAnimationFrame(tick)};
+  node.textContent=String(0).padStart(pad,'0');requestAnimationFrame(tick);}
+})();

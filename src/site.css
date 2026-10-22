@@ -1127,3 +1127,15 @@ html.menu-lock,html.menu-lock body{overflow:hidden}
 @media (max-width:900px){.msg-wrap{grid-template-columns:minmax(0,1fr)}}
 .ap-form,.msg-form{min-width:0}
 [hidden]{display:none!important}
+
+/* ================= Scroll reveal ================= */
+.rv-on .rv{opacity:0;transform:translate3d(0,28px,0);transition:opacity .9s var(--ease) var(--rv-d,0ms),transform 1.05s var(--ease) var(--rv-d,0ms)}
+.rv-on .rv.in{opacity:1;transform:none}
+.rv-on .rv-img{clip-path:inset(5% 5% 5% 5% round 24px);transition:clip-path 1.25s var(--ease) var(--rv-d,0ms)}
+.rv-on .rv-img img{transform:scale(1.12);transition:transform 1.7s var(--ease) var(--rv-d,0ms)}
+.rv-on .rv-img.in{clip-path:inset(0 0 0 0 round 24px)}
+.rv-on .rv-img.in img{transform:none}
+.rv-on .dr-portrait.rv-img img{transform-origin:50% 30%}
+.ecg-wait path{animation-play-state:paused!important;stroke-dashoffset:1600}
+.ecg-wait circle{opacity:0}
+@media (prefers-reduced-motion:reduce){.rv-on .rv,.rv-on .rv-img,.rv-on .rv-img img{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}}
